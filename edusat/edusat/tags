@@ -1,0 +1,165 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Abort	edusat.cpp	/^void Abort(string s, int i) {$/;"	f
+Abs	edusat.h	/^unsigned int Abs(int x) { \/\/ because the result is compared to an unsigned int. unsigned int are introduced by size() functions, that return size_t, which is defined to be unsigned. $/;"	f
+Assert	edusat.h	23;"	d
+AssertCheck	edusat.h	/^void AssertCheck(bool cond, string func_name, int line, string msg = "") {$/;"	f
+Assignment_file	edusat.h	32;"	d
+BCP	edusat.cpp	/^SolverState Solver::BCP() {$/;"	f	class:Solver
+BCP_stack	edusat.h	/^	vector<int> BCP_stack; \/\/ vector of assserted literals. $/;"	m	class:Solver
+CONFLICT	edusat.h	/^	CONFLICT, $/;"	m	class:SolverState
+C_SAT	edusat.h	/^	C_SAT,$/;"	m	class:ClauseState
+C_UNIT	edusat.h	/^	C_UNIT,$/;"	m	class:ClauseState
+C_UNSAT	edusat.h	/^	C_UNSAT,$/;"	m	class:ClauseState
+Clause	edusat.h	/^	Clause(){};$/;"	f	class:Clause
+Clause	edusat.h	/^class Clause {$/;"	c
+ClauseState	edusat.h	/^enum class ClauseState {$/;"	c
+L_SAT	edusat.h	/^	L_SAT,$/;"	m	class:LitState
+L_UNSAT	edusat.h	/^	L_UNSAT,$/;"	m	class:LitState
+Lit	edusat.h	/^typedef int Lit;$/;"	t
+LitScore	edusat.h	/^	vector<int> LitScore; \/\/ literal => frequency of this literal (# appearances in all clauses). $/;"	m	class:Solver
+LitState	edusat.h	/^enum class LitState {$/;"	c
+MINISAT	edusat.h	/^	MINISAT, $/;"	m	class:VAR_DEC_HEURISTIC
+Max_bring_forward	edusat.h	30;"	d
+Neg	edusat.h	26;"	d
+PHASESAVING	edusat.h	/^	PHASESAVING, $/;"	m	class:VAL_DEC_HEURISTIC
+Restart_lower	edusat.h	28;"	d
+Restart_multiplier	edusat.h	27;"	d
+Restart_upper	edusat.h	29;"	d
+S	edusat.cpp	/^Solver S;$/;"	v
+SAT	edusat.h	/^	SAT,$/;"	m	class:SolverState
+SolveWithAssumptions	edusat.cpp	/^void SolveWithAssumptions(Solver S) {$/;"	f
+Solver	edusat.h	/^	Solver(): $/;"	f	class:Solver
+Solver	edusat.h	/^class Solver {$/;"	c
+SolverState	edusat.h	/^enum class SolverState{$/;"	c
+UNSAT	edusat.h	/^	UNSAT,$/;"	m	class:SolverState
+VAL_DEC_HEURISTIC	edusat.h	/^enum class VAL_DEC_HEURISTIC {$/;"	c
+VAR_DEC_HEURISTIC	edusat.h	/^enum class VAR_DEC_HEURISTIC {$/;"	c
+ValDecHeuristic	edusat.h	/^VAL_DEC_HEURISTIC ValDecHeuristic = VAL_DEC_HEURISTIC::PHASESAVING;$/;"	v
+Var	edusat.h	/^typedef int Var;$/;"	t
+VarDecHeuristic	edusat.h	/^VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::MINISAT;$/;"	v
+_solve	edusat.cpp	/^SolverState Solver::_solve() {$/;"	f	class:Solver
+add_clause	edusat.cpp	/^void Solver::add_clause(Clause& c, int l, int r) {	$/;"	f	class:Solver
+add_to_trail	edusat.h	/^	void add_to_trail(int x) { trail.push_back(x); }$/;"	f	class:Solver
+add_unary_clause	edusat.cpp	/^void Solver::add_unary_clause(Lit l) {		$/;"	f	class:Solver
+analyze	edusat.cpp	/^int Solver::analyze(const Clause conflicting) {$/;"	f	class:Solver
+analyze_final	edusat.cpp	/^void Solver::analyze_final(Lit p) {$/;"	f	class:Solver
+antecedent	edusat.h	/^	vector<int> antecedent; \/\/ var => clause index in the cnf vector. For variables that their value was assigned in BCP, this is the clause that gave this variable its value. $/;"	m	class:Solver
+assert_lit	edusat.cpp	/^inline void Solver::assert_lit(Lit l) {$/;"	f	class:Solver
+assert_unary	edusat.cpp	/^inline void Solver::assert_unary(Lit l) {		\/\/ the difference is that we do not push unaries to the trail, and also force dlevel = 0$/;"	f	class:Solver
+asserted_lit	edusat.h	/^	Lit 		asserted_lit;$/;"	m	class:Solver
+assumptions	edusat.h	/^	vector<Lit> assumptions;$/;"	m	class:Solver
+assumptions_dl	edusat.h	/^		assumptions_dl,	\/\/ == |assumptions cast as decisions | <= |assumptions|. Monotonically decreases. $/;"	m	class:Solver
+backtrack	edusat.cpp	/^void Solver::backtrack(int k) {$/;"	f	class:Solver
+begin_time	edusat.h	/^double begin_time;$/;"	v
+bumpLitScore	edusat.cpp	/^void Solver::bumpLitScore(int lit_idx) {$/;"	f	class:Solver
+bumpVarScore	edusat.cpp	/^void Solver::bumpVarScore(int var_idx) {$/;"	f	class:Solver
+c	edusat.h	/^	clause_t c;$/;"	m	class:Clause
+cl	edusat.h	/^	clause_t& cl() {return c;}$/;"	f	class:Clause
+clause_it	edusat.h	/^typedef clause_t::iterator clause_it;$/;"	t
+clause_t	edusat.h	/^typedef vector<Lit> clause_t;$/;"	t
+cmtf_bring_forward	edusat.cpp	/^void Solver::cmtf_bring_forward(int idx) { $/;"	f	class:Solver
+cmtf_extract	edusat.cpp	/^void Solver::cmtf_extract(int idx) { $/;"	f	class:Solver
+cnf	edusat.h	/^	vector<Clause> cnf; \/\/ clause DB. $/;"	m	class:Solver
+cnf_size	edusat.h	/^	size_t cnf_size() { return cnf.size(); }$/;"	f	class:Solver
+conflicting_clause_idx	edusat.h	/^		conflicting_clause_idx, \/\/ holds the index of the current conflicting clause in cnf[]. -1 if none.				$/;"	m	class:Solver
+conflicts_at_dl	edusat.h	/^	vector<int> conflicts_at_dl; \/\/ decision level => # of conflicts under it. Used for local restarts. $/;"	m	class:Solver
+cpuTime	edusat.h	/^static inline double cpuTime(void) {$/;"	f
+decide	edusat.cpp	/^SolverState Solver::decide(){$/;"	f	class:Solver
+dl	edusat.h	/^		dl,				\/\/ decision level$/;"	m	class:Solver
+dlevel	edusat.h	/^	vector<int> dlevel; \/\/ var => decision level in which this variable was assigned its value. $/;"	m	class:Solver
+getVal	edusat.cpp	/^int Solver :: getVal(Var v) {$/;"	f	class:Solver
+get_ResponsibleAssumptions	edusat.h	/^	vector<Lit> get_ResponsibleAssumptions() { return out_ResponsibleAssumptions; }$/;"	f	class:Solver
+get_learned	edusat.h	/^	int get_learned() { return num_learned; }$/;"	f	class:Solver
+get_lw	edusat.h	/^	int get_lw() {return lw;}$/;"	f	class:Clause
+get_lw_lit	edusat.h	/^	int get_lw_lit() {return c[lw];}$/;"	f	class:Clause
+get_next	edusat.h	/^	int get_next() {return next;}$/;"	f	class:Clause
+get_nvars	edusat.h	/^	int get_nvars() { return nvars; }$/;"	f	class:Solver
+get_prev	edusat.h	/^	int get_prev() {return prev;}$/;"	f	class:Clause
+get_rw	edusat.h	/^	int get_rw() {return rw;}$/;"	f	class:Clause
+get_rw_lit	edusat.h	/^	int get_rw_lit() {return c[rw];}$/;"	f	class:Clause
+get_state	edusat.h	/^	char get_state(int x) { return state[x]; }$/;"	f	class:Solver
+help	edusat.cpp	/^void help() {$/;"	f
+initialize	edusat.cpp	/^void Solver::initialize() {	$/;"	f	class:Solver
+insert	edusat.h	/^	void insert(int i) {c.push_back(i);}$/;"	f	class:Clause
+l2rl	edusat.h	/^int l2rl(int l) {$/;"	f
+l2v	edusat.h	/^Var l2v(Lit l) {$/;"	f
+last_clause_idx	edusat.h	/^		last_clause_idx, \/\/ location in cnf of the most recent clause (it is not necessarily the last in the array because of the CMTF heuristic)$/;"	m	class:Solver
+lit	edusat.h	/^	int  lit(int i) {return c[i];} 		$/;"	f	class:Clause
+lit_state	edusat.h	/^	inline LitState lit_state(Lit l) {$/;"	f	class:Solver
+lit_state	edusat.h	/^	inline LitState lit_state(Lit l, char var_state) {$/;"	f	class:Solver
+lw	edusat.h	/^	int lw,rw; \/\/watches;$/;"	m	class:Clause
+lw_set	edusat.h	/^	void lw_set(int i) {lw = i; \/*assert(lw != rw);*\/}$/;"	f	class:Clause
+m_Score2Vars	edusat.h	/^	map<double, unordered_set<int>> m_Score2Vars; \/\/ From a score to the set of variables that have it. $/;"	m	class:Solver
+m_Score2Vars_r_it	edusat.h	/^	map<double, unordered_set<int>>::reverse_iterator m_Score2Vars_r_it;$/;"	m	class:Solver
+m_VarsSameScore_it	edusat.h	/^	unordered_set<int>::iterator m_VarsSameScore_it;$/;"	m	class:Solver
+m_activity	edusat.h	/^	vector<double>	m_activity; \/\/ Var -> activity$/;"	m	class:Solver
+m_curr_activity	edusat.h	/^	double			m_curr_activity;$/;"	m	class:Solver
+m_var_inc	edusat.h	/^	double			m_var_inc;	$/;"	m	class:Solver
+main	edusat.cpp	/^int main(int argc, char** argv){$/;"	f
+marked	edusat.h	/^	vector<bool> marked;	\/\/ var => seen during analyze()$/;"	m	class:Solver
+match	edusat.h	/^bool match(ifstream& in, char* str) {$/;"	f
+max_dl	edusat.h	/^		max_dl,			\/\/ max dl seen so far$/;"	m	class:Solver
+max_original	edusat.h	/^		max_original;$/;"	m	class:Solver
+nclauses	edusat.h	/^		nclauses, 		\/\/ # clauses$/;"	m	class:Solver
+next	edusat.h	/^	int prev, next; \/\/ indices in cnf of the prev and next clause according to the current order (the order changes in cmtf). $/;"	m	class:Clause
+next_not_false	edusat.cpp	/^inline ClauseState Clause::next_not_false(bool is_left_watch, Lit other_watch, bool binary, int& loc) {  \/\/ lit is the currently watched literal$/;"	f	class:Clause
+next_set	edusat.h	/^	void next_set(int i) {next = i;}$/;"	f	class:Clause
+nlits	edusat.h	/^		nlits,			\/\/ # literals = 2*nvars		$/;"	m	class:Solver
+num_assignments	edusat.h	/^		num_assignments,$/;"	m	class:Solver
+num_decisions	edusat.h	/^		num_decisions,$/;"	m	class:Solver
+num_learned	edusat.h	/^		num_learned, 	$/;"	m	class:Solver
+num_restarts	edusat.h	/^		num_restarts,$/;"	m	class:Solver
+nvars	edusat.h	/^		nvars,			\/\/ # vars$/;"	m	class:Solver
+opposite	edusat.h	/^Lit opposite(Lit l) {$/;"	f
+out_ResponsibleAssumptions	edusat.h	/^	vector<Lit> out_ResponsibleAssumptions;$/;"	m	class:Solver
+parseInt	edusat.cpp	/^static int parseInt(ifstream& in) {$/;"	f	file:
+parse_options	edusat.cpp	/^void parse_options(int argc, char** argv) {$/;"	f
+prev	edusat.h	/^	int prev, next; \/\/ indices in cnf of the prev and next clause according to the current order (the order changes in cmtf). $/;"	m	class:Clause
+prev_set	edusat.h	/^	void prev_set(int i) {prev = i;}$/;"	f	class:Clause
+prev_state	edusat.h	/^	vector<char> prev_state; \/\/ for phase-saving: same as state, only that it is not reset to 0 upon backtracking. $/;"	m	class:Solver
+print	edusat.h	/^	void print() {for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }$/;"	f	class:Clause
+print_cnf	edusat.h	/^	void print_cnf(){$/;"	f	class:Solver
+print_ordered_cnf	edusat.h	/^	void print_ordered_cnf() {$/;"	f	class:Solver
+print_real_cnf	edusat.h	/^	void print_real_cnf() {$/;"	f	class:Solver
+print_real_lits	edusat.h	/^	void print_real_lits() {$/;"	f	class:Clause
+print_state	edusat.h	/^	void print_state() {$/;"	f	class:Solver
+print_state	edusat.h	/^	void print_state(const char *file_name) {$/;"	f	class:Solver
+print_stats	edusat.h	/^	void print_stats() {cout << endl << "Statistics: " << endl << "===================" << endl << $/;"	f	class:Solver
+print_watches	edusat.h	/^	void print_watches() {$/;"	f	class:Solver
+print_with_watches	edusat.h	/^	void print_with_watches() {$/;"	f	class:Clause
+read_cnf	edusat.cpp	/^void Solver::read_cnf(ifstream& in) {$/;"	f	class:Solver
+reset	edusat.cpp	/^void Solver::reset() { \/\/ invoked initially + every restart$/;"	f	class:Solver
+reset	edusat.h	/^	void reset() { c.clear(); }	$/;"	f	class:Clause
+reset_iterators	edusat.cpp	/^void Solver::reset_iterators(double activity_key\/* = 0.0*\/) {$/;"	f	class:Solver
+restart	edusat.cpp	/^void Solver::restart() {	$/;"	f	class:Solver
+restart_lower	edusat.h	/^		restart_lower,$/;"	m	class:Solver
+restart_multiplier	edusat.h	/^	float restart_multiplier;$/;"	m	class:Solver
+restart_threshold	edusat.h	/^		restart_threshold,$/;"	m	class:Solver
+restart_upper	edusat.h	/^		restart_upper;$/;"	m	class:Solver
+rw	edusat.h	/^	int lw,rw; \/\/watches;$/;"	m	class:Clause
+rw_set	edusat.h	/^	void rw_set(int i) {rw = i; \/*assert(lw != rw);*\/}$/;"	f	class:Clause
+separators	edusat.h	/^	vector<int> separators; \/\/ indices into trail showing increase in dl 	$/;"	m	class:Solver
+set_assumptions	edusat.cpp	/^void Solver::set_assumptions(vector<Lit> assump) {$/;"	f	class:Solver
+set_nclauses	edusat.h	/^	void set_nclauses(int x) { nclauses = x; }$/;"	f	class:Solver
+set_nvars	edusat.h	/^	void set_nvars(int x) { nvars = x; }$/;"	f	class:Solver
+sign	edusat.h	/^char sign(Lit l) {$/;"	f
+size	edusat.h	/^	size_t size() {return c.size();}$/;"	f	class:Clause
+skipLine	edusat.cpp	/^void skipLine(ifstream& in) {$/;"	f
+skipWhitespace	edusat.cpp	/^static void skipWhitespace(ifstream& in, char&c) {$/;"	f	file:
+solve	edusat.cpp	/^SolverState Solver::solve() { \/\/ wrapper for incremental SAT. $/;"	f	class:Solver
+state	edusat.h	/^	vector<char> state;  \/\/ -1 = false, 0 = unassigned, 1 = true. $/;"	m	class:Solver
+test	edusat.cpp	/^void Solver::test() { \/\/ tests that each clause is watched twice. 	$/;"	f	class:Solver
+trail	edusat.h	/^	trail_t trail;  \/\/ assignment stack	$/;"	m	class:Solver
+trail_t	edusat.h	/^typedef vector<Lit> trail_t;$/;"	t
+unaries	edusat.h	/^	vector<int> unaries; $/;"	m	class:Solver
+v2l	edusat.h	/^unsigned int v2l(int i) { \/\/ maps a literal as it appears in the cnf to literal$/;"	f
+validate_assignment	edusat.cpp	/^void Solver::validate_assignment() {$/;"	f	class:Solver
+var_decay	edusat.h	31;"	d
+verbose	edusat.h	/^int verbose = 0;$/;"	v
+verbose_now	edusat.cpp	/^inline bool verbose_now() {$/;"	f
+watches	edusat.h	/^	vector<vector<int> > watches;  \/\/ Lit => vector of clause indices into CNF$/;"	m	class:Solver

@@ -1,0 +1,210 @@
+../edusat/test/sat/bj08amba2g4f3.k10.cnf
+vars: 92231 clauses: 346115
+Read 346076 clauses in 0.661 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	2
+Learned clauses:	498
+Decisions:	4031
+Implications:	4785465
+Time:		3.334
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-galileo-8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 0.49 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	7
+Learned clauses:	2794
+Decisions:	26063
+Implications:	11722243
+Time:		5.56
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-galileo-9.cnf
+vars: 63624 clauses: 326999
+Read 326805 clauses in 0.543 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	1
+Learned clauses:	309
+Decisions:	3038
+Implications:	933976
+Time:		0.98
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-1.cnf
+vars: 9685 clauses: 55870
+Read 55821 clauses in 0.09 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	3
+Learned clauses:	2099
+Decisions:	8453
+Implications:	1194807
+Time:		0.62
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-10.cnf
+vars: 59056 clauses: 323700
+Read 323253 clauses in 0.564 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	6
+Learned clauses:	4380
+Decisions:	44928
+Implications:	11690678
+Time:		6.394
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-11.cnf
+vars: 32109 clauses: 150027
+Read 149891 clauses in 0.256 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	6
+Learned clauses:	2602
+Decisions:	13503
+Implications:	4373943
+Time:		2.309
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-12.cnf
+vars: 39598 clauses: 194778
+Read 194630 clauses in 0.337 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	14
+Learned clauses:	8281
+Decisions:	27917
+Implications:	23666304
+Time:		14.512
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-13.cnf
+vars: 13215 clauses: 65728
+Read 65463 clauses in 0.112 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	68
+Learned clauses:	36928
+Decisions:	83590
+Implications:	43585472
+Time:		31.841
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-2.cnf
+vars: 2810 clauses: 11683
+Read 11583 clauses in 0.025 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	0
+Learned clauses:	22
+Decisions:	268
+Implications:	7518
+Time:		0.036
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-3.cnf
+vars: 14930 clauses: 72106
+Read 71987 clauses in 0.122 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	1
+Learned clauses:	187
+Decisions:	605
+Implications:	237075
+Time:		0.226
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-4.cnf
+vars: 28161 clauses: 139716
+Read 139499 clauses in 0.234 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	5
+Learned clauses:	1503
+Decisions:	9041
+Implications:	1474881
+Time:		1.012
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-5.cnf
+vars: 9396 clauses: 41207
+Read 41134 clauses in 0.067 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	0
+Learned clauses:	79
+Decisions:	1285
+Implications:	37680
+Time:		0.099
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-6.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 0.649 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	14
+Learned clauses:	7758
+Decisions:	17105
+Implications:	4225058
+Time:		3.241
+Assignment validated
+solution in assignment.txt
+SAT
+../edusat/test/sat/bmc-ibm-7.cnf
+vars: 8710 clauses: 39774
+Read 39572 clauses in 0.065 secs.
+Solving...
+
+Statistics: 
+===================
+Restarts:	0
+Learned clauses:	55
+Decisions:	566
+Implications:	22237
+Time:		0.089
+Assignment validated
+solution in assignment.txt
+SAT
