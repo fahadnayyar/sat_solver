@@ -7,6 +7,82 @@
 // 6. seperate treatment of binary clauses 
 // 7. Watchers with blocking clauses and possibly more literals (p. stucky's cache awarness paper)
 
+
+// my_TODO: [.] means paper.
+
+// 1.) lbd:
+		// (“Glue”) -- the # of decision levels in the clause.
+		// • Use it to improve:
+				// • Decision strategy 
+				// • Deletion strategy 
+				// • clauseshrinking
+		// [Predicting Learnt Clauses Quality in Modern SAT Solvers, Gilles Audemard, Laurent Simon, IJCAI09]
+
+// 2.) Change Decision Heuristic (learning-rate decision heuristic (vijay's sat'16)):
+		// Measure the activity of variables in learning new clauses relative to others, when the variable is assigned.
+		// [Learning Rate Based Branching Heuristic for SAT Solvers (SAT 2016)]
+
+// 3.) deletion strategy:
+		// read model checking book.
+		// Deletion of low-activity conflict clauses.
+		// Requires:
+			// • Compute activity of clauses based on various measures. • Based on activity of variables in the clause
+			// • Based on LBD: the # of decision levels in the conflict clause.
+		// Activate deletion periodically.
+
+// 4.) preprocessing
+		// read sec 9.4.7 in model checking book.
+		// Remove satisfied clauses at level 0
+		// Non-increasing variable elimination.
+
+// 5.) BCP order.
+		// Smart heuristics for BCP order:
+			// • e.g., Variables with higher activity score 
+			// • BFS / DFS among variables
+			// • According to the LBD information:
+			// • if the learned clause is ‘bad’, re-run BCP with a different order.
+			// • Perhaps: process according to the highest decision level within the clause.
+
+// 5.) conf. clause shrinking (doubt?)
+		
+// 6.) seperate treatment of binary clauses (doubt?)
+
+// 7.) Watchers with blocking clauses and possibly more literals (p. stucky's cache awarness paper)
+	// [Cache Conscious Data Structures for Boolean Satisfiability Solvers]
+
+// 8.) Resrtarts.
+		// read model checking book.
+// 9.) Learned clause minimization.
+		// read model checking book 9.4.3.
+
+// 10.) Lazy data structures.
+		// read model checking book.	
+
+//...............*** NOT REQUIRED ***.....................
+
+// 1.) Learn more...
+	// • In some applications (Bounded Model Checking, Planning) there is a lot of symmetry.
+	// • Learn such clauses only if they are of high value 
+		// • Compute activity
+		// • LBD
+		// • Attach short expiration date for them.
+	// [Accelerating Bounded Model Checking of Safety Formulas. /Formal Methods in System Design]
+
+// 2.) Extend to support pseudo-Boolean constraints
+	// • Direct treatment of cardinality constraints.
+
+// 3.)Test the value of incrementality
+	// • Incremental solvers benefit from 
+		//• Sharing conflict clauses
+		// • Sharing heuristic information
+	// • Depending on the increment, the heuristic information can perhaps be harmful. Can we find a test for when to activate it ?
+	// • Steps:
+		// • Take benchmarks from the incremental SAT competition
+			// • Also,fabricateincrementalinstanceswithvaryinglevelsofchange.
+		// • Add control to reset each heuristic info. Check effect.
+		// • Measure change between instances, per variable.
+			// • What happens if we reset the heuristic info of those variables that changed.
+
 #include "edusat.h"
 
 Solver S;
