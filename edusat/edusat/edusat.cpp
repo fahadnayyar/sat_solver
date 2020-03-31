@@ -145,15 +145,25 @@ void Solver::initialize() {
 	antecedent.resize(nvars + 1, -1);	
 	marked.resize(nvars+1);
 	dlevel.resize(nvars+1);
+	assigned.resize(nvars+1);
+	participated.resize(nvars+1);
+	ema.resize(nvars+1);
 	
 	nlits = 2 * nvars;
 	watches.resize(nlits + 1);
 	LitScore.resize(nlits + 1);
 	//initialize scores 	
 	m_activity.resize(nvars + 1);	
+	//initiliaze learning counter 
+	alpha = 0.04;
+	learning_counter = 0;
 	for (unsigned int v = 0; v <= nvars; ++v) {			
 		m_activity[v] = 0;		
+		ema[v] = 0;
+		assigned[v] = 0;
+		participated[v] = 0;
 	}
+	
 	reset();
 }
 
@@ -164,6 +174,7 @@ inline void Solver::assert_lit(Lit l) {
 	if (Neg(l)) prev_state[var] = state[var] = -1; else prev_state[var] = state[var] = 1;
 	dlevel[var] = dl;
 	++num_assignments;
+	OnAssign(var);
 	if (verbose > 1) cout << "v" << var << "(lit " << l << "):" << static_cast<int>(state[var]) << "@" << dl << endl;
 }
 
@@ -172,9 +183,25 @@ inline void Solver::assert_unary(Lit l) {		// the difference is that we do not p
 	if (Neg(l)) state[var] = -1; else state[var] = 1;
 	dlevel[var] = 0;
 	++num_assignments;
+	OnAssign(var);
 	if (verbose > 1) cout << "v" << var << "(lit " << l << "):" << static_cast<int>(state[var]) << "@" << 0 << endl;
 }
 
+void Solver::OnAssign(int var_idx)
+{
+	assigned[var_idx] = learning_counter;
+	participated[var_idx] = 0;
+}
+
+void Solver::OnUnAssign(int var_idx)
+{
+	int interval = learning_counter - assigned[var_idx];
+	if(internal > 0)
+	{
+		double r = participated[var_idx] / interval;
+		ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * r;
+	}
+}
 
 void Solver::bumpVarScore(int var_idx) {
 	//if (verbose_now()) cout << "bumpVarScore" << endl;
@@ -301,6 +328,19 @@ SolverState Solver::decide(){
 				}
 			}
 		}
+		break;
+	}
+	case VAR_DEC_HEURISTIC::LRATE: {
+		double maxval = 0;
+		Var v = 0;
+		for (unsigned int i = 0; i <= nvars; ++i) {
+			if(state[i] == 0 && maxval > ema[i])
+			{
+				maxval = ema[i];
+				v = i;
+			}
+		}
+		best_lit = getVal(v);
 		break;
 	}
 	default: Assert(0);
@@ -493,7 +533,7 @@ int Solver::analyze(const Clause conflicting) {
 		watch_lit = 0, // points to what literal in the learnt clause should be watched, other than the asserting one
 		antecedents_idx = 0, 
 		cmtf_forward_counter = 0;
-
+	set<Var> conflictSideAndClause; 
 	Lit u;
 	Var v;
 	trail_t::reverse_iterator t_it = trail.rbegin();
@@ -516,7 +556,7 @@ int Solver::analyze(const Clause conflicting) {
 				}
 			}
 		}
-		
+
 		while (t_it != trail.rend()) {
 			u = *t_it;
 			v = l2v(u);
@@ -529,13 +569,16 @@ int Solver::analyze(const Clause conflicting) {
 		int ant = antecedent[v];		
 		current_clause = cnf[ant]; 
 		current_clause.cl().erase(find(current_clause.cl().begin(), current_clause.cl().end(), u));
+		conflictSideAndClause.insert(v);
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF && cmtf_forward_counter++ < Max_bring_forward) {
 			cmtf_extract(ant); 
 			cmtf_bring_forward(ant);
 		}
 	}	while (resolve_num > 0);
-	for (clause_it it = new_clause.cl().begin(); it != new_clause.cl().end(); ++it) 
+	for (clause_it it = new_clause.cl().begin(); it != new_clause.cl().end(); ++it) {
 		marked[l2v(*it)] = false;
+		conflictSideAndClause.insert(l2v(*it));
+	}
 	Lit opp_u = opposite(u);
 	new_clause.cl().push_back(opp_u);		
 	if (VarDecHeuristic == VAR_DEC_HEURISTIC::MINISAT) m_var_inc *= 1 / var_decay; // increasing importance of participating variables.
@@ -569,6 +612,18 @@ int Solver::analyze(const Clause conflicting) {
 	return bktrk; 
 }
 
+void Solver::AfterConflictAnalysis(set<Var> ConflictSideAndClause){
+	learning_counter ++;
+	for(Var v: ConflictSideAndClause)
+	{
+		participated[v]++;
+	}
+	if(alpha > 0.06)
+	{
+		alpha = alpha - 1e-6;
+	}
+}
+
 void Solver::backtrack(int k) {
 	if (verbose_now()) cout << "backtrack" << endl;
 	if (k > 0 && (num_learned - conflicts_at_dl[k] > restart_threshold)) {	// "local restart"	
@@ -581,6 +636,7 @@ void Solver::backtrack(int k) {
 		Var v = l2v(*it);
 		if (dlevel[v]) { // we need the condition because of learnt unary clauses. In that case we enforce an assignment with dlevel = 0.
 			state[v] = 0;
+			OnUnAssign(v);
 			if (VarDecHeuristic == VAR_DEC_HEURISTIC::MINISAT) jump_to_activity = max(jump_to_activity, m_activity[v]);
 		}
 	}
@@ -630,6 +686,7 @@ void Solver::restart() {
 		if (dlevel[i] > 0) {
 			state[i] = 0; 
 			dlevel[i] = 0;
+			OnUnAssign(i);
 		}	
 	BCP_stack.clear();
 	trail.clear();

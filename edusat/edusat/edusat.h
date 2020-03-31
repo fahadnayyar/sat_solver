@@ -50,7 +50,8 @@ enum class VAR_DEC_HEURISTIC {
 	that participated in its learning. Traversing these clauses from the end, if a clause has at least 
 	one unassigned literal we give it a value according to the value heuristic.
 	Looking at only unresolved clauses makes the search better but more expensive to decide, and overall worse. */
-	CMTF } ;
+	CMTF,
+	LRATE } ;
 
 VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::MINISAT;
 
@@ -238,6 +239,13 @@ class Solver {
 	// doubt
 	double			m_curr_activity;
 	
+	//Used by VAR_DH_LRATE:
+	double alpha;
+	int learning_counter;
+	vector<int> assigned;
+	vector<int> participated;
+	vector<double> ema;
+
 	unsigned int 
 		nvars,			// # vars
 		nclauses, 		// # clauses
@@ -329,6 +337,11 @@ class Solver {
 	inline void bumpVarScore(int idx);
 	// doubt
 	inline void bumpLitScore(int lit_idx);
+
+	//rate
+	void AfterConflictAnalysis(set<Var> ConflictSideAndClause);
+	void OnAssign(int idx);
+	void OnUnAssign(int idx);
 
 public:
 	// doubt
