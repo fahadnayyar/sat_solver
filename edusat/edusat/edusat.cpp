@@ -189,12 +189,14 @@ inline void Solver::assert_unary(Lit l) {		// the difference is that we do not p
 
 void Solver::OnAssign(int var_idx)
 {
+	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	assigned[var_idx] = learning_counter;
 	participated[var_idx] = 0;
 }
 
 void Solver::OnUnAssign(int var_idx)
 {
+	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	int interval = learning_counter - assigned[var_idx];
 	if(internal > 0)
 	{
@@ -569,7 +571,7 @@ int Solver::analyze(const Clause conflicting) {
 		int ant = antecedent[v];		
 		current_clause = cnf[ant]; 
 		current_clause.cl().erase(find(current_clause.cl().begin(), current_clause.cl().end(), u));
-		conflictSideAndClause.insert(v);
+		if (VarDecHeuristic == VAR_DEC_HEURISTIC::LRATE ) { conflictSideAndClause.insert(v); }
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF && cmtf_forward_counter++ < Max_bring_forward) {
 			cmtf_extract(ant); 
 			cmtf_bring_forward(ant);
@@ -613,6 +615,7 @@ int Solver::analyze(const Clause conflicting) {
 }
 
 void Solver::AfterConflictAnalysis(set<Var> ConflictSideAndClause){
+	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	learning_counter ++;
 	for(Var v: ConflictSideAndClause)
 	{
