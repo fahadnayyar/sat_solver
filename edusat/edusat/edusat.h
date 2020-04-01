@@ -53,7 +53,7 @@ enum class VAR_DEC_HEURISTIC {
 	CMTF,
 	LRATE } ;
 
-VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::MINISAT;
+VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::LRATE;
 
 // doubt
 enum class VAL_DEC_HEURISTIC {
@@ -430,6 +430,16 @@ public:
 		"### Time:\t\t" << cpuTime() - begin_time << endl;
 	}
 	
+	void print_lrate(){
+		cout << endl << "Learning Rate Stats" << endl ;
+		for(int i=0;i < nvars+1; i++)
+		{
+			cout << "Assigned " << assigned[i] << " Participated " << participated[i] << endl;
+			cout << "EMA " << ema[i] << endl ;
+		}
+		cout << endl;
+	}
+
 	void validate_assignment();
 };
 

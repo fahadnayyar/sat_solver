@@ -274,7 +274,7 @@ void Solver::OnUnAssign(int var_idx)
 {
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	int interval = learning_counter - assigned[var_idx];
-	if(internal > 0)
+	if(interval > 0)
 	{
 		double r = participated[var_idx] / interval;
 		ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * r;
@@ -401,6 +401,7 @@ SolverState Solver::decide(){
 				++cnt;
 				if (state[v] == 0) { // found a var to assign
 					m_curr_activity = m_activity[v];
+					// cout << "v " << v << endl;
 					best_lit = getVal(v);
 					break;
 				}
@@ -409,10 +410,11 @@ SolverState Solver::decide(){
 		break;
 	}
 	case VAR_DEC_HEURISTIC::LRATE: {
-		double maxval = 0;
+		// cout << "Here" << endl;
+		double maxval = -1;
 		Var v = 0;
-		for (unsigned int i = 0; i <= nvars; ++i) {
-			if(state[i] == 0 && maxval > ema[i])
+		for (unsigned int i = 1; i <= nvars; ++i) {
+			if(state[i] == 0 && maxval < ema[i])
 			{
 				maxval = ema[i];
 				v = i;
@@ -424,8 +426,8 @@ SolverState Solver::decide(){
 	default: Assert(0);
 	}	
 	
-	//cout << "decided on " << l2rl(best_lit) << endl;
-	//print_state();
+	// cout << "decided on " << l2rl(best_lit) << endl;
+	// print_state();
 	
 	if (!best_lit) { 		
 		S.print_state(Assignment_file); 
@@ -674,7 +676,7 @@ int Solver::analyze(const Clause conflicting) {
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) cmtf_bring_forward(cnf_size()-1); // this takes care of the prev/next in cnf for new_clause.
 		if (verbose > 1) cout << "BCP_stack <- " << new_clause.cl()[watch_lit] << endl;
 	}
-	
+	AfterConflictAnalysis(conflictSideAndClause);
 
 	if (verbose_now()) {	
 		cout << "Learned clause #" << cnf_size() + unaries.size() << ". "; 
@@ -824,12 +826,21 @@ SolverState Solver::_solve() {
 	while (true) {		
 		while (true) {
 			res = BCP();
-			if (res == SolverState::UNSAT) return res;
-			if (res == SolverState::CONFLICT)
+			// cout << "res " << endl;
+			if (res == SolverState::UNSAT) {
+				// cout << "unsat" << endl; 
+				return res;}
+			if (res == SolverState::CONFLICT){
 				backtrack(analyze(cnf[conflicting_clause_idx]));
+				// cout << "conflict" << endl;
+			}
 			else break;
+			// cout << "Loop 1 " << endl;
+			// print_lrate();
 		}
 		res = decide();
+		// cout << "Loop 2 " << endl;
+		// print_lrate();
 		if (res == SolverState::SAT || res == SolverState::UNSAT) return res;
 	}
 }
