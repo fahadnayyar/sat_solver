@@ -235,11 +235,11 @@ void Solver::initialize() {
 	learning_counter = 0;
 	for (unsigned int v = 0; v <= nvars; ++v) {			
 		m_activity[v] = 0;		
-		ema[v] = 0;
+		// ema[v] = 0;
 		assigned[v] = 0;
 		participated[v] = 0;
 	}
-	
+	heap.initialize(nvars+1);
 	reset();
 }
 
@@ -268,17 +268,26 @@ void Solver::OnAssign(int var_idx)
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	assigned[var_idx] = learning_counter;
 	participated[var_idx] = 0;
+	int ind = heap.index[var_idx];
+	heap.update(ind, -1);
+	// heap.print_heap();
 }
 
 void Solver::OnUnAssign(int var_idx)
 {
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	int interval = learning_counter - assigned[var_idx];
+	int ind = heap.index[var_idx];
+	ExpoAverage temp = heap.harr[ind];
 	if(interval > 0)
 	{
 		double r = participated[var_idx] / interval;
-		ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * r;
+		// ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * r;
+		
+		temp.average = temp.average * (1-alpha) + alpha*r;
 	}
+	heap.update(ind, temp.average);
+	// heap.print_heap();
 }
 
 void Solver::bumpVarScore(int var_idx) {
@@ -413,13 +422,17 @@ SolverState Solver::decide(){
 		// cout << "Here" << endl;
 		double maxval = -1;
 		Var v = 0;
-		for (unsigned int i = 1; i <= nvars; ++i) {
-			if(state[i] == 0 && maxval < ema[i])
-			{
-				maxval = ema[i];
-				v = i;
-			}
-		}
+		// for (unsigned int i = 1; i <= nvars; ++i) {
+		// 	if(state[i] == 0 && maxval < ema[i])
+		// 	{
+		// 		maxval = ema[i];
+		// 		v = i;
+		// 	}
+		// }
+		ExpoAverage temp = heap.getMax();
+		// cout << " v " << temp.var << " priority: " << temp.priority << endl;
+		if(temp.priority == -1){break;}
+		v = temp.var;
 		best_lit = getVal(v);
 		break;
 	}

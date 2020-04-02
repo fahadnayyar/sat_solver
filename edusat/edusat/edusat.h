@@ -196,6 +196,105 @@ public:
 	}
 };
 
+class ExpoAverage{
+public:
+	int var;
+	int average;
+	int priority;
+	ExpoAverage()
+	{
+		var = 0;
+		average = 0;
+		priority = 0;
+	};
+};
+
+class Heap 
+{ 
+    int capacity; // maximum possible size of min heap 
+	int heap_size;
+public: 
+	vector<int> index;
+    vector<ExpoAverage> harr; // pointer to array of elements in heap 	
+	void initialize(int capacity)
+	{
+		this->capacity = capacity;
+		harr = vector<ExpoAverage>(capacity);
+		index = vector<int>(capacity);
+		heap_size = capacity;
+		for (int i = 0; i < capacity; i++)
+		{
+			harr[i].var = i;
+			harr[i].average = 0;
+			harr[i].priority = 0;
+			index[i] = i;
+		}
+		// harr[0].priority = -1;
+		update(0,-1);
+		// cout << "In Heap at index 0: " << harr[index[0]].var << endl;
+		// cout << "In Heap" << harr[0].var << endl;
+	};
+	void Heapify(int i)
+	{
+		int l = left(i); 
+		int r = right(i); 
+		int smallest = i; 
+		if (l < heap_size && harr[l].priority > harr[i].priority) 
+			smallest = l; 
+		if (r < heap_size && harr[r].priority > harr[smallest].priority) 
+			smallest = r; 
+		if (smallest != i) 
+		{ 
+			index[harr[i].var] = smallest;
+			index[harr[smallest].var] = i;
+			ExpoAverage temp = harr[i];
+			harr[i] = harr[smallest];
+			harr[smallest] = temp;
+			// cout << "In Heap at index : " << harr[i].var << " " << harr[index[harr[i].var]].var << endl;
+			// cout << "In Heap at index : " << harr[smallest].var << " " << harr[index[harr[smallest].var]].var << endl;
+			// swap(&harr[i], &harr[smallest]); 
+			Heapify(smallest); 
+		} 
+	}
+	void update(int i, double val)
+	{
+		// cout << harr[i].var << " " << harr[i].priority << val << endl;
+		if(val < harr[i].priority)
+		{
+			// cout << "Here" << endl;
+			harr[i].priority = val; 
+			Heapify(i);
+			return;
+		}
+		harr[i].priority = val; 
+		while (i != 0 && harr[parent(i)].priority < harr[i].priority) 
+		{ 
+			index[harr[i].var] = parent(i);
+			index[harr[parent(i)].var] = i;
+			ExpoAverage temp = harr[i];
+			harr[i] = harr[parent(i)];
+			harr[parent(i)] = temp;
+			// swap(&harr[i], &harr[parent(i)]); 
+			i = parent(i); 
+		} 
+	}
+	int parent(int i) { return (i-1)/2; } 
+	int left(int i) { return (2*i + 1); } 
+	int right(int i) { return (2*i + 2); } 
+	ExpoAverage getMax() { return harr[0]; } 
+	void print_heap()
+	{
+		for (int i = 0; i < capacity; i++)
+		{
+			int ind = index[i];
+			ExpoAverage temp = harr[i];
+			cout << "Var : " << temp.var << "Priority : " << temp.priority << endl;
+		}
+		
+	}
+};
+
+
 class Solver {
 	vector<Clause> cnf; // clause DB. 
 	// doubt
@@ -245,6 +344,7 @@ class Solver {
 	vector<int> assigned;
 	vector<int> participated;
 	vector<double> ema;
+	Heap heap;
 
 	unsigned int 
 		nvars,			// # vars
@@ -349,7 +449,7 @@ public:
 		nvars(0), nclauses(0), num_learned(0), num_decisions(0), num_assignments(0), 
 		num_restarts(0), m_var_inc(1.0), max_original(0), assumptions_dl(0),
 		restart_threshold(Restart_lower), restart_lower(Restart_lower), 
-		restart_upper(Restart_upper), restart_multiplier(Restart_multiplier)	 {};
+		restart_upper(Restart_upper), restart_multiplier(Restart_multiplier)	 { };
 	
 	// service functions
 	inline LitState lit_state(Lit l) {
