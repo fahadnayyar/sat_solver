@@ -199,8 +199,8 @@ public:
 class ExpoAverage{
 public:
 	int var;
-	int average;
-	int priority;
+	float average;
+	float priority;
 	ExpoAverage()
 	{
 		var = 0;
@@ -339,7 +339,7 @@ class Solver {
 	double			m_curr_activity;
 	
 	//Used by VAR_DH_LRATE:
-	double alpha;
+	float alpha;
 	int learning_counter;
 	vector<int> assigned;
 	vector<int> participated;
