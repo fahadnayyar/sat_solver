@@ -201,39 +201,6 @@ void Solver::read_cnf(ifstream& in) {
 /******************  Solving ******************************/
 #pragma region solving
 
-bool compareLearnedClause(Clause c1, Clause c2) {
-	
-	// // binary clauses should always be rightmost in sorted order.
-	// // clauses with size>2 are bad (in comparision to clauses with size==2).
-	// if (c1.size()>2 && c2.size()==2) 
-	// 	return true;
-	// if (c2.size()>2 && c1.size()==2)
-	// 	return false;
-	// if (c1.size()==2 && c2.size()==2)
-	// 	return false;
-
-	// // smaller lbd should be on right in sorted order.
-	// // clauses with larger are bad.
-	// if (c1.get_lbd() > c2.get_lbd())
-	// 	return true;	
-	// if (c1.get_lbd() < c2.get_lbd())
-	// 	return false;
-
-	// // smaller activity should be left in sorted ordert. 
-	// // clauses with smaller activity are bad.
-	// if ( c1.get_activity() < c2.activity() )
-	// 	return true;
-	// if ( c1.get_activity() > c2.activity() )
-	// 	return false;
-
-	// // smaller size should be left in sorted ordert. 
-	// // clauses with smaller size are bad.
-	// if ( c1.size() < c2.size() )
-	// 	return true;
-	// if ( c1.size() > c2.size() )
-	// 	return false;
-
-}
 
 // void Solver::shrink(int j, int i) {
 
@@ -242,7 +209,7 @@ bool compareLearnedClause(Clause c1, Clause c2) {
 // bool locked (Clause c) {
 // 	if(c.size()>2)
 //      return value(c[0]) == l_True && reason(var(c[0])) != CRef_Undef && ca.lea(reason(var(c[0]))) == &c;
-//    return
+//    returnreduce
 //      (value(c[0]) == l_True && reason(var(c[0])) != CRef_Undef && ca.lea(reason(var(c[0]))) == &c)
 //      ||
 //      (value(c[1]) == l_True && reason(var(c[1])) != CRef_Undef && ca.lea(reason(var(c[1]))) == &c);
@@ -258,20 +225,25 @@ inline void Solver::computeLBD(Clause c) {
 }
  
 void Solver::reduceDB() {
-	printf("hi\n");
-	int     i, j;
+	// printf("hi\n");
+	int     i, j, locked;
 	++num_reduceDB;
 
 	// finding set of locked indices i.e. indices of clause in cnf which are being used in implication graph right now.
-	set<Clause*> locked_indices;
-	for (int i=0; i<nvars; i++) {
-		if (get_state(i) != 0) {
-			locked_indices.insert(antecedent[i]);			
+	for (int i = 0; i < cnf.size(); i++)
+	{
+		cnf[i].set_locked(false);
+	}
+	
+	for (int i=1; i<=nvars; i++) {
+		if (state[i] != 0 && &antecedent[i]!=temp_clause) {
+			antecedent[i].set_locked(true);			
+			locked++;
 		}
 	}
 	
 	// sorting the leant clauses.
-	sort(cnf.begin()+prob_size , cnf.end(), compareLearnedClause);
+	sort(cnf.begin()+prob_size , cnf.end());
 	 
 	// We have a lot of "good" clauses, it is difficult to compare them. Keep more !
   	int mid_idx = prob_size + (cnf.size() - prob_size)/2;
@@ -281,21 +253,22 @@ void Solver::reduceDB() {
 
   	// Don't delete binary or locked clauses. From the rest, delete clauses from the first half
   	// Keep clauses which seem to be usefull (their lbd was reduce during this sequence)
-	int limit = prob_size + (cnf.size() - prob_size)/2;
+	int limit = prob_size + ((cnf.size() - prob_size)/2);
 	for (i = j = prob_size; i < cnf.size(); i++){
 	   Clause c = cnf[i];
-	   if (c.get_lbd()>2 && c.size() > 2 && c.canBeDel() &&  locked_indices.find(&c)==locked_indices.end() && (i < limit)) { // implement locked 
+	   if (c.get_lbd()>2 && c.size() > 2 && c.canBeDel() &&  !c.get_locked() && (i < limit)) { // implement locked 
 	     cnf[i].set_deleted(true);
 	     nbRemovedClauses++;
 	   }
 	   else {
 	     if(!c.canBeDel()) limit++; //we keep c, so we can delete an other clause
-	     c.setCanBeDel(true);       // At the next step, c can be delete
 	     cnf[j++] = cnf[i];
 	   }
 	 }
-	 printf("j: %d, i: %d\n", j, i);
-	 cnf.erase(cnf.begin()+i, cnf.end()+j+1);
+	//  cout << "Locked: " << locked << endl;
+	//  printf("j: %d, i: %d Size: %d\n", j, i, cnf.size());
+	 cnf.erase(cnf.begin()+j, cnf.begin()+i+1);
+	//  cout << "Size: " << cnf.size() << endl;
 	 // checkGarbage(); // doubt
 
 }
@@ -321,10 +294,10 @@ void Solver::reset_iterators(double activity_key/* = 0.0*/) {
 }
 
 void Solver::initialize() {	
-	
+	temp_clause = new Clause();
 	state.resize(nvars + 1);
 	prev_state.resize(nvars + 1, 0);
-	antecedent.resize(nvars + 1, NULL);	
+	antecedent.resize(nvars + 1, *temp_clause);	
 	marked.resize(nvars+1);
 	dlevel.resize(nvars+1);
 	
@@ -382,19 +355,20 @@ void Solver::bumpLitScore(int lit_idx) {
 
 void Solver::add_clause(Clause& c, int l, int r) {	
 	Assert(c.size() > 1) ;
+	// cout << "l: "  << l<< " r: "<< r << endl; 
 	c.lw_set(l);
 	c.rw_set(r);
 	int loc = static_cast<int>(cnf.size());  // the first is in location 0 in cnf
-	// if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) {
-	// 	c.prev_set(loc - 1);  	
-	// 	if (!max_original && (loc - 1 >= 0)) { // only originals ('next' for num_learned clauses will be updated in cmtf_move_forward)
-	// 		cnf[loc - 1].next_set(loc);
-	// 	}	
-	// }
+	if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) {
+		c.prev_set(loc - 1);  	
+		if (!max_original && (loc - 1 >= 0)) { // only originals ('next' for num_learned clauses will be updated in cmtf_move_forward)
+			cnf[loc - 1].next_set(loc);
+		}	
+	}
 	int size = c.size();
-	
-	watches[c.lit(l)].push_back(loc); 
-	watches[c.lit(r)].push_back(loc);
+	// cout << "Pointer Address: " << &c << endl;
+	watches[c.lit(l)].push_back(c); 
+	watches[c.lit(r)].push_back(c);
 	cnf.push_back(c);
 }
 
@@ -446,8 +420,10 @@ SolverState Solver::decide(){
 	
 
 	switch (VarDecHeuristic) {
-	// case  VAR_DEC_HEURISTIC::CMTF:
-	// 	for (int it = last_clause_idx; !best_lit && it >= 0; it = cnf.at(it).get_prev()) {	// go over clauses 
+	// case  VAR_DEC_HEURISTIC::CMTF:{
+	// 	std::vector<Clause>::iterator itr = find(cnf.begin(), cnf.end(), *last_clause_idx);
+	// 	int idx = std::distance(cnf.begin(), itr);
+	// 	for (int it = idx; !best_lit && it >= 0; it = cnf.at(it).get_prev()) {	// go over clauses 
 	// 		for (vector<Lit>::reverse_iterator it_c = cnf.at(it).cl().rbegin(); it_c != cnf.at(it).cl().rend(); ++it_c) { // go over literals in the clause								
 	// 			Var v = l2v(*it_c);
 	// 			LitState res = lit_state(*it_c, state[v]);
@@ -459,6 +435,7 @@ SolverState Solver::decide(){
 	// 		}
 	// 	}
 	// 	break;
+	// }
 	case  VAR_DEC_HEURISTIC::MINISAT: {
 		// m_Score2Vars_r_it and m_VarsSameScore_it are fields. 
 		// When we get here they are the locaion where we need to start looking. 
@@ -551,8 +528,8 @@ void Solver::test() { // tests that each clause is watched twice.
 		Clause c = cnf[idx];
 		bool found = false;
 		for (int zo = 0; zo <= 1; ++zo) {
-			for (vector<int>::iterator it = watches[c.cl()[zo]].begin(); !found && it != watches[c.cl()[zo]].end(); ++it) {				
-				if (*it == idx) {
+			for (vector<Clause>::iterator it = watches[c.cl()[zo]].begin(); !found && it != watches[c.cl()[zo]].end(); ++it) {				
+				if (&(*it) == &cnf[idx]) {
 					found = true;
 					break;
 				}
@@ -576,11 +553,15 @@ SolverState Solver::BCP() {
 		Assert(lit_state(lit) == LitState::L_UNSAT);
 		if (verbose > 1) cout << "BCP_stack -> " << lit << endl;
 		BCP_stack.pop_back();
-		vector<int> new_watch_list; // The original watch list minus those clauses that changed a watch. The order is maintained. 
+		vector<Clause> new_watch_list; // The original watch list minus those clauses that changed a watch. The order is maintained. 
 		int new_watch_list_idx = watches[lit].size() - 1; // Since we are traversing the watch_list backwards, this index goes down.
+		// cout << "Size: " << new_watch_list_idx << endl;
 		new_watch_list.resize(watches[lit].size());
-		for (vector<int>::reverse_iterator it = watches[lit].rbegin(); it != watches[lit].rend() && conflicting_clause_idx==NULL; ++it) {
-			Clause& c = cnf[*it];
+		for (vector<Clause>::reverse_iterator it = watches[lit].rbegin(); it != watches[lit].rend() && conflicting_clause_idx==NULL; ++it) {
+			Clause c = *it;
+			// Clause c = *(temp);
+			// cout << "Lit " << lit << " Pointer Address in Bcp: " << &(*it) << endl;
+			// c.print();
 			Lit l_watch = c.get_lw_lit(), 
 				r_watch = c.get_rw_lit();			
 			bool binary = c.size() == 2;
@@ -598,7 +579,7 @@ SolverState Solver::BCP() {
 					analyze_final(lit);
 					return SolverState::UNSAT;
 				}
-				conflicting_clause_idx = &cnf[*it];  // this will also break the loop
+				conflicting_clause_idx = &(*it);  // this will also break the loop
 				BCP_stack.clear();
 				 int dist = distance(it, watches[lit].rend()) - 1; // # of entries in watches[lit] that were not yet processed when we hit this conflict. 
 				// Copying the remaining watched clauses:
@@ -612,7 +593,7 @@ SolverState Solver::BCP() {
 				if (verbose > 1) cout << "propagating: ";
 				assert_lit(other_watch);
 				BCP_stack.push_back(opposite(other_watch));
-				antecedent[l2v(other_watch)] = &cnf[*it];
+				antecedent[l2v(other_watch)] = *it;
 				if (verbose > 1) cout << "BCP_stack <- " << opposite(other_watch) << endl;
 				break;
 			}
@@ -636,27 +617,29 @@ SolverState Solver::BCP() {
 }
 
 // putting clause idx in the end
-// void Solver::cmtf_bring_forward(int idx) { 
-// 	if (idx == last_clause_idx) return;	
-// 	Clause& c = cnf.at(idx);
-// 	cnf.at(last_clause_idx).next_set(idx);
-// 	c.prev_set(last_clause_idx);
-// 	c.next_set(cnf_size());
-// 	last_clause_idx = idx;
-// }
+void Solver::cmtf_bring_forward(int idx) { 
+	// if (&cnf[idx] == last_clause_idx) return;	
+	// Clause& c = cnf.at(idx);
+	// std::vector<Clause>::iterator itr = find(cnf.begin(), cnf.end(), *last_clause_idx);
+	// int temp_idx = std::distance(cnf.begin(), itr);
+	// cnf.at(temp_idx).next_set(idx);
+	// c.prev_set(temp_idx);
+	// c.next_set(cnf_size());
+	// last_clause_idx = &cnf[idx];
+}
 
 // taking clause idx out of its current_clause location. Should be followed by cmtf_bring_forward 
-// void Solver::cmtf_extract(int idx) { 
-// 	if (idx == last_clause_idx) return;	
-// 	Clause& c = cnf.at(idx);
-// 	unsigned int next = c.get_next();	
-// 	Assert(next < cnf_size());
-// 	int prev = c.get_prev();
-// 	cnf.at(next).prev_set(prev);
-// 	if (prev >=0) cnf.at(prev).next_set(next);
-// 	//print_ordered_cnf();
-// 	//	check_cyclicity();
-// }
+void Solver::cmtf_extract(int idx) { 
+	// if (&cnf[idx] == last_clause_idx) return;	
+	// Clause& c = cnf.at(idx);
+	// unsigned int next = c.get_next();	
+	// Assert(next < cnf_size());
+	// int prev = c.get_prev();
+	// cnf.at(next).prev_set(prev);
+	// if (prev >=0) cnf.at(prev).next_set(next);
+	//print_ordered_cnf();
+	//	check_cyclicity();
+}
 
 /*******************************************************************************************************************
 name: analyze
@@ -679,7 +662,7 @@ int Solver::analyze(const Clause conflicting) {
 		watch_lit = 0, // points to what literal in the learnt clause should be watched, other than the asserting one
 		antecedents_idx = 0, 
 		cmtf_forward_counter = 0;
-
+	// current_clause.print();
 	Lit u;
 	Var v;
 	trail_t::reverse_iterator t_it = trail.rbegin();
@@ -712,13 +695,18 @@ int Solver::analyze(const Clause conflicting) {
 		marked[v] = false;
 		--resolve_num;
 		if(!resolve_num) continue; 
-		// int ant = antecedent[v];		
-		// current_clause = cnf[ant]; 
-		current_clause = *antecedent[v];
-		current_clause.cl().erase(find(current_clause.cl().begin(), current_clause.cl().end(), u));
+		Clause ant = antecedent[v];		
+		current_clause = ant; 
+		// cout << "u: " << u << endl;
+		auto temp = find(current_clause.cl().begin(), current_clause.cl().end(), u);
+		// cout << "size: " << current_clause.cl().size() << " temp: " << *temp << endl;
+		// current_clause.print();
+		current_clause.cl().erase(temp);
 		// if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF && cmtf_forward_counter++ < Max_bring_forward) {
-		// 	cmtf_extract(ant); 
-		// 	cmtf_bring_forward(ant);
+		// 	std::vector<Clause>::iterator itr = find(cnf.begin(), cnf.end(), *ant);
+		// 	int idx = std::distance(cnf.begin(), itr);
+		// 	cmtf_extract(idx); 
+		// 	cmtf_bring_forward(idx);
 		// }
 	}	while (resolve_num > 0);
 	for (clause_it it = new_clause.cl().begin(); it != new_clause.cl().end(); ++it) 
@@ -779,7 +767,7 @@ void Solver::backtrack(int k) {
 	dl = k;
 	if (k == 0) assert_unary(asserted_lit);
 	else assert_lit(asserted_lit);
-	antecedent[l2v(asserted_lit)] = &cnf[cnf.size() - 1];
+	antecedent[l2v(asserted_lit)] = cnf[cnf.size() - 1];
 	conflicting_clause_idx = NULL;
 }
 
@@ -836,11 +824,11 @@ void Solver::analyze_final(Lit p) {
 		for (int i = trail.size() - 1; i >= separators[1]; i--) {
 			Var x = l2v(trail[i]);
 			if (seen[x]) {
-				if (antecedent[x] == NULL) {
+				if (&antecedent[x] == temp_clause) {
 					out_ResponsibleAssumptions.push_back(trail[i]);
 				}
 				else {
-					Clause& c = *antecedent[x];
+					Clause& c = antecedent[x];
 					for (unsigned int j = 0; j < c.size(); j++)
 						if ((dlevel[l2v(c.cl()[j])]) > 0)
 						{
@@ -888,13 +876,13 @@ SolverState Solver::_solve() {
 	    // lbd starts.
 	    // clause deletion
 	    if ( conflicts >= curRestart*nbclausesbeforereduce ) {
-      		assert(cnf.size()>prob_size);
+      		assert(cnf.size()>=prob_size);
       		
-      		printf("sizeDB: %d\n", cnf.size());
-      		printf("conflicts: %d, curRestart: %d, nbclausesbeforereduce: %d\n", conflicts, curRestart, nbclausesbeforereduce);
+      		// printf("sizeDB: %d\n", cnf.size());
+      		// printf("conflicts: %d, curRestart: %d, nbclausesbeforereduce: %d\n", conflicts, curRestart, nbclausesbeforereduce);
       		
       		curRestart = (conflicts/ nbclausesbeforereduce)+1;
-      		reduceDB();
+      		// reduceDB();
       		nbclausesbeforereduce += 300;
 	      }
 	    // lbd ends.  

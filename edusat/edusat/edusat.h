@@ -149,8 +149,10 @@ class Clause {
 	// added to support lbd based deletion.
 	int lbd; // lbd
 	int activity; // lbd
-	int canbedel; // lbd
+	int canbedel = true; // lbd
 	bool deleted = false; // lbd
+	bool locked; //lbd	
+
 public:	
 	Clause(){};
 	void insert(int i) {c.push_back(i);}
@@ -168,13 +170,15 @@ public:
 	int  lit(int i) {return c[i];} 		
 	inline ClauseState next_not_false(bool is_left_watch, Lit other_watch, bool binary, int& loc); 
 	size_t size() {return c.size();}
+	void set_locked(bool b) {locked = b;}
+	int get_locked() {return locked;}
 	void set_lbd(int lbdd)  { lbd = lbdd; }
 	int get_lbd() { return lbd; } // lbd
 	int get_activity() { return activity; } // lbd
 	bool get_deleted() { return deleted; } // lbd
 	void set_deleted(bool deletedd) { deleted = deletedd; } // lbd
 	void reset() { c.clear(); }	
-	void print() {for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }
+	void print() { cout << "Clause: "<< endl; for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }
 	void print_real_lits() {
 		Lit l; 
 		cout << "("; 
@@ -198,6 +202,40 @@ public:
 	}
 	void setCanBeDel(bool cbd) { canbedel=cbd; } // lbd
 	clause_t get_clause(){return c ;}
+
+	bool operator < (Clause& c1) {	
+		// binary clauses should always be rightmost in sorted order.
+		// clauses with size>2 are bad (in comparision to clauses with size==2).
+		if (size()>2 && c1.size()==2) 
+			return true;
+		if (c1.size()>2 && size()==2)
+			return false;
+		if (size()==2 && c1.size()==2)
+			return false;
+
+		// smaller lbd should be on right in sorted order.
+		// clauses with larger are bad.
+		if (get_lbd() > c1.get_lbd())
+			return true;	
+		if (get_lbd() < c1.get_lbd())
+			return false;
+
+		// smaller size should be left in sorted ordert. 
+		// clauses with smaller size are bad.
+		if ( size() < c1.size() )
+			return true;
+		if ( size() > c1.size() )
+			return false;
+
+		// smaller activity should be left in sorted ordert. 
+		// clauses with smaller activity are bad.
+		if ( get_activity() < c1.get_activity() )
+			return true;
+		if ( get_activity() > c1.get_activity() )
+			return false;
+		return false;
+	}
+
 };
 
 class Solver {
@@ -207,7 +245,7 @@ class Solver {
 	vector<int> separators; // indices into trail showing increase in dl 	
 	vector<int> LitScore; // literal => frequency of this literal (# appearances in all clauses). 
 	// this
-	vector<vector<int> > watches;  // Lit => vector of clause indices into CNF
+	vector<vector<Clause> > watches;  // Lit => vector of clause indices into CNF
 	vector<char> state;  // -1 = false, 0 = unassigned, 1 = true. 
 	vector<char> prev_state; // for phase-saving: same as state, only that it is not reset to 0 upon backtracking. 
 	vector<int> BCP_stack; // vector of assserted literals. 
@@ -257,8 +295,8 @@ class Solver {
 
 	Clause * conflicting_clause_idx;
 	Clause * last_clause_idx;
-	vector<Clause*> antecedent;
-
+	vector<Clause> antecedent;
+	Clause * temp_clause;
 
 
 	Lit asserted_lit;
@@ -285,8 +323,8 @@ class Solver {
 	void reset_iterators(double activity_key = 0.0);
 	
 	// used by CMTF
-	// void cmtf_extract(int idx);
-	// void cmtf_bring_forward(int idx);  // putting clause idx in the end
+	void cmtf_extract(int idx);
+	void cmtf_bring_forward(int idx);  // putting clause idx in the end
 
 	// solving	
 	SolverState decide();
@@ -379,10 +417,10 @@ public:
 	
 	void print_watches() {
 		if (verbose < 2) return;
-		for (vector<vector<int> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
+		for (vector<vector<Clause> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
 			cout << distance(watches.begin(), it) << ": ";
-			for (vector<int>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
-				cnf[*it_c].print();
+			for (vector<Clause>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
+				(*it_c).print();
 				cout << "; ";
 			}
 			cout << endl;
