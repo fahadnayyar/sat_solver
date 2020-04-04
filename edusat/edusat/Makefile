@@ -1,7 +1,7 @@
 default: edusat
 
 edusat: edusat.cpp edusat.h
-	g++ edusat.cpp -o edusat
+	g++-8 -g edusat.cpp -o edusat
 
 run:
 	sh ./test.sh

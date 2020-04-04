@@ -39,6 +39,7 @@ typedef vector<Lit> trail_t;
 //doubt
 #define Assignment_file "assignment.txt"
 
+#define RATIOREMOVECLAUSES 2
 // doubt
 int verbose = 0;
 double begin_time;
@@ -155,6 +156,12 @@ class Clause {
 	clause_t c;
 	int lw,rw; //watches;
 	int prev, next; // indices in cnf of the prev and next clause according to the current order (the order changes in cmtf). 
+	bool locked;
+	int lbd; // lbd
+	int activity; // lbd
+	int canbedel = true; // lbd
+	bool deleted = false; // lbd
+	int index;
 public:	
 	Clause(){};
 	void insert(int i) {c.push_back(i);}
@@ -173,6 +180,15 @@ public:
 	// doubt
 	inline ClauseState next_not_false(bool is_left_watch, Lit other_watch, bool binary, int& loc); 
 	size_t size() {return c.size();}
+	void set_index(int i) { index =i; }
+	int get_index(){ return index;}
+	void set_locked(bool lock)  { locked = lock; }
+	bool get_locked() { return locked; } // lbd
+	void set_lbd(int lbdd)  { lbd = lbdd; }
+	int get_lbd() { return lbd; } // lbd
+	int get_activity() { return activity; } // lbd
+	bool get_deleted() { return deleted; } // lbd
+	void set_deleted(bool deletedd) { deleted = deletedd; } // lbd
 	void reset() { c.clear(); }	
 	void print() {for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }
 	void print_real_lits() {
@@ -192,6 +208,43 @@ public:
 			if (j == rw) cout << "R";
 			cout << " ";
 		};
+	}
+	bool canBeDel(){ // lbd
+		return canbedel;
+	}
+	void setCanBeDel(bool cbd) { canbedel=cbd; } // lbd
+	clause_t get_clause(){return c ;}
+	bool operator < (Clause& c1) {	
+		// binary clauses should always be rightmost in sorted order.
+		// clauses with size>2 are bad (in comparision to clauses with size==2).
+		if (size()>2 && c1.size()==2) 
+			return true;
+		if (c1.size()>2 && size()==2)
+			return false;
+		if (size()==2 && c1.size()==2)
+			return false;
+
+		// smaller lbd should be on right in sorted order.
+		// clauses with larger are bad.
+		if (get_lbd() > c1.get_lbd())
+			return true;	
+		if (get_lbd() < c1.get_lbd())
+			return false;
+
+		// smaller size should be left in sorted ordert. 
+		// clauses with smaller size are bad.
+		if ( size() < c1.size() )
+			return true;
+		if ( size() > c1.size() )
+			return false;
+
+		// smaller activity should be left in sorted ordert. 
+		// clauses with smaller activity are bad.
+		if ( get_activity() < c1.get_activity() )
+			return true;
+		if ( get_activity() > c1.get_activity() )
+			return false;
+		return false;
 	}
 };
 
@@ -244,7 +297,13 @@ class Solver {
 		nlits,			// # literals = 2*nvars		
 		// doubt
 		max_original;
+	long curRestart; 
 	int
+		nbRemovedClauses, // lbd
+		nbclausesbeforereduce, // lbd
+		conflicts, // lbd
+		num_reduceDB, // lbd
+		prob_size, // lbd
 		// doubt
 		num_learned, 	
 		// doubt
@@ -275,7 +334,8 @@ class Solver {
 
 	// doubt
 	vector<Lit> out_ResponsibleAssumptions;
-
+	int get_ReduceDB() { return num_reduceDB; } // lbd
+	int get_Conflicts() { return conflicts; } // lbd
 	// access	
 	int get_learned() { return num_learned; }
 	void set_nvars(int x) { nvars = x; }
@@ -330,9 +390,15 @@ class Solver {
 	// doubt
 	inline void bumpLitScore(int lit_idx);
 
+	// lbd, clause deletion
+	inline void reduceDB(); // lbd
+	// void shrink(int j, int i); // lbd
+	inline void computeLBD(int idx);
+
 public:
 	// doubt
-	Solver(): 
+	Solver():
+		nbRemovedClauses(0), curRestart(1), nbclausesbeforereduce(2000), conflicts(0), num_reduceDB(0), // lbd 
 		nvars(0), nclauses(0), num_learned(0), num_decisions(0), num_assignments(0), 
 		num_restarts(0), m_var_inc(1.0), max_original(0), assumptions_dl(0),
 		restart_threshold(Restart_lower), restart_lower(Restart_lower), 
@@ -358,6 +424,16 @@ public:
 	
 	
 // debugging
+	void print_cnf_new(){
+		cout << "Clauses: " << endl;
+		for (auto i = cnf.begin() ; i != cnf.end() ; i++)
+		{
+			cout << i->get_index() << " ";
+			// cout << endl;
+		}
+		cout << endl;
+	}
+
 	void print_cnf(){
 		if (verbose < 2) return; 
 		for(vector<Clause>::iterator i = cnf.begin(); i != cnf.end(); ++i) {
@@ -377,7 +453,8 @@ public:
 	void print_real_cnf() {
 		if (verbose < 2) return; 
 		for(vector<Clause>::iterator i = cnf.begin(); i != cnf.end(); ++i) {
-			i -> print_real_lits(); 
+			// i -> print_real_lits(); 
+			i->print();
 			cout << endl;
 		}
 	} 
@@ -398,6 +475,7 @@ public:
 	
 	void print_watches() {
 		if (verbose < 2) return;
+		cout << "Watches: " << endl;
 		for (vector<vector<int> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
 			cout << distance(watches.begin(), it) << ": ";
 			for (vector<int>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
@@ -408,8 +486,31 @@ public:
 		}
 	};
 
+	void print_antecedent() {
+		cout << "Antecent: " << endl;
+		for (int i = 0; i < nvars + 1; i++)
+		{
+			cout << antecedent[i] << " " ;
+		}
+		cout << endl;
+	}
+
+	void print_watches_new() {
+		if (verbose < 2) return;
+		cout << "Watches: " << endl;
+		for (vector<vector<int> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
+			cout << distance(watches.begin(), it) << ": ";
+			for (vector<int>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
+				cout << *it_c;
+				cout << "; ";
+			}
+			cout << endl;
+		}
+	};
 
 	void print_stats() {cout << endl << "Statistics: " << endl << "===================" << endl << 
+		"### nbRemovedClauses:\t\t" << nbRemovedClauses << endl << // lbd
+		"### reduceDB:\t\t" << num_reduceDB << endl << // lbd
 		"### Restarts:\t\t" << num_restarts << endl <<
 		"### Learned-clauses:\t" << num_learned << endl <<
 		"### Decisions:\t\t" << num_decisions << endl <<
