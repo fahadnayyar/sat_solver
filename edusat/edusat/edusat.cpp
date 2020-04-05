@@ -223,27 +223,38 @@ inline void Solver::computeLBD(int idx) {
 }
 
 void Solver::reduceDB() {
-	// printf("hi\n");
+	
 
+	//* debugging.
+	// printf("hi\n");
+	// cout << prob_size << endl;
 	// cout << "Conflicting Index: " << conflicting_clause_idx << " Last Conflicting Index : " << last_clause_idx << endl;
 	
-	int     ii, j;
+	
+	//* increasing counter.
 	++num_reduceDB;
+	
 
+	//* var declerations and initializations.
+	int     ii, j;
 	int learnt_size = cnf.size() - prob_size;
 	vector<int> map_index;
 	map_index.resize(learnt_size, -1);
-	// finding set of locked indices i.e. indices of clause in cnf which are being used in implication graph right now.
-	for (int i = 0; i < cnf.size(); i++)
-	{
-		cnf[i].set_locked(false);
-		cnf[i].set_index(i);
-	}
+
+	
+	//* debugigng
 	// cout << endl;
 	// print_real_cnf();
 	// print_cnf_new();
 	// print_watches();
 	// print_antecedent();
+
+
+	//* finding set of locked indices i.e. indices of clause in cnf which are being used in implication graph right now.
+	for (int i = 0; i < cnf.size(); i++)
+	{
+		cnf[i].set_locked(false);
+	}
 	for (int i=0; i<nvars; i++) {
 		if (get_state(i) != 0) {
 			if(antecedent[i] != -1){
@@ -252,23 +263,35 @@ void Solver::reduceDB() {
 		}
 	}
 
-	// sorting the leant clauses.
+
+	//* correcting the index. [Not Required].
+	for (int i = 0; i < cnf.size(); i++)
+	{
+		cnf[i].set_index(i);
+	}
+
+
+	//* sorting the leant clauses.
 	sort(cnf.begin()+prob_size , cnf.end());
 
-	// We have a lot of "good" clauses, it is difficult to compare them. Keep more !
+
+	//* We have a lot of "good" clauses, it is difficult to compare them. Keep more !
   	int mid_idx = prob_size + ((cnf.size() - prob_size)/2);
   	if ( cnf[mid_idx].get_lbd()<=3 ) nbclausesbeforereduce += 1000; 
-  	// Useless :-)
+  	//* Useless :-)
   	if ( cnf[cnf.size()].get_lbd()<=5 )  nbclausesbeforereduce += 1000; 
 
-  	// Don't delete binary or locked clauses. From the rest, delete clauses from the first half
-  	// Keep clauses which seem to be usefull (their lbd was reduce during this sequence)
+
+  	//* Don't delete binary or locked clauses. From the rest, delete clauses from the first half
+  	//* Keep clauses which seem to be usefull (their lbd was reduce during this sequence)
 	int limit = prob_size + ((cnf.size() - prob_size)/2);
 	for (ii = j = prob_size; ii < cnf.size(); ii++){
 	   Clause c = cnf[ii];
 		// cout << "Lbd: " << c.get_lbd() << " Size: " <<  c.size() << " Del: " << c.canBeDel() << " Lock: " << c.get_locked() << " Index: " << ii << endl ;
+	   // cout << "ii: " << ii << "size " << cnf.size() << endl;
 	   if (c.get_lbd()>2 && c.size() > 2 && c.canBeDel() &&  !c.get_locked() && (ii < limit)) { // implement locked 
 	     cnf[ii].set_deleted(true);
+	     // cout << "nbRemovedClauses: " << nbRemovedClauses << endl;
 	     nbRemovedClauses++;	
 	   }
 	   else {
@@ -277,37 +300,71 @@ void Solver::reduceDB() {
 	     cnf[j++] = cnf[ii];
 	   }
 	 }
-	printf("j: %d, i: %d\n", j, ii);
+	printf("j: %d, ii: %d\n", j, ii);
+	// printf("size: %d\n", cnf.size());
+	cnf.erase(cnf.begin()+j, cnf.begin()+ii+1);
+	// printf("size: %d\n", cnf.size());
 
-	cnf.erase(cnf.begin()+j+1, cnf.begin()+ii+1);
-	 // checkGarbage(); // doubt
+	//* don't know.
+	// checkGarbage(); // doubt
+	
+
+	//* setting old indices in map_index. map_index[i-prob_size] tells the new index if (old) cnf[i].
 	for(int i = prob_size; i < cnf.size(); i++)
 	{
 		int index = cnf[i].get_index();
-		map_index[index - prob_size] = i; 
+		map_index[index - prob_size] = i; // doubt.
 	}
+	
+
+	//* debugging.
 	// cout << "Map Index : " << endl;
 	// for (int i = 0; i < map_index.size(); i++)
 	// {
 	// 	cout << i << " ";
 	// }
 	// cout << endl;
+
+
+	//* correcting conflixt_clause_idx.
 	if(conflicting_clause_idx >= prob_size)
 	{
 		conflicting_clause_idx = map_index[conflicting_clause_idx - prob_size];
+		//* if old index was deleted then new index would be -1.
+		if(conflicting_clause_idx >= cnf.size())
+		{
+			conflicting_clause_idx = -1;
+		}
 	}
+
+	
+	//* correcting conflixt_clause_idx.
 	if(last_clause_idx >= prob_size)
 	{
 		last_clause_idx = map_index[last_clause_idx - prob_size];
+		//* if old index was deleted then new index would be -1.
+		if(last_clause_idx >= cnf.size()){
+			last_clause_idx = -1;
+		}
 	}
+
+	
+	//* correcting antecedent array.
 	for (int i = 0; i < nvars+1; i++)
 	{
 		int index = antecedent[i];
 		if(index >= prob_size)
 		{
 			antecedent[i] = map_index[index - prob_size];
+			//* if old index was deleted then new index would be -1.
+			if(antecedent[i] >= cnf.size()){
+				antecedent[i] = -1;
+			}
 		}
 	}
+
+	
+	//* correcting watches 2d-array.
 	for (int i = 1; i < watches.size(); i++)
 	{
 		vector<int> temp;
@@ -317,13 +374,18 @@ void Solver::reduceDB() {
 			// cout << index << " ";
 			if(index >= prob_size && map_index[index - prob_size ] > -1 )
 			{
-				temp.push_back(map_index[index-prob_size]);
+				//* if old index was deleted then new index would be not be added.
+				if(map_index[index-prob_size] < cnf.size()) {
+					temp.push_back(map_index[index-prob_size]);
+				}
 			}
 			else
 			{
 				temp.push_back(index);
 			}
 		}
+		
+		//* debugging.
 		// cout << endl;
 		// cout << "Temp" << endl;
 		// for (int i = 0; i < temp.size(); i++)
@@ -331,13 +393,21 @@ void Solver::reduceDB() {
 		// 	cout << temp[i] << " ";
 		// }
 		// cout << endl;
+		// assert(temp.size() == watches[i].size());
+
 		watches[i] = temp;
 	}
+
+
+	//* seeting new indices for cnf.
 	for (int i = prob_size; i < cnf.size(); i++)
 	{
 		int index = cnf[i].get_index();
 		cnf[i].set_index(map_index[index-prob_size]);		
 	}
+	
+
+	//* debugging.
 	// cout << endl;
 	// print_real_cnf();
 	// print_cnf_new();
@@ -553,7 +623,7 @@ Apply_decision:
 		separators[dl] = trail.size();
 		conflicts_at_dl[dl] = num_learned;
 	}
-	cout << "Best_lit: " << best_lit << endl;
+	// cout << "Best_lit: " << best_lit << endl;
 	assert_lit(best_lit);	
 	++num_decisions;
 	BCP_stack.push_back(opposite(best_lit));
@@ -653,7 +723,7 @@ SolverState Solver::BCP() {
 			case ClauseState::C_SAT: break; // nothing to do when clause has a satisfied literal.
 			case ClauseState::C_UNIT: { // new implication				
 				if (verbose > 1) cout << "propagating: ";
-				cout << "Other Watch: " << other_watch << endl;
+				// cout << "Other Watch: " << other_watch << endl;
 				assert_lit(other_watch);
 				BCP_stack.push_back(opposite(other_watch));
 				antecedent[l2v(other_watch)] = *it;
@@ -710,7 +780,6 @@ input:	1) conflicting clause
 		
 assumes: 1) no clause should have the same literal twice. To guarantee this we read through a set in read_cnf. 
             Wihtout this assumption it may loop forever because we may remove only one copy of the pivot.
-
 This is Alg. 1 from "HaifaSat: a SAT solver based on an Abstraction/Refinement model" 
 ********************************************************************************************************************/
 
@@ -809,7 +878,7 @@ void Solver::backtrack(int k) {
 	double jump_to_activity = m_curr_activity;
 	for (trail_t::iterator it = trail.begin() + separators[k+1]; it != trail.end(); ++it) { // erasing from k+1
 		Var v = l2v(*it);
-		cout << "Var: " << v << endl; 
+		// cout << "Var: " << v << endl; 
 		if (dlevel[v]) { // we need the condition because of learnt unary clauses. In that case we enforce an assignment with dlevel = 0.
 			state[v] = 0;
 			if (VarDecHeuristic == VAR_DEC_HEURISTIC::MINISAT) jump_to_activity = max(jump_to_activity, m_activity[v]);
@@ -820,7 +889,7 @@ void Solver::backtrack(int k) {
 	if (verbose > 1) print_state();
 	trail.erase(trail.begin() + separators[k+1], trail.end());
 	dl = k;
-	cout << "Asserted lit: " << asserted_lit << endl;
+	// cout << "Asserted lit: " << asserted_lit << endl;
 	if (k == 0) assert_unary(asserted_lit);
 	else assert_lit(asserted_lit);
 	antecedent[l2v(asserted_lit)] = cnf.size() - 1;
