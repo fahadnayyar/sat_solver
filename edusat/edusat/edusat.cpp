@@ -428,9 +428,9 @@ void Solver::reduceDB() {
   		}else
   		{
   			if (!c->canBeDel()){
-  				assert(0);
   				limit++;
   			}
+			c->setCanBeDel(true);  			
   			cnf[j++] = cnf[itr];
   		}
   	}	
@@ -931,6 +931,27 @@ This is Alg. 1 from "HaifaSat: a SAT solver based on an Abstraction/Refinement m
 ********************************************************************************************************************/
 
 int Solver::analyze(const Clause conflicting) {
+	
+
+	// lbd begin.
+	if (conflicting_clause_idx>=prob_size && cnf[conflicting_clause_idx].get_lbd()>2)
+	{
+		int old_lbd;
+		computeLBD(conflicting_clause_idx);
+		if (cnf[conflicting_clause_idx].get_lbd() + 1 < old_lbd)
+		{
+			if (old_lbd <= 30)
+			{
+				cnf[conflicting_clause_idx].setCanBeDel(false);
+			}
+		}else
+		{
+			cnf[conflicting_clause_idx].set_lbd(old_lbd);
+		}
+	}
+	// lbd end.
+
+
 	if (verbose_now()) cout << "analyze" << endl;
 	Clause	current_clause = conflicting, 
 			new_clause;
@@ -975,6 +996,27 @@ int Solver::analyze(const Clause conflicting) {
 		int ant = antecedent[v];
 		assert(ant != -1);
 		current_clause = cnf[ant];
+		
+
+		// lbd begin.
+		if (ant>=prob_size && cnf[ant].get_lbd()>2)
+		{
+			int old_lbd;
+			computeLBD(ant);
+			if (cnf[ant].get_lbd() + 1 < old_lbd)
+			{
+				if (old_lbd <= 30)
+				{
+					cnf[ant].setCanBeDel(false);
+				}
+			}else
+			{
+				cnf[ant].set_lbd(old_lbd);
+			}
+		}
+		// lbd end.
+
+
 		auto temp =	find(current_clause.cl().begin(), current_clause.cl().end(), u) ;
 		current_clause.cl().erase(temp);
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF && cmtf_forward_counter++ < Max_bring_forward) {
