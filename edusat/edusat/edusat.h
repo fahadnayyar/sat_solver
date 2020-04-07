@@ -1,4 +1,3 @@
-// doubt
 #pragma once
 #include <iostream>
 #include <algorithm>
@@ -19,32 +18,22 @@ typedef int Var;
 typedef int Lit;
 typedef vector<Lit> clause_t;
 typedef clause_t::iterator clause_it;
-// doubt
 typedef vector<Lit> trail_t;
 
 #define Assert(exp) AssertCheck(exp, __func__, __LINE__)
 
-//doubt
 #define Neg(l) (l & 1)
-//doubt
 #define Restart_multiplier 1.1f
-//doubt
 #define Restart_lower 100
-//doubt
 #define Restart_upper 1000
-//doubt
 #define Max_bring_forward 10
-//doubt
 #define var_decay 0.95;
-//doubt
 #define Assignment_file "assignment.txt"
 
 #define RATIOREMOVECLAUSES 2
-// doubt
 int verbose = 0;
 double begin_time;
 
-// doubt
 enum class VAR_DEC_HEURISTIC {
 	MINISAT, 
 	/* Each time a clause is learned, we push to the end of the list the learned clause + some clauses 
@@ -55,7 +44,6 @@ enum class VAR_DEC_HEURISTIC {
 
 VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::MINISAT;
 
-// doubt
 enum class VAL_DEC_HEURISTIC {
 	/* Same as last value. When no previous value then false*/
 	PHASESAVING, 
@@ -86,7 +74,6 @@ enum class SolverState{
 } ;
 /***************** service functions **********************/
 
-// doubt
 #ifdef _MSC_VER
 	#include <ctime>
 
@@ -156,12 +143,14 @@ class Clause {
 	clause_t c;
 	int lw,rw; //watches;
 	int prev, next; // indices in cnf of the prev and next clause according to the current order (the order changes in cmtf). 
-	bool locked;
+	
+	bool locked; // lbd
 	int lbd; // lbd
 	int activity; // lbd
 	int canbedel = true; // lbd
 	// bool deleted = false; // lbd
-	int index;
+	// int index;  // lbd
+
 public:	
 	Clause(){};
 	void insert(int i) {c.push_back(i);}
@@ -177,18 +166,19 @@ public:
 	int get_prev() {return prev;}
 	int get_next() {return next;}
 	int  lit(int i) {return c[i];} 		
-	// doubt
 	inline ClauseState next_not_false(bool is_left_watch, Lit other_watch, bool binary, int& loc); 
 	size_t size() {return c.size();}
 	void set_index(int i) { index =i; }
 	int get_index(){ return index;}
-	void set_locked(bool lock)  { locked = lock; }
+
+	void set_locked(bool lock)  { locked = lock; }  // lbd
 	bool get_locked() { return locked; } // lbd
-	void set_lbd(int lbdd)  { lbd = lbdd; }
+	void set_lbd(int lbdd)  { lbd = lbdd; }  // lbd
 	int get_lbd() { return lbd; } // lbd
 	int get_activity() { return activity; } // lbd
 	// bool get_deleted() { return deleted; } // lbd
 	// void set_deleted(bool deletedd) { deleted = deletedd; } // lbd
+
 	void reset() { c.clear(); }	
 	void print() {for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }
 	void print_real_lits() {
@@ -202,7 +192,6 @@ public:
 		//if (verbose < 2) return;
 		for (clause_it it = c.begin(); it != c.end(); ++it) {
 			cout << *it;
-			// doubt
 			int j = distance(c.begin(), it); //also could write "int j = i - c.begin();"  : the '-' operator is overloaded to allow such things. but distance is more standard, as it works on all standard containers.
 			if (j == lw) cout << "L";
 			if (j == rw) cout << "R";
@@ -250,52 +239,32 @@ public:
 
 class Solver {
 	vector<Clause> cnf; // clause DB. 
-	// doubt
 	vector<int> unaries; 
-	// doubt
 	trail_t trail;  // assignment stack	
-	// doubt
 	vector<int> separators; // indices into trail showing increase in dl 	
-	// doubt
 	vector<int> LitScore; // literal => frequency of this literal (# appearances in all clauses). 
-	// doubt
 	vector<vector<int> > watches;  // Lit => vector of clause indices into CNF
-	// doubt
 	vector<char> state;  // -1 = false, 0 = unassigned, 1 = true. 
-	// doubt
 	vector<char> prev_state; // for phase-saving: same as state, only that it is not reset to 0 upon backtracking. 
-	// doubt9
 	vector<int> BCP_stack; // vector of assserted literals. 
-	// doubt
 	vector<int> antecedent; // var => clause index in the cnf vector. For variables that their value was assigned in BCP, this is the clause that gave this variable its value. 
-	// doubt
 	vector<bool> marked;	// var => seen during analyze()
-	// doubt
 	vector<int> dlevel; // var => decision level in which this variable was assigned its value. 
-	// doubt
 	vector<int> conflicts_at_dl; // decision level => # of conflicts under it. Used for local restarts. 
-	// doubt
 	vector<Lit> assumptions;
 
 	// Used by VAR_DH_MINISAT:
-	// doubt
 	map<double, unordered_set<int>> m_Score2Vars; // From a score to the set of variables that have it. 
-	// doubt
 	map<double, unordered_set<int>>::reverse_iterator m_Score2Vars_r_it;
-	// doubt
 	unordered_set<int>::iterator m_VarsSameScore_it;
-	// doubt
 	vector<double>	m_activity; // Var -> activity
-	// doubt
 	double			m_var_inc;	
-	// doubt
 	double			m_curr_activity;
 	
 	unsigned int 
 		nvars,			// # vars
 		nclauses, 		// # clauses
 		nlits,			// # literals = 2*nvars		
-		// doubt
 		max_original;
 	long curRestart; 
 	int
@@ -304,35 +273,24 @@ class Solver {
 		conflicts, // lbd
 		num_reduceDB, // lbd
 		prob_size, // lbd
-		// doubt
+		
 		num_learned, 	
-		// doubt
 		num_decisions,
-		// doubt
 		num_assignments,
-		// doubt
 		num_restarts,
 		dl,				// decision level
 		max_dl,			// max dl seen so far
-		// doubt
 		assumptions_dl,	// == |assumptions cast as decisions | <= |assumptions|. Monotonically decreases. 
 		conflicting_clause_idx, // holds the index of the current conflicting clause in cnf[]. -1 if none.				
-		// doubt
 		last_clause_idx, // location in cnf of the most recent clause (it is not necessarily the last in the array because of the CMTF heuristic)
-		// doubt
 		restart_threshold,
-		// doubt
 		restart_lower,
-		// doubt
 		restart_upper;
 
-		// doubt
 	Lit asserted_lit;
 	
-	// doubt
 	float restart_multiplier;
 
-	// doubt
 	vector<Lit> out_ResponsibleAssumptions;
 	int get_ReduceDB() { return num_reduceDB; } // lbd
 	int get_Conflicts() { return conflicts; } // lbd
@@ -347,59 +305,40 @@ class Solver {
 	// misc.
 	void add_to_trail(int x) { trail.push_back(x); }
 
-	// doubt
 	void reset(); // initialization that is invoked initially + every restart
-	// doubt
 	void initialize();
-	// doubt
 	void reset_iterators(double activity_key = 0.0);
 	
 	// used by CMTF
-	// doubt
 	void cmtf_extract(int idx);
-	// doubt
 	void cmtf_bring_forward(int idx);  // putting clause idx in the end
 
 	// solving	
 	SolverState decide();
-	// doubt
 	void test();
 	SolverState BCP();
-	// doubt
 	int  analyze(const Clause);
-	// doubt
 	inline int  getVal(Var v);
-	// doubt
 	inline void add_clause(Clause& c, int l, int r);
-	// doubt
 	inline void add_unary_clause(Lit l);
-	// doubt
 	inline void assert_lit(Lit l);
-	// doubt
 	inline void assert_unary(Lit l);
-	// doubt
 	inline void backtrack(int k);
-	// doubt
 	void analyze_final(Lit p);
-	// doubt
 	void restart();
 	// bool comp(int i, int j);
 
 	// scores	
-	// doubt
 	inline void bumpVarScore(int idx);
-	// doubt
 	inline void bumpLitScore(int lit_idx);
 
 	// lbd, clause deletion
 	inline void reduceDB(); // lbd
-	// void shrink(int j, int i); // lbd
-	inline void computeLBD(int idx);
+	inline void computeLBD(int idx); // lbd
 
 
 
 public:
-	// doubt
 	Clause * get_cnf_clause(int i) { return &cnf[i]; };
 	Solver():
 		nbRemovedClauses(0), curRestart(1), nbclausesbeforereduce(2000), conflicts(0), num_reduceDB(0), // lbd 

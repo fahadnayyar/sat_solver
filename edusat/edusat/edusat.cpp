@@ -218,11 +218,15 @@ inline void Solver::computeLBD(int idx) {
 		Var v = l2v(cc[it]);
 		if(state[v] !=0){
 			levels.insert(dlevel[v]);
+			// cout << dlevel [v] << " ";
 		}
 	}
 	// cout << endl;
-	cnf[idx].set_lbd(levels.size()+1); // doubt?
-	// cout << "Index: " << idx << "Lbd" << cnf[idx].get_lbd() << endl;
+	cnf[idx].set_lbd(levels.size()); // doubt?
+	// cout << " size: " << cnf[idx].size() << " Lbd " << cnf[idx].get_lbd() << endl ;
+	// cnf[idx].print();
+	// cout << "\n\n";
+	// assert((cnf[idx].get_lbd() >= 2 || cnf[idx].size()==1));
 	levels.clear();
 }
 
@@ -407,7 +411,7 @@ void Solver::reduceDB() {
   	{
   		Clause * c = &cnf[itr];
   		// assert(c->get_lbd()>=2);
-  		if(c->get_lbd()>2 && c->size()>2 && c->canBeDel() && !c->get_locked() && (itr<limit))
+  		if(c->get_lbd()!=2 && c->size()>2 && c->canBeDel() && !c->get_locked() && (itr<limit)) // doubt.
   		{
   			// c->set_deleted(true);
   			nbRemovedClauses++;
@@ -985,7 +989,7 @@ int Solver::analyze(const Clause conflicting) {
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) cmtf_bring_forward(cnf_size()-1); // this takes care of the prev/next in cnf for new_clause.
 		if (verbose > 1) cout << "BCP_stack <- " << new_clause.cl()[watch_lit] << endl;
 	}
-	//*** computeLBD(cnf.size()-1); 	
+	computeLBD(cnf.size()-1); 	
 
 	if (verbose_now()) {	
 		cout << "Learned clause #" << cnf_size() + unaries.size() << ". "; 
@@ -1125,8 +1129,8 @@ SolverState Solver::_solve() {
 			if (res == SolverState::UNSAT) return res;
 			if (res == SolverState::CONFLICT){
 				conflicts++;
+				// computeLBD(cnf.size()-1);
 				backtrack(analyze(cnf[conflicting_clause_idx]));
-				computeLBD(cnf.size()-1);
 			}
 			else break;
 		}
