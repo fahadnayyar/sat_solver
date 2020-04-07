@@ -1,3 +1,4 @@
+// doubt
 #pragma once
 #include <iostream>
 #include <algorithm>
@@ -18,25 +19,32 @@ typedef int Var;
 typedef int Lit;
 typedef vector<Lit> clause_t;
 typedef clause_t::iterator clause_it;
+// doubt
 typedef vector<Lit> trail_t;
 
 #define Assert(exp) AssertCheck(exp, __func__, __LINE__)
 
-
+//doubt
 #define Neg(l) (l & 1)
+//doubt
 #define Restart_multiplier 1.1f
+//doubt
 #define Restart_lower 100
+//doubt
 #define Restart_upper 1000
+//doubt
 #define Max_bring_forward 10
+//doubt
 #define var_decay 0.95;
+//doubt
 #define Assignment_file "assignment.txt"
 
 #define RATIOREMOVECLAUSES 2
-
-
+// doubt
 int verbose = 0;
 double begin_time;
 
+// doubt
 enum class VAR_DEC_HEURISTIC {
 	MINISAT, 
 	/* Each time a clause is learned, we push to the end of the list the learned clause + some clauses 
@@ -47,6 +55,7 @@ enum class VAR_DEC_HEURISTIC {
 
 VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::MINISAT;
 
+// doubt
 enum class VAL_DEC_HEURISTIC {
 	/* Same as last value. When no previous value then false*/
 	PHASESAVING, 
@@ -77,6 +86,7 @@ enum class SolverState{
 } ;
 /***************** service functions **********************/
 
+// doubt
 #ifdef _MSC_VER
 	#include <ctime>
 
@@ -103,6 +113,7 @@ void AssertCheck(bool cond, string func_name, int line, string msg = "") {
 	exit(1);
 }
 
+// doubt & in argument and return type.
 bool match(ifstream& in, char* str) {
     for (; *str != '\0'; ++str)
         if (*str != in.get())
@@ -145,14 +156,12 @@ class Clause {
 	clause_t c;
 	int lw,rw; //watches;
 	int prev, next; // indices in cnf of the prev and next clause according to the current order (the order changes in cmtf). 
-	
-	// added to support lbd based deletion.
+	bool locked;
 	int lbd; // lbd
 	int activity; // lbd
 	int canbedel = true; // lbd
-	bool deleted = false; // lbd
-	bool locked; //lbd	
-
+	// bool deleted = false; // lbd
+	int index;
 public:	
 	Clause(){};
 	void insert(int i) {c.push_back(i);}
@@ -168,17 +177,20 @@ public:
 	int get_prev() {return prev;}
 	int get_next() {return next;}
 	int  lit(int i) {return c[i];} 		
+	// doubt
 	inline ClauseState next_not_false(bool is_left_watch, Lit other_watch, bool binary, int& loc); 
 	size_t size() {return c.size();}
-	void set_locked(bool b) {locked = b;}
-	int get_locked() {return locked;}
+	void set_index(int i) { index =i; }
+	int get_index(){ return index;}
+	void set_locked(bool lock)  { locked = lock; }
+	bool get_locked() { return locked; } // lbd
 	void set_lbd(int lbdd)  { lbd = lbdd; }
 	int get_lbd() { return lbd; } // lbd
 	int get_activity() { return activity; } // lbd
-	bool get_deleted() { return deleted; } // lbd
-	void set_deleted(bool deletedd) { deleted = deletedd; } // lbd
+	// bool get_deleted() { return deleted; } // lbd
+	// void set_deleted(bool deletedd) { deleted = deletedd; } // lbd
 	void reset() { c.clear(); }	
-	void print() { cout << "Clause: "<< endl; for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }
+	void print() {for (clause_it it = c.begin(); it != c.end(); ++it) {cout << *it << " ";}; }
 	void print_real_lits() {
 		Lit l; 
 		cout << "("; 
@@ -202,8 +214,7 @@ public:
 	}
 	void setCanBeDel(bool cbd) { canbedel=cbd; } // lbd
 	clause_t get_clause(){return c ;}
-
-	bool operator < (Clause& c1) {	
+	bool operator < (Clause c1) {	
 		// binary clauses should always be rightmost in sorted order.
 		// clauses with size>2 are bad (in comparision to clauses with size==2).
 		if (size()>2 && c1.size()==2) 
@@ -235,80 +246,98 @@ public:
 			return false;
 		return false;
 	}
-
 };
 
 class Solver {
 	vector<Clause> cnf; // clause DB. 
+	// doubt
 	vector<int> unaries; 
+	// doubt
 	trail_t trail;  // assignment stack	
+	// doubt
 	vector<int> separators; // indices into trail showing increase in dl 	
+	// doubt
 	vector<int> LitScore; // literal => frequency of this literal (# appearances in all clauses). 
-	// this
-	vector<vector<Clause> > watches;  // Lit => vector of clause indices into CNF
+	// doubt
+	vector<vector<int> > watches;  // Lit => vector of clause indices into CNF
+	// doubt
 	vector<char> state;  // -1 = false, 0 = unassigned, 1 = true. 
+	// doubt
 	vector<char> prev_state; // for phase-saving: same as state, only that it is not reset to 0 upon backtracking. 
+	// doubt9
 	vector<int> BCP_stack; // vector of assserted literals. 
-	// this
-	// vector<int> antecedent; // var => clause index in the cnf vector. For variables that their value was assigned in BCP, this is the clause that gave this variable its value. 
+	// doubt
+	vector<int> antecedent; // var => clause index in the cnf vector. For variables that their value was assigned in BCP, this is the clause that gave this variable its value. 
+	// doubt
 	vector<bool> marked;	// var => seen during analyze()
+	// doubt
 	vector<int> dlevel; // var => decision level in which this variable was assigned its value. 
+	// doubt
 	vector<int> conflicts_at_dl; // decision level => # of conflicts under it. Used for local restarts. 
+	// doubt
 	vector<Lit> assumptions;
 
 	// Used by VAR_DH_MINISAT:
+	// doubt
 	map<double, unordered_set<int>> m_Score2Vars; // From a score to the set of variables that have it. 
+	// doubt
 	map<double, unordered_set<int>>::reverse_iterator m_Score2Vars_r_it;
+	// doubt
 	unordered_set<int>::iterator m_VarsSameScore_it;
+	// doubt
 	vector<double>	m_activity; // Var -> activity
+	// doubt
 	double			m_var_inc;	
+	// doubt
 	double			m_curr_activity;
 	
 	unsigned int 
 		nvars,			// # vars
 		nclauses, 		// # clauses
 		nlits,			// # literals = 2*nvars		
-		// this
+		// doubt
 		max_original;
-	long curRestart; // lbd 
+	long curRestart; 
 	int
 		nbRemovedClauses, // lbd
 		nbclausesbeforereduce, // lbd
 		conflicts, // lbd
 		num_reduceDB, // lbd
 		prob_size, // lbd
-
+		// doubt
 		num_learned, 	
+		// doubt
 		num_decisions,
+		// doubt
 		num_assignments,
+		// doubt
 		num_restarts,
 		dl,				// decision level
 		max_dl,			// max dl seen so far
+		// doubt
 		assumptions_dl,	// == |assumptions cast as decisions | <= |assumptions|. Monotonically decreases. 
-		// this
-		// conflicting_clause_idx, // holds the index of the current conflicting clause in cnf[]. -1 if none.				
-		// this
-		// last_clause_idx, // location in cnf of the most recent clause (it is not necessarily the last in the array because of the CMTF heuristic)
+		conflicting_clause_idx, // holds the index of the current conflicting clause in cnf[]. -1 if none.				
+		// doubt
+		last_clause_idx, // location in cnf of the most recent clause (it is not necessarily the last in the array because of the CMTF heuristic)
+		// doubt
 		restart_threshold,
+		// doubt
 		restart_lower,
+		// doubt
 		restart_upper;
 
-	Clause * conflicting_clause_idx;
-	Clause * last_clause_idx;
-	vector<Clause> antecedent;
-	Clause * temp_clause;
-
-
+		// doubt
 	Lit asserted_lit;
 	
+	// doubt
 	float restart_multiplier;
 
+	// doubt
 	vector<Lit> out_ResponsibleAssumptions;
-
-	// access	
 	int get_ReduceDB() { return num_reduceDB; } // lbd
 	int get_Conflicts() { return conflicts; } // lbd
-	int get_learned() { return num_learned; } 
+	// access	
+	int get_learned() { return num_learned; }
 	void set_nvars(int x) { nvars = x; }
 	int get_nvars() { return nvars; }
 	void set_nclauses(int x) { nclauses = x; }
@@ -318,40 +347,62 @@ class Solver {
 	// misc.
 	void add_to_trail(int x) { trail.push_back(x); }
 
+	// doubt
 	void reset(); // initialization that is invoked initially + every restart
+	// doubt
 	void initialize();
+	// doubt
 	void reset_iterators(double activity_key = 0.0);
 	
 	// used by CMTF
+	// doubt
 	void cmtf_extract(int idx);
+	// doubt
 	void cmtf_bring_forward(int idx);  // putting clause idx in the end
 
 	// solving	
 	SolverState decide();
+	// doubt
 	void test();
 	SolverState BCP();
+	// doubt
 	int  analyze(const Clause);
+	// doubt
 	inline int  getVal(Var v);
+	// doubt
 	inline void add_clause(Clause& c, int l, int r);
+	// doubt
 	inline void add_unary_clause(Lit l);
+	// doubt
 	inline void assert_lit(Lit l);
+	// doubt
 	inline void assert_unary(Lit l);
+	// doubt
 	inline void backtrack(int k);
+	// doubt
 	void analyze_final(Lit p);
+	// doubt
 	void restart();
-	
+	// bool comp(int i, int j);
+
 	// scores	
+	// doubt
 	inline void bumpVarScore(int idx);
+	// doubt
 	inline void bumpLitScore(int lit_idx);
 
 	// lbd, clause deletion
 	inline void reduceDB(); // lbd
 	// void shrink(int j, int i); // lbd
-	inline void computeLBD(Clause c);
+	inline void computeLBD(int idx);
+
+
 
 public:
-	Solver(): 
-		nbRemovedClauses(0), curRestart(1), nbclausesbeforereduce(2000), conflicts(0), num_reduceDB(0), // lbd
+	// doubt
+	Clause * get_cnf_clause(int i) { return &cnf[i]; };
+	Solver():
+		nbRemovedClauses(0), curRestart(1), nbclausesbeforereduce(2000), conflicts(0), num_reduceDB(0), // lbd 
 		nvars(0), nclauses(0), num_learned(0), num_decisions(0), num_assignments(0), 
 		num_restarts(0), m_var_inc(1.0), max_original(0), assumptions_dl(0),
 		restart_threshold(Restart_lower), restart_lower(Restart_lower), 
@@ -377,6 +428,16 @@ public:
 	
 	
 // debugging
+	void print_cnf_new(){
+		cout << "Clauses: " << endl;
+		for (auto i = cnf.begin() ; i != cnf.end() ; i++)
+		{
+			cout << i->get_index() << " ";
+			// cout << endl;
+		}
+		cout << endl;
+	}
+
 	void print_cnf(){
 		if (verbose < 2) return; 
 		for(vector<Clause>::iterator i = cnf.begin(); i != cnf.end(); ++i) {
@@ -388,7 +449,7 @@ public:
 	void print_ordered_cnf() {
 		if (verbose < 2) return;
 		cout << "ordered cnf, reverse order: " << endl;
-		for (int i = cnf.size(); i >= 0; i = cnf[i].get_prev())
+		for (int i = last_clause_idx; i >= 0; i = cnf[i].get_prev())
 			cnf[i].print_real_lits();
 		cout << endl;
 	};
@@ -396,7 +457,8 @@ public:
 	void print_real_cnf() {
 		if (verbose < 2) return; 
 		for(vector<Clause>::iterator i = cnf.begin(); i != cnf.end(); ++i) {
-			i -> print_real_lits(); 
+			// i -> print_real_lits(); 
+			i->print();
 			cout << endl;
 		}
 	} 
@@ -417,16 +479,38 @@ public:
 	
 	void print_watches() {
 		if (verbose < 2) return;
-		for (vector<vector<Clause> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
+		cout << "Watches: " << endl;
+		for (vector<vector<int> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
 			cout << distance(watches.begin(), it) << ": ";
-			for (vector<Clause>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
-				(*it_c).print();
+			for (vector<int>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
+				cnf[*it_c].print();
 				cout << "; ";
 			}
 			cout << endl;
 		}
 	};
 
+	void print_antecedent() {
+		cout << "Antecent: " << endl;
+		for (int i = 0; i < nvars + 1; i++)
+		{
+			cout << antecedent[i] << " " ;
+		}
+		cout << endl;
+	}
+
+	void print_watches_new() {
+		if (verbose < 2) return;
+		cout << "Watches: " << endl;
+		for (vector<vector<int> >::iterator it = watches.begin() + 1; it != watches.end(); ++it) {
+			cout << distance(watches.begin(), it) << ": ";
+			for (vector<int>::iterator it_c = (*it).begin(); it_c != (*it).end(); ++it_c) {
+				cout << *it_c;
+				cout << "; ";
+			}
+			cout << endl;
+		}
+	};
 
 	void print_stats() {cout << endl << "Statistics: " << endl << "===================" << endl << 
 		"### nbRemovedClauses:\t\t" << nbRemovedClauses << endl << // lbd
