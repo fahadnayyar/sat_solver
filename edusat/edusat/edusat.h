@@ -33,7 +33,8 @@ typedef vector<Lit> trail_t;
 #define RATIOREMOVECLAUSES 2
 int verbose = 0;
 double begin_time;
-
+double sort_time = 0;
+double reducedb_time = 0; 
 enum class VAR_DEC_HEURISTIC {
 	MINISAT, 
 	/* Each time a clause is learned, we push to the end of the list the learned clause + some clauses 
@@ -149,7 +150,7 @@ class Clause {
 	int activity; // lbd
 	int canbedel = true; // lbd
 	// bool deleted = false; // lbd
-	// int index;  // lbd
+	int index;  // lbd
 
 public:	
 	Clause(){};
@@ -452,6 +453,8 @@ public:
 	};
 
 	void print_stats() {cout << endl << "Statistics: " << endl << "===================" << endl << 
+		"### reducedb_time:\t\t" << reducedb_time << endl << // lbd
+		"### sort_time:\t\t" << sort_time << endl << // lbd
 		"### nbRemovedClauses:\t\t" << nbRemovedClauses << endl << // lbd
 		"### reduceDB:\t\t" << num_reduceDB << endl << // lbd
 		"### Restarts:\t\t" << num_restarts << endl <<

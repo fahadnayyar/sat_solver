@@ -236,7 +236,14 @@ bool comp(int i, int j)
 }
 
 void Solver::reduceDB() {
+ 	//* helper counters.
+ 	double start_time1;
+ 	double end_time1;
+	double start_time2 = cpuTime();
+ 	double end_time2;
+
  	//* debugging.
+ 	// cout << reducedb_time << " " << sort_time << "\n";
 	// printf("hi\n");
 	// cout << "Conflicting Index: " << conflicting_clause_idx << " Last Conflicting Index : " << last_clause_idx << endl;
 	
@@ -396,7 +403,10 @@ void Solver::reduceDB() {
 
 
   	//* sorting the cnf array.
-	// sort(cnf.begin()+prob_size, cnf.end());
+	start_time1 = cpuTime();
+	sort(cnf.begin()+prob_size, cnf.end());
+	end_time1 = cpuTime();
+	sort_time += (end_time1 - start_time1);
 	//* We have a lot of "good" clauses, it is difficult to compare them. Keep more !
   	int mid_idx = prob_size + ((cnf.size() - prob_size)/2);
   	if ( cnf[mid_idx].get_lbd()<=3 ) nbclausesbeforereduce += 1000; 
@@ -411,7 +421,7 @@ void Solver::reduceDB() {
   	{
   		Clause * c = &cnf[itr];
   		// assert(c->get_lbd()>=2);
-  		if(c->get_lbd()!=2 && c->size()>2 && c->canBeDel() && !c->get_locked() && (itr<limit)) // doubt.
+  		if(c->get_lbd()>2 && c->size()>2 && c->canBeDel() && !c->get_locked() && (itr<limit)) // doubt.
   		{
   			// c->set_deleted(true);
   			nbRemovedClauses++;
@@ -550,6 +560,8 @@ void Solver::reduceDB() {
 	map_index.clear();
 	// indexarr.clear();
 	// delete_indices.clear();
+	end_time2 = cpuTime();
+	reducedb_time += (end_time2 - start_time2);
 }
 
 void Solver::reset() { // invoked initially + every restart
