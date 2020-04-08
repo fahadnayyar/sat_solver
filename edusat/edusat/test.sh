@@ -8,6 +8,7 @@ do
   echo "Processing $f file..."
   # take action on each file. $f store current file name
   # cat $f
+  ./edusat -vardh 0 $f
   ./edusat $f
 done
 
@@ -16,6 +17,7 @@ do
   echo "Processing $f file..."
   # take action on each file. $f store current file name
   # cat $f
+  ./edusat -vardh 0 $f
   ./edusat $f
 done
 
