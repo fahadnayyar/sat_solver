@@ -283,8 +283,8 @@ void Solver::OnUnAssign(int var_idx)
 	int interval = learning_counter - assigned[var_idx];
 	if(interval > 0)
 	{
-		float r =( (float)participated[var_idx] )/ (float)interval;
-		float rsr = ( (float)reasoned[var_idx] )/ (float)interval;
+		double r =( (double)participated[var_idx] )/ (double)interval;
+		double rsr = ( (double)reasoned[var_idx] )/ (double)interval;
 		// cout << interval << " " << participated[var_idx] << " " << reasoned[var_idx] << endl;
 		// cout << r << " " << rsr << endl;
 		ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * (r+rsr);
@@ -719,13 +719,13 @@ void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClaus
 	learning_counter ++;
 	for(Var v: ConflictSide)
 	{
-		participated[v]++;
+		participated[v]+=1;
 	}
 	vector<int> temp;
 	temp.resize(nvars+1, 0);
 	for(Var v: ConflictClause)
 	{
-		participated[v]++;
+		participated[v]+=1;
 		int reason_clause_idx = antecedent[v];
 		if(reason_clause_idx != -1)
 		{
@@ -733,17 +733,17 @@ void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClaus
 			for(int i=0; i < clause_size; i++){
 				Lit u = cnf[reason_clause_idx].Lit_at_index(i);
 				Var reason_v = l2v(u);
-				temp[reason_v] ++;
+				temp[reason_v] =1;
 			}
 		}
 	}
 	for (Var v: ConflictClause)
-	{
+	
 		temp[v] = 0;
 	}
 	for (int i = 0; i < nvars+1; i++)
 	{
-		reasoned[i] += temp[i];
+		reasoned[i] += (double)temp[i];
 		if(state[i]==0)
 		{
 			ema[i] = 0.95*ema[i];
