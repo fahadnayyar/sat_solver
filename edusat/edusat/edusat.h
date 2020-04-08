@@ -242,12 +242,12 @@ class Solver {
 	double			m_curr_activity;
 	
 	//Used by VAR_DH_LRATE:
-	float alpha; // lrate
+	double alpha; // lrate
 	int learning_counter; // lrate
 	vector<int> assigned; // lrate
 	vector<int> participated; // lrate
-	vector<float> ema; // lrate
-	vector<float> reasoned; // lrate
+	vector<double> ema; // lrate
+	vector<double> reasoned; // lrate
 
 	unsigned int 
 		nvars,			// # vars
