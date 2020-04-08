@@ -221,25 +221,29 @@ void Solver::initialize() {
 	antecedent.resize(nvars + 1, -1);	
 	marked.resize(nvars+1);
 	dlevel.resize(nvars+1);
-	assigned.resize(nvars+1);
-	participated.resize(nvars+1);
-	ema.resize(nvars+1);
+	assigned.resize(nvars+1); // lrate
+	participated.resize(nvars+1); // lrate
+	ema.resize(nvars+1); // lrate
+	reasoned.resize(nvars+1); // lrate
 	
 	nlits = 2 * nvars;
 	watches.resize(nlits + 1);
 	LitScore.resize(nlits + 1);
 	//initialize scores 	
 	m_activity.resize(nvars + 1);	
+	
 	//initiliaze learning counter 
-	alpha = 0.04;
-	learning_counter = 0;
+	alpha = 0.4; // lrate
+	learning_counter = 0; // lrate
+	
 	for (unsigned int v = 0; v <= nvars; ++v) {			
 		m_activity[v] = 0;		
-		// ema[v] = 0;
-		assigned[v] = 0;
-		participated[v] = 0;
+		ema[v] = 0; // lrate
+		assigned[v] = 0; // lrate
+		participated[v] = 0; // lrate
+		reasoned[v] = 0; // lrate
 	}
-	heap.initialize(nvars+1);
+	
 	reset();
 }
 
@@ -250,7 +254,7 @@ inline void Solver::assert_lit(Lit l) {
 	if (Neg(l)) prev_state[var] = state[var] = -1; else prev_state[var] = state[var] = 1;
 	dlevel[var] = dl;
 	++num_assignments;
-	OnAssign(var);
+	OnAssign(var); // lrate
 	if (verbose > 1) cout << "v" << var << "(lit " << l << "):" << static_cast<int>(state[var]) << "@" << dl << endl;
 }
 
@@ -259,35 +263,32 @@ inline void Solver::assert_unary(Lit l) {		// the difference is that we do not p
 	if (Neg(l)) state[var] = -1; else state[var] = 1;
 	dlevel[var] = 0;
 	++num_assignments;
-	OnAssign(var);
+	OnAssign(var); // lrate
 	if (verbose > 1) cout << "v" << var << "(lit " << l << "):" << static_cast<int>(state[var]) << "@" << 0 << endl;
 }
 
+// lrate function.
 void Solver::OnAssign(int var_idx)
 {
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	assigned[var_idx] = learning_counter;
 	participated[var_idx] = 0;
-	int ind = heap.index[var_idx];
-	heap.update(ind, -1);
-	// heap.print_heap();
+	reasoned[var_idx] = 0;
 }
 
+// lrate function.
 void Solver::OnUnAssign(int var_idx)
 {
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	int interval = learning_counter - assigned[var_idx];
-	int ind = heap.index[var_idx];
-	ExpoAverage temp = heap.harr[ind];
 	if(interval > 0)
 	{
-		double r = participated[var_idx] / interval;
-		// ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * r;
-		
-		temp.average = temp.average * (1-alpha) + alpha*r;
+		float r =( (float)participated[var_idx] )/ (float)interval;
+		float rsr = ( (float)reasoned[var_idx] )/ (float)interval;
+		// cout << interval << " " << participated[var_idx] << " " << reasoned[var_idx] << endl;
+		// cout << r << " " << rsr << endl;
+		ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * (r+rsr);
 	}
-	heap.update(ind, temp.average);
-	// heap.print_heap();
 }
 
 void Solver::bumpVarScore(int var_idx) {
@@ -418,27 +419,32 @@ SolverState Solver::decide(){
 		}
 		break;
 	}
+	
+
+
+	// lrate begins.
 	case VAR_DEC_HEURISTIC::LRATE: {
 		// cout << "Here" << endl;
 		double maxval = -1;
 		Var v = 0;
-		// for (unsigned int i = 1; i <= nvars; ++i) {
-		// 	if(state[i] == 0 && maxval < ema[i])
-		// 	{
-		// 		maxval = ema[i];
-		// 		v = i;
-		// 	}
-		// }
-		ExpoAverage temp = heap.getMax();
-		// cout << " v " << temp.var << " priority: " << temp.priority << endl;
-		if(temp.priority == -1){break;}
-		v = temp.var;
+		for (unsigned int i = 1; i <= nvars; ++i) {
+			if(state[i] == 0 && maxval < ema[i])
+			{
+				maxval = ema[i];
+				v = i;
+			}
+		}
 		best_lit = getVal(v);
 		break;
 	}
+	// lrate ends.
+
 	default: Assert(0);
 	}	
 	
+	
+
+
 	// cout << "decided on " << l2rl(best_lit) << endl;
 	// print_state();
 	
@@ -626,7 +632,7 @@ int Solver::analyze(const Clause conflicting) {
 		watch_lit = 0, // points to what literal in the learnt clause should be watched, other than the asserting one
 		antecedents_idx = 0, 
 		cmtf_forward_counter = 0;
-	set<Var> conflictSideAndClause; 
+	set<Var> ConflictSide, ConflictClause; // lrate 
 	Lit u;
 	Var v;
 	trail_t::reverse_iterator t_it = trail.rbegin();
@@ -662,7 +668,7 @@ int Solver::analyze(const Clause conflicting) {
 		int ant = antecedent[v];		
 		current_clause = cnf[ant]; 
 		current_clause.cl().erase(find(current_clause.cl().begin(), current_clause.cl().end(), u));
-		if (VarDecHeuristic == VAR_DEC_HEURISTIC::LRATE ) { conflictSideAndClause.insert(v); }
+		if (VarDecHeuristic == VAR_DEC_HEURISTIC::LRATE ) { ConflictSide.insert(v); } // lrate
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF && cmtf_forward_counter++ < Max_bring_forward) {
 			cmtf_extract(ant); 
 			cmtf_bring_forward(ant);
@@ -670,7 +676,7 @@ int Solver::analyze(const Clause conflicting) {
 	}	while (resolve_num > 0);
 	for (clause_it it = new_clause.cl().begin(); it != new_clause.cl().end(); ++it) {
 		marked[l2v(*it)] = false;
-		conflictSideAndClause.insert(l2v(*it));
+		ConflictClause.insert(l2v(*it)); // lrate
 	}
 	Lit opp_u = opposite(u);
 	new_clause.cl().push_back(opp_u);		
@@ -689,8 +695,10 @@ int Solver::analyze(const Clause conflicting) {
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) cmtf_bring_forward(cnf_size()-1); // this takes care of the prev/next in cnf for new_clause.
 		if (verbose > 1) cout << "BCP_stack <- " << new_clause.cl()[watch_lit] << endl;
 	}
-	AfterConflictAnalysis(conflictSideAndClause);
+	AfterConflictAnalysis(ConflictSide, ConflictClause); // lrate
 
+	ConflictSide.clear(); // lrate
+	ConflictClause.clear(); // lrate
 	if (verbose_now()) {	
 		cout << "Learned clause #" << cnf_size() + unaries.size() << ". "; 
 		new_clause.print(); 
@@ -705,17 +713,48 @@ int Solver::analyze(const Clause conflicting) {
 	return bktrk; 
 }
 
-void Solver::AfterConflictAnalysis(set<Var> ConflictSideAndClause){
+// lrate function.
+void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClause){
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
 	learning_counter ++;
-	for(Var v: ConflictSideAndClause)
+	for(Var v: ConflictSide)
 	{
 		participated[v]++;
 	}
+	vector<int> temp;
+	temp.resize(nvars+1, 0);
+	for(Var v: ConflictClause)
+	{
+		participated[v]++;
+		int reason_clause_idx = antecedent[v];
+		if(reason_clause_idx != -1)
+		{
+			int clause_size = cnf[reason_clause_idx].clause_size();
+			for(int i=0; i < clause_size; i++){
+				Lit u = cnf[reason_clause_idx].Lit_at_index(i);
+				Var reason_v = l2v(u);
+				temp[reason_v] ++;
+			}
+		}
+	}
+	for (Var v: ConflictClause)
+	{
+		temp[v] = 0;
+	}
+	for (int i = 0; i < nvars+1; i++)
+	{
+		reasoned[i] += temp[i];
+		if(state[i]==0)
+		{
+			ema[i] = 0.95*ema[i];
+		}
+	}
+	
 	if(alpha > 0.06)
 	{
 		alpha = alpha - 1e-6;
 	}
+	temp.clear();
 }
 
 void Solver::backtrack(int k) {
@@ -730,7 +769,7 @@ void Solver::backtrack(int k) {
 		Var v = l2v(*it);
 		if (dlevel[v]) { // we need the condition because of learnt unary clauses. In that case we enforce an assignment with dlevel = 0.
 			state[v] = 0;
-			OnUnAssign(v);
+			OnUnAssign(v); // lrate
 			if (VarDecHeuristic == VAR_DEC_HEURISTIC::MINISAT) jump_to_activity = max(jump_to_activity, m_activity[v]);
 		}
 	}
@@ -780,7 +819,7 @@ void Solver::restart() {
 		if (dlevel[i] > 0) {
 			state[i] = 0; 
 			dlevel[i] = 0;
-			OnUnAssign(i);
+			OnUnAssign(i); // lrate
 		}	
 	BCP_stack.clear();
 	trail.clear();
