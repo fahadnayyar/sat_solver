@@ -227,6 +227,7 @@ inline void Solver::computeLBD(int idx) {
 	// cnf[idx].print();
 	// cout << "\n\n";
 	// assert((cnf[idx].get_lbd() >= 2 || cnf[idx].size()==1));
+	assert(cnf[idx].get_lbd()>0);
 	levels.clear();
 }
 
@@ -404,6 +405,15 @@ void Solver::reduceDB() {
 
   	//* sorting the cnf array.
 	start_time1 = cpuTime();
+	// cout << cnf.size() << endl;
+	// for(int jj =prob_size; jj<cnf.size(); jj++)
+	// {
+	// 	cnf[jj].print();
+	// 	cout << "\n\n";
+	// 	cout << cnf[jj].get_lbd() << "\n";
+	// 	cout << cnf[jj].size() << "\n";
+	// }
+	// cout << "\n-1\n\n\n\n\n";
 	sort(cnf.begin()+prob_size, cnf.end());
 	end_time1 = cpuTime();
 	sort_time += (end_time1 - start_time1);
@@ -425,18 +435,21 @@ void Solver::reduceDB() {
   		{
   			// c->set_deleted(true);
   			nbRemovedClauses++;
+  			// lbds.push_back(c->get_lbd());
+  			// sizes.push_back(c->size());
   		}else
   		{
   			if (!c->canBeDel()){
   				limit++;
+			    c->setCanBeDel(true);  			
   			}
-			c->setCanBeDel(true);  			
   			cnf[j++] = cnf[itr];
   		}
   	}	
   	// cout << " j: " << j << " itr: " << itr << " nbRemovedClauses: " << nbRemovedClauses << endl;
   	cnf.erase(cnf.begin()+j, cnf.begin()+itr);
-
+  	sizes.push_back(-1);
+  	lbds.push_back(-1);
 
 
 
@@ -936,7 +949,7 @@ int Solver::analyze(const Clause conflicting) {
 	// lbd begin.
 	if (conflicting_clause_idx>=prob_size && cnf[conflicting_clause_idx].get_lbd()>2)
 	{
-		int old_lbd;
+		int old_lbd = cnf[conflicting_clause_idx].get_lbd();
 		computeLBD(conflicting_clause_idx);
 		if (cnf[conflicting_clause_idx].get_lbd() + 1 < old_lbd)
 		{
@@ -1001,7 +1014,7 @@ int Solver::analyze(const Clause conflicting) {
 		// lbd begin.
 		if (ant>=prob_size && cnf[ant].get_lbd()>2)
 		{
-			int old_lbd;
+			int old_lbd = cnf[ant].get_lbd();
 			computeLBD(ant);
 			if (cnf[ant].get_lbd() + 1 < old_lbd)
 			{
@@ -1039,11 +1052,11 @@ int Solver::analyze(const Clause conflicting) {
 	else {
 		BCP_stack.push_back(u); // this way after backtracking we will handle the new clause.
 		add_clause(new_clause, watch_lit, new_clause.size() - 1);
+		computeLBD(cnf.size()-1); 	
 		//cout << "added conflict" << endl;
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) cmtf_bring_forward(cnf_size()-1); // this takes care of the prev/next in cnf for new_clause.
 		if (verbose > 1) cout << "BCP_stack <- " << new_clause.cl()[watch_lit] << endl;
 	}
-	computeLBD(cnf.size()-1); 	
 
 	if (verbose_now()) {	
 		cout << "Learned clause #" << cnf_size() + unaries.size() << ". "; 

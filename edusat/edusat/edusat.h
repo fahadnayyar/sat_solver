@@ -19,6 +19,8 @@ typedef int Lit;
 typedef vector<Lit> clause_t;
 typedef clause_t::iterator clause_it;
 typedef vector<Lit> trail_t;
+vector<int> lbds;
+vector<int> sizes;
 
 #define Assert(exp) AssertCheck(exp, __func__, __LINE__)
 
@@ -146,7 +148,7 @@ class Clause {
 	int prev, next; // indices in cnf of the prev and next clause according to the current order (the order changes in cmtf). 
 	
 	bool locked; // lbd
-	int lbd; // lbd
+	int lbd = 1000000; // lbd
 	int activity; // lbd
 	int canbedel = true; // lbd
 	// bool deleted = false; // lbd
@@ -230,10 +232,10 @@ public:
 
 		// smaller activity should be left in sorted ordert. 
 		// clauses with smaller activity are bad.
-		if ( get_activity() < c1.get_activity() )
-			return true;
-		if ( get_activity() > c1.get_activity() )
-			return false;
+		// if ( get_activity() < c1.get_activity() )
+		// 	return true;
+		// if ( get_activity() > c1.get_activity() )
+		// 	return false;
 		return false;
 	}
 };
@@ -462,6 +464,17 @@ public:
 		"### Decisions:\t\t" << num_decisions << endl <<
 		"### Implications:\t" << num_assignments - num_decisions << endl <<
 		"### Time:\t\t" << cpuTime() - begin_time << endl;
+		
+
+		// int sizes_len = sizes.size();
+		// int lbds_len = lbds.size();
+		// for (int i=0;i<lbds_len;i++)
+		// 	cout << lbds[i] << "\n";
+		// cout << "\n\n";
+		// for (int i=0;i<sizes_len;i++)
+		// 	cout << sizes[i] << "\n";
+		// cout << "\n\n";
+			
 	}
 	
 	void validate_assignment();
