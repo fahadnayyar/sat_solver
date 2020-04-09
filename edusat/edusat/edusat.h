@@ -41,7 +41,10 @@ typedef vector<Lit> trail_t;
 
 // doubt
 int verbose = 0;
-double begin_time;
+double begin_time=0; 
+double lrate_time=0; // lrate
+int is_queue=1; // lrate
+double queue_time=0; // lrate
 
 // doubt
 enum class VAR_DEC_HEURISTIC {
@@ -152,6 +155,117 @@ int l2rl(int l) {
 
 /********** classes ******/ 
 
+class ExpoAverage{
+public:
+	int var;
+	double average;
+	double priority;
+	ExpoAverage()
+	{
+		var = 0;
+		average = 0;
+		priority = 0;
+	};
+	bool isGreaterThan(ExpoAverage * e){
+		if(e->priority < priority)
+			return true;
+		else if(e->priority == priority)
+		{
+			return var < e->var;	
+		}
+		return false;
+	}
+};
+
+class Heap 
+{ 
+    int capacity; // maximum possible size of min heap 
+	int heap_size;
+public: 
+	vector<int> index;
+    vector<ExpoAverage> harr; // pointer to array of elements in heap 	
+	void initialize(int capacity)
+	{
+		this->capacity = capacity; // doubt
+		harr = vector<ExpoAverage>(capacity);
+		index = vector<int>(capacity);
+		heap_size = capacity; // doubt
+		for (int i = 0; i < capacity; i++)
+		{
+			harr[i].var = i;
+			harr[i].average = 0;
+			harr[i].priority = 0; // doubt
+			index[i] = i;
+		}
+		// harr[0].priority = -1;
+		update(0,-2);
+		// cout << "In Heap at index 0: " << harr[index[0]].var << endl;
+		// cout << "In Heap" << harr[0].var << endl;
+	};
+	void Heapify(int i)
+	{
+		int l = left(i); 
+		int r = right(i); 
+		int largest = i; 
+		if (l < heap_size && /* harr[l].priority > harr[i].priority && */ harr[l].isGreaterThan(&harr[i])) 
+			largest = l; 
+		if (r < heap_size &&/*  harr[r].priority > harr[largest].priority */ harr[r].isGreaterThan(&harr[largest])) 
+			largest = r; 
+		if (largest != i) 
+		{ 
+			index[harr[i].var] = largest;
+			index[harr[largest].var] = i;
+			ExpoAverage temp = harr[i];
+			harr[i] = harr[largest];
+			harr[largest] = temp;
+			// cout << "In Heap at index : " << harr[i].var << " " << harr[index[harr[i].var]].var << endl;
+			// cout << "In Heap at index : " << harr[largest].var << " " << harr[index[harr[largest].var]].var << endl;
+			// swap(&harr[i], &harr[largest]); 
+			Heapify(largest); 
+		} 
+	}
+	void update(int i, double val)
+	{
+		// cout << harr[i].var << " " << harr[i].priority << val << endl;
+		if(val < harr[i].priority)
+		{
+			// cout << "Here" << endl;
+			harr[i].priority = val; 
+			Heapify(i);
+			return;
+		}
+		harr[i].priority = val; 
+		while (i != 0 && /* harr[parent(i)].priority < harr[i].priority */ harr[i].isGreaterThan(&harr[parent(i)])) 
+		{ 
+			index[harr[i].var] = parent(i);
+			index[harr[parent(i)].var] = i;
+			ExpoAverage temp = harr[i];
+			harr[i] = harr[parent(i)];
+			harr[parent(i)] = temp;
+			// swap(&harr[i], &harr[parent(i)]); 
+			i = parent(i); 
+		} 
+	}
+	int parent(int i) { return (i-1)/2; } 
+	int left(int i) { return (2*i + 1); } 
+	int right(int i) { return (2*i + 2); } 
+	ExpoAverage *  getMax() { return &harr[0]; } 
+	void print_heap()
+	{
+		for (int i = 0; i < capacity; i++)
+		{
+			int ind = index[i];
+			ExpoAverage temp = harr[i];
+			cout << "Var : " << temp.var << "Priority : " << temp.priority << endl;
+		}
+
+	}
+};
+
+
+
+
+
 class Clause {
 	clause_t c;
 	int lw,rw; //watches;
@@ -248,6 +362,7 @@ class Solver {
 	vector<int> participated; // lrate
 	vector<double> ema; // lrate
 	vector<double> reasoned; // lrate
+	Heap heap; // lrate
 
 	unsigned int 
 		nvars,			// # vars
@@ -260,6 +375,8 @@ class Solver {
 		num_learned, 	
 		// doubt
 		num_decisions,
+		num_OnAssign=0, // lbd
+		num_OnUnAssign=0, // lbd 
 		// doubt
 		num_assignments,
 		// doubt
@@ -426,6 +543,11 @@ public:
 
 
 	void print_stats() {cout << endl << "Statistics: " << endl << "===================" << endl << 
+		"### queue_time :\t\t" << queue_time << endl <<
+		"### lrate_time:\t\t" << lrate_time << endl <<
+		"### num_OnAssign:\t\t" << num_OnAssign << endl <<
+		"### num_OnUnAssign:\t\t" << num_OnUnAssign << endl <<
+		"### num_decisions:\t\t" << num_decisions << endl <<
 		"### Restarts:\t\t" << num_restarts << endl <<
 		"### Learned-clauses:\t" << num_learned << endl <<
 		"### Decisions:\t\t" << num_decisions << endl <<

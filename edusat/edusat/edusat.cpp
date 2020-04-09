@@ -223,9 +223,16 @@ void Solver::initialize() {
 	dlevel.resize(nvars+1);
 	assigned.resize(nvars+1); // lrate
 	participated.resize(nvars+1); // lrate
-	ema.resize(nvars+1); // lrate
-	reasoned.resize(nvars+1); // lrate
+	reasoned.resize(nvars+1); // lrate	
 	
+	if (is_queue)
+	{
+		heap.initialize(nvars+1); // lrate
+	}else
+	{
+		ema.resize(nvars+1); // lrate
+	} 
+		
 	nlits = 2 * nvars;
 	watches.resize(nlits + 1);
 	LitScore.resize(nlits + 1);
@@ -238,12 +245,15 @@ void Solver::initialize() {
 	
 	for (unsigned int v = 0; v <= nvars; ++v) {			
 		m_activity[v] = 0;		
-		ema[v] = 0; // lrate
+		if (!is_queue)
+		{
+			ema[v] = 0; // lrate
+		}
 		assigned[v] = 0; // lrate
 		participated[v] = 0; // lrate
 		reasoned[v] = 0; // lrate
 	}
-	
+
 	reset();
 }
 
@@ -271,15 +281,29 @@ inline void Solver::assert_unary(Lit l) {		// the difference is that we do not p
 void Solver::OnAssign(int var_idx)
 {
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
+	double start_timer = cpuTime();
+	num_OnAssign++;
 	assigned[var_idx] = learning_counter;
 	participated[var_idx] = 0;
 	reasoned[var_idx] = 0;
+	double end_timer = cpuTime();
+	lrate_time += (end_timer - start_timer);
+	if (is_queue)
+	{
+		double start_timer1 = cpuTime();
+			int ind = heap.index[var_idx];
+			heap.update(ind, -1); // doubt 0 or -1?
+		double end_timer1 = cpuTime();
+		queue_time += (end_timer1 - start_timer1);
+	}
 }
 
 // lrate function.
 void Solver::OnUnAssign(int var_idx)
 {
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
+	double start_timer = cpuTime();
+	num_OnUnAssign++;
 	int interval = learning_counter - assigned[var_idx];
 	if(interval > 0)
 	{
@@ -287,8 +311,26 @@ void Solver::OnUnAssign(int var_idx)
 		double rsr = ( (double)reasoned[var_idx] )/ (double)interval;
 		// cout << interval << " " << participated[var_idx] << " " << reasoned[var_idx] << endl;
 		// cout << r << " " << rsr << endl;
-		ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * (r+rsr);
+		if (is_queue)
+		{
+			double start_timer1 = cpuTime();
+				int ind = heap.index[var_idx];
+				ExpoAverage * temp = &heap.harr[ind];
+				// if (temp.priority==-1){assert(0);}
+				// if (temp.priority!=-1)
+				// {
+					temp->average = temp->average * (1-alpha) + alpha*(r+rsr);
+					heap.update(ind, temp->average);
+				// }
+			double end_timer1 = cpuTime();
+			queue_time += (end_timer1 - start_timer1);
+		} else
+		{
+			ema[var_idx] = ema[var_idx] * (1 - alpha) + alpha * (r+rsr);
+		}
 	}
+	double end_timer = cpuTime();
+	lrate_time += (end_timer - start_timer);	
 }
 
 void Solver::bumpVarScore(int var_idx) {
@@ -424,17 +466,66 @@ SolverState Solver::decide(){
 
 	// lrate begins.
 	case VAR_DEC_HEURISTIC::LRATE: {
+		double start_timer = cpuTime();
+	
 		// cout << "Here" << endl;
-		double maxval = -1;
-		Var v = 0;
-		for (unsigned int i = 1; i <= nvars; ++i) {
-			if(state[i] == 0 && maxval < ema[i])
-			{
-				maxval = ema[i];
-				v = i;
+		Var v = 0;	
+		if (is_queue) 
+		{
+			double start_timer1 = cpuTime();
+				ExpoAverage * temp = heap.getMax();
+				// cout << temp->priority << " " << temp->average << endl;
+				// Var new_var = temp->var;
+				// while (state[new_var] != 0)
+				// {
+				// 	if (temp.priority==-1)
+				// 	{
+				// 		v = 0;
+				// 		break;
+				// 		// assert(0);
+				// 	}
+				// 	heap.update(heap.index[temp.var],-1);
+				// 	temp = heap.getMax();
+				// 	new_var = temp.var;
+				// 	v = temp.var;
+				// }
+				// cout << " v " << temp.var << " priority: " << temp.priority << endl;
+				if(temp->priority == -1)
+				{
+					// assert(0);
+					double end_timer1 = cpuTime();
+					queue_time += (end_timer1 - start_timer1);
+					double end_timer = cpuTime();
+					lrate_time += (end_timer - start_timer);
+					break;
+					// heap.print_heap();
+					// cout << "\n\n\n";
+				} // doubt assert(0) ?
+				else{
+					v = temp->var;
+					double end_timer1 = cpuTime();
+					queue_time += (end_timer1 - start_timer1);
+				}
+				// cout << " Var : " << v << endl;
+				// heap.print_heap();
+				// heap.update(0, -1); // doubt 0 or -1? // doubt should it be here?
+		}else
+		{
+			// Var v; 
+			double maxval = -1;
+			for (unsigned int i = 1; i <= nvars; ++i) {
+				if(state[i] == 0 && maxval < ema[i])
+				{
+					maxval = ema[i];
+					v = i;
+				}
 			}
+			// cout << maxval << endl;
 		}
+		// assert(v!=0);
 		best_lit = getVal(v);
+		double end_timer = cpuTime();
+		lrate_time += (end_timer - start_timer);
 		break;
 	}
 	// lrate ends.
@@ -716,6 +807,7 @@ int Solver::analyze(const Clause conflicting) {
 // lrate function.
 void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClause){
 	if (VarDecHeuristic != VAR_DEC_HEURISTIC::LRATE ) {return; }
+	double start_timer = cpuTime();
 	learning_counter ++;
 	for(Var v: ConflictSide)
 	{
@@ -738,15 +830,32 @@ void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClaus
 		}
 	}
 	for (Var v: ConflictClause)
+	{
 	
 		temp[v] = 0;
 	}
-	for (int i = 0; i < nvars+1; i++)
+	for (int i = 1; i < nvars+1; i++)
 	{
 		reasoned[i] += (double)temp[i];
 		if(state[i]==0)
 		{
-			ema[i] = 0.95*ema[i];
+			if (is_queue)
+			{
+				double start_timer1 = cpuTime();
+					int ind = heap.index[i];
+					ExpoAverage *tempp = &heap.harr[ind];
+					// if (temp.priority==-1) {assert(0);} // doubt
+					tempp->average = 0.95*tempp->average;
+					if (tempp->priority != -1)
+					{
+						heap.update(ind, tempp->average);				
+					}
+				double end_timer1 = cpuTime();
+				queue_time += (end_timer1 - start_timer1);		
+			}else
+			{
+				ema[i] = 0.95*ema[i];
+			}
 		}
 	}
 	
@@ -755,6 +864,8 @@ void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClaus
 		alpha = alpha - 1e-6;
 	}
 	temp.clear();
+	double end_timer = cpuTime();
+	lrate_time += (end_timer - start_timer);
 }
 
 void Solver::backtrack(int k) {
@@ -767,6 +878,7 @@ void Solver::backtrack(int k) {
 	double jump_to_activity = m_curr_activity;
 	for (trail_t::iterator it = trail.begin() + separators[k+1]; it != trail.end(); ++it) { // erasing from k+1
 		Var v = l2v(*it);
+		// cout << v << endl;
 		if (dlevel[v]) { // we need the condition because of learnt unary clauses. In that case we enforce an assignment with dlevel = 0.
 			state[v] = 0;
 			OnUnAssign(v); // lrate
@@ -970,6 +1082,11 @@ void SolveWithAssumptions(Solver S) {
 /******************  main ******************************/
 
 int main(int argc, char** argv){
+	char* ISQUEUE = (char*) getenv("ISQUEUE");
+	if (ISQUEUE != NULL){
+		is_queue = atoi(ISQUEUE);
+	}
+	
 	begin_time = cpuTime();
 	parse_options(argc, argv);
 	
