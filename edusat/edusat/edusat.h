@@ -35,15 +35,22 @@ vector<int> sizes;
 #define RATIOREMOVECLAUSES 2
 int verbose = 0;
 double begin_time;
-double sort_time = 0;
-double reducedb_time = 0; 
+double sort_time = 0; // lbd
+double reducedb_time = 0; // lbd
+
+double lrate_time=0; // lrate
+int is_queue=1; // lrate
+double queue_time=0; // lrate
+
 enum class VAR_DEC_HEURISTIC {
 	MINISAT, 
 	/* Each time a clause is learned, we push to the end of the list the learned clause + some clauses 
 	that participated in its learning. Traversing these clauses from the end, if a clause has at least 
 	one unassigned literal we give it a value according to the value heuristic.
 	Looking at only unresolved clauses makes the search better but more expensive to decide, and overall worse. */
-	CMTF } ;
+	CMTF,
+	LRATE 
+} ;
 
 VAR_DEC_HEURISTIC VarDecHeuristic = VAR_DEC_HEURISTIC::MINISAT;
 
@@ -141,6 +148,114 @@ int l2rl(int l) {
 
 
 /********** classes ******/ 
+	
+class ExpoAverage{
+public:
+	int var;
+	double average;
+	double priority;
+	ExpoAverage()
+	{
+		var = 0;
+		average = 0;
+		priority = 0;
+	};
+	bool isGreaterThan(ExpoAverage * e){
+		if(e->priority < priority)
+			return true;
+		else if(e->priority == priority)
+		{
+			return var < e->var;	
+		}
+		return false;
+	}
+};
+
+class Heap 
+{ 
+    int capacity; // maximum possible size of min heap 
+	int heap_size;
+public: 
+	vector<int> index;
+    vector<ExpoAverage> harr; // pointer to array of elements in heap 	
+	void initialize(int capacity)
+	{
+		this->capacity = capacity; // doubt
+		harr = vector<ExpoAverage>(capacity);
+		index = vector<int>(capacity);
+		heap_size = capacity; // doubt
+		for (int i = 0; i < capacity; i++)
+		{
+			harr[i].var = i;
+			harr[i].average = 0;
+			harr[i].priority = 0; // doubt
+			index[i] = i;
+		}
+		// harr[0].priority = -1;
+		update(0,-2);
+		// cout << "In Heap at index 0: " << harr[index[0]].var << endl;
+		// cout << "In Heap" << harr[0].var << endl;
+	};
+	void Heapify(int i)
+	{
+		int l = left(i); 
+		int r = right(i); 
+		int largest = i; 
+		if (l < heap_size && /* harr[l].priority > harr[i].priority && */ harr[l].isGreaterThan(&harr[i])) 
+			largest = l; 
+		if (r < heap_size &&/*  harr[r].priority > harr[largest].priority */ harr[r].isGreaterThan(&harr[largest])) 
+			largest = r; 
+		if (largest != i) 
+		{ 
+			index[harr[i].var] = largest;
+			index[harr[largest].var] = i;
+			ExpoAverage temp = harr[i];
+			harr[i] = harr[largest];
+			harr[largest] = temp;
+			// cout << "In Heap at index : " << harr[i].var << " " << harr[index[harr[i].var]].var << endl;
+			// cout << "In Heap at index : " << harr[largest].var << " " << harr[index[harr[largest].var]].var << endl;
+			// swap(&harr[i], &harr[largest]); 
+			Heapify(largest); 
+		} 
+	}
+	void update(int i, double val)
+	{
+		// cout << harr[i].var << " " << harr[i].priority << val << endl;
+		if(val < harr[i].priority)
+		{
+			// cout << "Here" << endl;
+			harr[i].priority = val; 
+			Heapify(i);
+			return;
+		}
+		harr[i].priority = val; 
+		while (i != 0 && /* harr[parent(i)].priority < harr[i].priority */ harr[i].isGreaterThan(&harr[parent(i)])) 
+		{ 
+			index[harr[i].var] = parent(i);
+			index[harr[parent(i)].var] = i;
+			ExpoAverage temp = harr[i];
+			harr[i] = harr[parent(i)];
+			harr[parent(i)] = temp;
+			// swap(&harr[i], &harr[parent(i)]); 
+			i = parent(i); 
+		} 
+	}
+	int parent(int i) { return (i-1)/2; } 
+	int left(int i) { return (2*i + 1); } 
+	int right(int i) { return (2*i + 2); } 
+	ExpoAverage *  getMax() { return &harr[0]; } 
+	void print_heap()
+	{
+		for (int i = 0; i < capacity; i++)
+		{
+			int ind = index[i];
+			ExpoAverage temp = harr[i];
+			cout << "Var : " << temp.var << "Priority : " << temp.priority << endl;
+		}
+
+	}
+};
+
 
 class Clause {
 	clause_t c;
@@ -162,6 +277,8 @@ public:
 	void prev_set(int i) {prev = i;}
 	void next_set(int i) {next = i;}
 	clause_t& cl() {return c;}
+	int clause_size () { return c.size(); } // lrate
+	Lit Lit_at_index(int i) { return c[i]; } // lrate	
 	int get_lw() {return lw;}
 	int get_rw() {return rw;}
 	int get_lw_lit() {return c[lw];}
@@ -264,6 +381,15 @@ class Solver {
 	double			m_var_inc;	
 	double			m_curr_activity;
 	
+		//Used by VAR_DH_LRATE:
+	double alpha; // lrate
+	int learning_counter; // lrate
+	vector<int> assigned; // lrate
+	vector<int> participated; // lrate
+	vector<double> ema; // lrate
+	vector<double> reasoned; // lrate
+	Heap heap; // lrate
+
 	unsigned int 
 		nvars,			// # vars
 		nclauses, 		// # clauses
@@ -276,7 +402,12 @@ class Solver {
 		conflicts, // lbd
 		num_reduceDB, // lbd
 		prob_size, // lbd
+
 		
+		num_OnAssign=0, // lrate
+		num_OnUnAssign=0, // lrate
+
+
 		num_learned, 	
 		num_decisions,
 		num_assignments,
@@ -338,6 +469,12 @@ class Solver {
 	// lbd, clause deletion
 	inline void reduceDB(); // lbd
 	inline void computeLBD(int idx); // lbd
+
+
+	// lrate
+	inline void AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClause); // lrate
+	inline void OnAssign(int idx); // lrate
+	inline void OnUnAssign(int idx); // lrate
 
 
 
@@ -455,16 +592,26 @@ public:
 	};
 
 	void print_stats() {cout << endl << "Statistics: " << endl << "===================" << endl << 
+		
+		"### queue_time :\t\t" << queue_time << endl << // lrate
+		"### lrate_time:\t\t" << lrate_time << endl << // lrate
+		"### num_OnAssign:\t\t" << num_OnAssign << endl << // lrate
+		"### num_OnUnAssign:\t\t" << num_OnUnAssign << endl << // lrate
+		"### num_decisions:\t\t" << num_decisions << endl << // lrate
+
 		"### reducedb_time:\t\t" << reducedb_time << endl << // lbd
 		"### sort_time:\t\t" << sort_time << endl << // lbd
 		"### nbRemovedClauses:\t\t" << nbRemovedClauses << endl << // lbd
 		"### reduceDB:\t\t" << num_reduceDB << endl << // lbd
+
 		"### Restarts:\t\t" << num_restarts << endl <<
 		"### Learned-clauses:\t" << num_learned << endl <<
 		"### Decisions:\t\t" << num_decisions << endl <<
 		"### Implications:\t" << num_assignments - num_decisions << endl <<
 		"### Time:\t\t" << cpuTime() - begin_time << endl;
 		
+
+
 
 		// int sizes_len = sizes.size();
 		// int lbds_len = lbds.size();
@@ -478,6 +625,19 @@ public:
 	}
 	
 	void validate_assignment();
+
+	// lrate starts.
+	void print_lrate(){
+		cout << endl << "Learning Rate Stats" << endl ;
+		for(int i=0;i < nvars+1; i++)
+		{
+			cout << "Assigned " << assigned[i] << " Participated " << participated[i] << endl;
+			cout << "EMA " << ema[i] << endl ;
+		}
+		cout << endl;
+	}
+	// lrate ends.
+
 };
 
 
