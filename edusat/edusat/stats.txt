@@ -1,0 +1,9202 @@
+sh ./test.sh
+Processing ./test-cases/Group1/unsat/uuf50-01.cnf file...
+./test-cases/Group1/unsat/uuf50-01.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001881 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		54
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	42
+### Decisions:		54
+### Implications:	766
+### Time:		0.005074
+UNSAT
+./test-cases/Group1/unsat/uuf50-01.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.003263 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		54
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	42
+### Decisions:		54
+### Implications:	766
+### Time:		0.005961
+UNSAT
+./test-cases/Group1/unsat/uuf50-01.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.000616 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003231
+### num_OnAssign:		1569
+### num_OnUnAssign:		1542
+### num_decisions:		92
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	82
+### Decisions:		92
+### Implications:	1477
+### Time:		0.012784
+UNSAT
+./test-cases/Group1/unsat/uuf50-01.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001717
+### num_OnAssign:		1569
+### num_OnUnAssign:		1542
+### num_decisions:		92
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	82
+### Decisions:		92
+### Implications:	1477
+### Time:		0.006442
+UNSAT
+Processing ./test-cases/Group1/unsat/uuf50-02.cnf file...
+./test-cases/Group1/unsat/uuf50-02.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001731 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		38
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	32
+### Decisions:		38
+### Implications:	702
+### Time:		0.004361
+UNSAT
+./test-cases/Group1/unsat/uuf50-02.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.002205 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		38
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	32
+### Decisions:		38
+### Implications:	702
+### Time:		0.005784
+UNSAT
+./test-cases/Group1/unsat/uuf50-02.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.000711 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001306
+### num_OnAssign:		1295
+### num_OnUnAssign:		1286
+### num_decisions:		82
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	66
+### Decisions:		82
+### Implications:	1213
+### Time:		0.005724
+UNSAT
+./test-cases/Group1/unsat/uuf50-02.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.000877 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002403
+### num_OnAssign:		1295
+### num_OnUnAssign:		1286
+### num_decisions:		82
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	66
+### Decisions:		82
+### Implications:	1213
+### Time:		0.00958
+UNSAT
+Processing ./test-cases/Group1/unsat/uuf50-03.cnf file...
+./test-cases/Group1/unsat/uuf50-03.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001684 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		36
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	30
+### Decisions:		36
+### Implications:	556
+### Time:		0.004719
+UNSAT
+./test-cases/Group1/unsat/uuf50-03.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.002668 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		36
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	30
+### Decisions:		36
+### Implications:	556
+### Time:		0.005038
+UNSAT
+./test-cases/Group1/unsat/uuf50-03.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002254
+### num_OnAssign:		1319
+### num_OnUnAssign:		1301
+### num_decisions:		79
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	68
+### Decisions:		79
+### Implications:	1240
+### Time:		0.008474
+UNSAT
+./test-cases/Group1/unsat/uuf50-03.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.000683 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001473
+### num_OnAssign:		1319
+### num_OnUnAssign:		1301
+### num_decisions:		79
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	68
+### Decisions:		79
+### Implications:	1240
+### Time:		0.006232
+UNSAT
+Processing ./test-cases/Group1/unsat/uuf50-04.cnf file...
+./test-cases/Group1/unsat/uuf50-04.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001821 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		54
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	52
+### Decisions:		54
+### Implications:	938
+### Time:		0.005635
+UNSAT
+./test-cases/Group1/unsat/uuf50-04.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001828 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		54
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	52
+### Decisions:		54
+### Implications:	938
+### Time:		0.006516
+UNSAT
+./test-cases/Group1/unsat/uuf50-04.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.000724 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002599
+### num_OnAssign:		1816
+### num_OnUnAssign:		1778
+### num_decisions:		103
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	92
+### Decisions:		103
+### Implications:	1713
+### Time:		0.010433
+UNSAT
+./test-cases/Group1/unsat/uuf50-04.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.000659 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002203
+### num_OnAssign:		1816
+### num_OnUnAssign:		1778
+### num_decisions:		103
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	92
+### Decisions:		103
+### Implications:	1713
+### Time:		0.008567
+UNSAT
+Processing ./test-cases/Group1/unsat/uuf50-05.cnf file...
+./test-cases/Group1/unsat/uuf50-05.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001922 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		40
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	33
+### Decisions:		40
+### Implications:	742
+### Time:		0.004676
+UNSAT
+./test-cases/Group1/unsat/uuf50-05.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		40
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	33
+### Decisions:		40
+### Implications:	742
+### Time:		0.00295
+UNSAT
+./test-cases/Group1/unsat/uuf50-05.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.00074 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003329
+### num_OnAssign:		1532
+### num_OnUnAssign:		1499
+### num_decisions:		79
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	72
+### Decisions:		79
+### Implications:	1453
+### Time:		0.013182
+UNSAT
+./test-cases/Group1/unsat/uuf50-05.cnf
+vars: 50 clauses: 218
+Read 218 clauses in 0.001084 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001453
+### num_OnAssign:		1532
+### num_OnUnAssign:		1499
+### num_decisions:		79
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	72
+### Decisions:		79
+### Implications:	1453
+### Time:		0.006697
+UNSAT
+Processing ./test-cases/Group1/sat/11.cnf file...
+./test-cases/Group1/sat/11.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000631 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		1
+### Implications:	9
+### Time:		0.001086
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/11.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000502 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		1
+### Implications:	9
+### Time:		0.001141
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/11.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000139 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.6e-05
+### num_OnAssign:		9
+### num_OnUnAssign:		4
+### num_decisions:		1
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		1
+### Implications:	8
+### Time:		0.000422
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/11.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000144 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.4e-05
+### num_OnAssign:		9
+### num_OnUnAssign:		4
+### num_decisions:		1
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		1
+### Implications:	8
+### Time:		0.000432
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/15.cnf file...
+./test-cases/Group1/sat/15.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000272 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	5
+### Time:		0.000541
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/15.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000316 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	5
+### Time:		0.000661
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/15.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		8
+### num_OnUnAssign:		3
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	5
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/15.cnf
+vars: 5 clauses: 20
+Read 19 clauses in 0.000194 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.4e-05
+### num_OnAssign:		8
+### num_OnUnAssign:		3
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	5
+### Time:		0.000607
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/2.cnf file...
+./test-cases/Group1/sat/2.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000254 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		5
+### Implications:	0
+### Time:		0.000534
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/2.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000333 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		5
+### Implications:	0
+### Time:		0.000702
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/2.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000163 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2e-05
+### num_OnAssign:		10
+### num_OnUnAssign:		0
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		10
+### Implications:	0
+### Time:		0.00055
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/2.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000317 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.1e-05
+### num_OnAssign:		10
+### num_OnUnAssign:		0
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		10
+### Implications:	0
+### Time:		0.000998
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/26.cnf file...
+./test-cases/Group1/sat/26.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.008301 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		29
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		29
+### Implications:	21
+### Time:		0.009098
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/26.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.009402 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		29
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		29
+### Implications:	21
+### Time:		0.010755
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/26.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.002046 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		9.5e-05
+### num_OnAssign:		56
+### num_OnUnAssign:		6
+### num_decisions:		27
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		27
+### Implications:	29
+### Time:		0.003039
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/26.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.002568 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000101
+### num_OnAssign:		56
+### num_OnUnAssign:		6
+### num_decisions:		27
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		27
+### Implications:	29
+### Time:		0.003865
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/27.cnf file...
+./test-cases/Group1/sat/27.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.008112 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		26
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		26
+### Implications:	24
+### Time:		0.008112
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/27.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.009074 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		26
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		26
+### Implications:	24
+### Time:		0.010082
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/27.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.002101 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		62
+### num_OnUnAssign:		12
+### num_decisions:		31
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		31
+### Implications:	31
+### Time:		0.002101
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/27.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.002452 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000161
+### num_OnAssign:		62
+### num_OnUnAssign:		12
+### num_decisions:		31
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		31
+### Implications:	31
+### Time:		0.00435
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/28.cnf file...
+./test-cases/Group1/sat/28.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.007867 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		33
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		33
+### Implications:	17
+### Time:		0.008581
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/28.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.010835 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		33
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		33
+### Implications:	17
+### Time:		0.011615
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/28.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.001968 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000139
+### num_OnAssign:		73
+### num_OnUnAssign:		23
+### num_decisions:		33
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		33
+### Implications:	40
+### Time:		0.003261
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/28.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.002402 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000151
+### num_OnAssign:		73
+### num_OnUnAssign:		23
+### num_decisions:		33
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		33
+### Implications:	40
+### Time:		0.003931
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/3.cnf file...
+./test-cases/Group1/sat/3.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000249 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		5
+### Implications:	0
+### Time:		0.000665
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/3.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		5
+### Implications:	0
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/3.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000127 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.9e-05
+### num_OnAssign:		10
+### num_OnUnAssign:		0
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		10
+### Implications:	0
+### Time:		0.000446
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/3.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000127 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.5e-05
+### num_OnAssign:		10
+### num_OnUnAssign:		0
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		10
+### Implications:	0
+### Time:		0.00048
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/30.cnf file...
+./test-cases/Group1/sat/30.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.010456 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		25
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		25
+### Implications:	25
+### Time:		0.011268
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/30.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.009599 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		25
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		25
+### Implications:	25
+### Time:		0.010616
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/30.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0.002155 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000123
+### num_OnAssign:		68
+### num_OnUnAssign:		18
+### num_decisions:		34
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		34
+### Implications:	34
+### Time:		0.003373
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/30.cnf
+vars: 50 clauses: 500
+Read 499 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		68
+### num_OnUnAssign:		18
+### num_decisions:		34
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		34
+### Implications:	34
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/6.cnf file...
+./test-cases/Group1/sat/6.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	4
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/6.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000394 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	4
+### Time:		0.000988
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/6.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.00014 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.7e-05
+### num_OnAssign:		12
+### num_OnUnAssign:		2
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		9
+### Implications:	3
+### Time:		0.0008
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/6.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000199 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		5.8e-05
+### num_OnAssign:		12
+### num_OnUnAssign:		2
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		9
+### Implications:	3
+### Time:		0.000688
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group1/sat/8.cnf file...
+./test-cases/Group1/sat/8.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000438 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		3
+### Implications:	2
+### Time:		0.000773
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/8.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000271 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		3
+### Implications:	2
+### Time:		0.000663
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/8.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0.000133 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.8e-05
+### num_OnAssign:		10
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		9
+### Implications:	1
+### Time:		0.000611
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group1/sat/8.cnf
+vars: 10 clauses: 10
+Read 9 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		10
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		9
+### Implications:	1
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/unsat/aim-100-1_6-no-1.cnf file...
+./test-cases/Group2/unsat/aim-100-1_6-no-1.cnf
+vars: 100 clauses: 160
+Read 160 clauses in 0.001247 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		135
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	25
+### Decisions:		135
+### Implications:	295
+### Time:		0.002456
+UNSAT
+./test-cases/Group2/unsat/aim-100-1_6-no-1.cnf
+vars: 100 clauses: 160
+Read 160 clauses in 0.001387 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		135
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	25
+### Decisions:		135
+### Implications:	295
+### Time:		0.003164
+UNSAT
+./test-cases/Group2/unsat/aim-100-1_6-no-1.cnf
+vars: 100 clauses: 160
+Read 160 clauses in 0.000827 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000918
+### num_OnAssign:		344
+### num_OnUnAssign:		333
+### num_decisions:		116
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	26
+### Decisions:		116
+### Implications:	228
+### Time:		0.003667
+UNSAT
+./test-cases/Group2/unsat/aim-100-1_6-no-1.cnf
+vars: 100 clauses: 160
+Read 160 clauses in 0.00059 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000866
+### num_OnAssign:		344
+### num_OnUnAssign:		333
+### num_decisions:		116
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	26
+### Decisions:		116
+### Implications:	228
+### Time:		0.003241
+UNSAT
+Processing ./test-cases/Group2/unsat/bf0432-007.cnf file...
+./test-cases/Group2/unsat/bf0432-007.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.028441 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1351
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	665
+### Decisions:		1351
+### Implications:	102090
+### Time:		0.423139
+UNSAT
+./test-cases/Group2/unsat/bf0432-007.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.026111 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1351
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	665
+### Decisions:		1351
+### Implications:	102090
+### Time:		0.42753
+UNSAT
+./test-cases/Group2/unsat/bf0432-007.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.010106 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.15932
+### num_OnAssign:		100218
+### num_OnUnAssign:		100289
+### num_decisions:		1509
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	595
+### Decisions:		1509
+### Implications:	98709
+### Time:		0.525146
+UNSAT
+./test-cases/Group2/unsat/bf0432-007.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.008379 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.137059
+### num_OnAssign:		100218
+### num_OnUnAssign:		100289
+### num_decisions:		1509
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	595
+### Decisions:		1509
+### Implications:	98709
+### Time:		0.452505
+UNSAT
+Processing ./test-cases/Group2/unsat/hole6.cnf file...
+./test-cases/Group2/unsat/hole6.cnf
+vars: 42 clauses: 133
+Read 133 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		391
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	336
+### Decisions:		391
+### Implications:	4759
+### Time:		0.043761
+UNSAT
+./test-cases/Group2/unsat/hole6.cnf
+vars: 42 clauses: 133
+Read 133 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		391
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	336
+### Decisions:		391
+### Implications:	4759
+### Time:		0.0433
+UNSAT
+./test-cases/Group2/unsat/hole6.cnf
+vars: 42 clauses: 133
+Read 133 clauses in 0.000738 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.022754
+### num_OnAssign:		11832
+### num_OnUnAssign:		11843
+### num_decisions:		914
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		4
+### Learned-clauses:	773
+### Decisions:		914
+### Implications:	10918
+### Time:		0.151356
+UNSAT
+./test-cases/Group2/unsat/hole6.cnf
+vars: 42 clauses: 133
+Read 133 clauses in 0.000457 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.021817
+### num_OnAssign:		11832
+### num_OnUnAssign:		11843
+### num_decisions:		914
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		4
+### Learned-clauses:	773
+### Decisions:		914
+### Implications:	10918
+### Time:		0.142043
+UNSAT
+Processing ./test-cases/Group2/unsat/tatamii.cnf file...
+./test-cases/Group2/unsat/tatamii.cnf
+vars: 3048 clauses: 11177
+Read 11177 clauses in 0.085376 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		13104
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2432
+### Decisions:		13104
+### Implications:	299120
+### Time:		1.07983
+UNSAT
+./test-cases/Group2/unsat/tatamii.cnf
+vars: 3048 clauses: 11177
+Read 11177 clauses in 0.082861 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		13246
+### reducedb_time:		0.021515
+### sort_time:		0.010769
+### nbRemovedClauses:		918
+### reduceDB:		1
+### Restarts:		0
+### Learned-clauses:	2416
+### Decisions:		13246
+### Implications:	291962
+### Time:		1.03399
+UNSAT
+./test-cases/Group2/unsat/tatamii.cnf
+vars: 3048 clauses: 11177
+Read 11177 clauses in 0.025436 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.234557
+### num_OnAssign:		113567
+### num_OnUnAssign:		113276
+### num_decisions:		3057
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	707
+### Decisions:		3057
+### Implications:	110510
+### Time:		0.594114
+UNSAT
+./test-cases/Group2/unsat/tatamii.cnf
+vars: 3048 clauses: 11177
+Read 11177 clauses in 0.031579 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.234051
+### num_OnAssign:		113567
+### num_OnUnAssign:		113276
+### num_decisions:		3057
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	707
+### Decisions:		3057
+### Implications:	110510
+### Time:		0.604428
+UNSAT
+Processing ./test-cases/Group2/sat/aim-50-1_6-yes1-4.cnf file...
+./test-cases/Group2/sat/aim-50-1_6-yes1-4.cnf
+vars: 50 clauses: 80
+Read 80 clauses in 0.000704 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		9
+### Implications:	59
+### Time:		0.001326
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/aim-50-1_6-yes1-4.cnf
+vars: 50 clauses: 80
+Read 80 clauses in 0.0007 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		9
+### Implications:	59
+### Time:		0.001195
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/aim-50-1_6-yes1-4.cnf
+vars: 50 clauses: 80
+Read 80 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		174
+### num_OnUnAssign:		124
+### num_decisions:		40
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	11
+### Decisions:		40
+### Implications:	134
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/aim-50-1_6-yes1-4.cnf
+vars: 50 clauses: 80
+Read 80 clauses in 0.000332 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000265
+### num_OnAssign:		174
+### num_OnUnAssign:		124
+### num_decisions:		40
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	11
+### Decisions:		40
+### Implications:	134
+### Time:		0.001247
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/fsnark-subset-99.cnf file...
+./test-cases/Group2/sat/fsnark-subset-99.cnf
+vars: 1782 clauses: 4159
+Read 4156 clauses in 0.03079 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		24369
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		20
+### Learned-clauses:	12052
+### Decisions:		24369
+### Implications:	692100
+### Time:		3.85768
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/fsnark-subset-99.cnf
+vars: 1782 clauses: 4159
+Read 4156 clauses in 0.029235 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		30122
+### reducedb_time:		0.141082
+### sort_time:		0.117934
+### nbRemovedClauses:		8719
+### reduceDB:		3
+### Restarts:		21
+### Learned-clauses:	14734
+### Decisions:		30122
+### Implications:	845250
+### Time:		4.62155
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/fsnark-subset-99.cnf
+vars: 1782 clauses: 4159
+Read 4156 clauses in 0.011349 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.082017
+### num_OnAssign:		46074
+### num_OnUnAssign:		44526
+### num_decisions:		3071
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	356
+### Decisions:		3071
+### Implications:	43003
+### Time:		0.204584
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/fsnark-subset-99.cnf
+vars: 1782 clauses: 4159
+Read 4156 clauses in 0.012237 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.079234
+### num_OnAssign:		46074
+### num_OnUnAssign:		44526
+### num_decisions:		3071
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	356
+### Decisions:		3071
+### Implications:	43003
+### Time:		0.197097
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/mcgregor-f10le7-bb.cnf file...
+./test-cases/Group2/sat/mcgregor-f10le7-bb.cnf
+vars: 864 clauses: 2647
+Read 2645 clauses in 0.019981 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		36173
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		41
+### Learned-clauses:	17767
+### Decisions:		36173
+### Implications:	2385482
+### Time:		23.7868
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/mcgregor-f10le7-bb.cnf
+vars: 864 clauses: 2647
+Read 2645 clauses in 0.015941 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		72448
+### reducedb_time:		0.408988
+### sort_time:		0.372988
+### nbRemovedClauses:		26086
+### reduceDB:		5
+### Restarts:		69
+### Learned-clauses:	37686
+### Decisions:		72448
+### Implications:	5427333
+### Time:		50.7108
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/mcgregor-f10le7-bb.cnf
+vars: 864 clauses: 2647
+Read 2645 clauses in 0.010526 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.56224
+### num_OnAssign:		1513020
+### num_OnUnAssign:		1522745
+### num_decisions:		15972
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		22
+### Learned-clauses:	10479
+### Decisions:		15972
+### Implications:	1497048
+### Time:		12.8836
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/mcgregor-f10le7-bb.cnf
+vars: 864 clauses: 2647
+Read 2645 clauses in 0.009367 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.24184
+### num_OnAssign:		829690
+### num_OnUnAssign:		836918
+### num_decisions:		9969
+### reducedb_time:		0.01388
+### sort_time:		0.011051
+### nbRemovedClauses:		994
+### reduceDB:		1
+### Restarts:		17
+### Learned-clauses:	6014
+### Decisions:		9969
+### Implications:	819721
+### Time:		4.60101
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/mutex-fourbits-distinct-blemmas-36.cnf file...
+./test-cases/Group2/sat/mutex-fourbits-distinct-blemmas-36.cnf
+vars: 22199 clauses: 50264
+Read 49931 clauses in 0.430899 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		37211
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		13
+### Learned-clauses:	5826
+### Decisions:		37211
+### Implications:	4839499
+### Time:		15.5581
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/mutex-fourbits-distinct-blemmas-36.cnf
+vars: 22199 clauses: 50264
+Read 49931 clauses in 0.428351 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		42179
+### reducedb_time:		0.054517
+### sort_time:		0.014337
+### nbRemovedClauses:		985
+### reduceDB:		1
+### Restarts:		13
+### Learned-clauses:	5836
+### Decisions:		42179
+### Implications:	5082770
+### Time:		14.1114
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/mutex-fourbits-distinct-blemmas-36.cnf
+vars: 22199 clauses: 50264
+Read 49931 clauses in 0.125761 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		6.33613
+### num_OnAssign:		2469596
+### num_OnUnAssign:		2531260
+### num_decisions:		11192
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		8
+### Learned-clauses:	3377
+### Decisions:		11192
+### Implications:	2458404
+### Time:		13.7842
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/mutex-fourbits-distinct-blemmas-36.cnf
+vars: 22199 clauses: 50264
+Read 49931 clauses in 0.13669 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		7.25295
+### num_OnAssign:		2709596
+### num_OnUnAssign:		2768232
+### num_decisions:		12460
+### reducedb_time:		0.050849
+### sort_time:		0.01341
+### nbRemovedClauses:		987
+### reduceDB:		1
+### Restarts:		9
+### Learned-clauses:	3925
+### Decisions:		12460
+### Implications:	2697136
+### Time:		15.9008
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/par8-1-c.cnf file...
+./test-cases/Group2/sat/par8-1-c.cnf
+vars: 64 clauses: 254
+Read 253 clauses in 0.002775 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		20
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	19
+### Decisions:		20
+### Implications:	708
+### Time:		0.005338
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/par8-1-c.cnf
+vars: 64 clauses: 254
+Read 253 clauses in 0.003725 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		20
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	19
+### Decisions:		20
+### Implications:	708
+### Time:		0.006423
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/par8-1-c.cnf
+vars: 64 clauses: 254
+Read 253 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		813
+### num_OnUnAssign:		749
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	22
+### Decisions:		22
+### Implications:	791
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/par8-1-c.cnf
+vars: 64 clauses: 254
+Read 253 clauses in 0.001107 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001508
+### num_OnAssign:		813
+### num_OnUnAssign:		749
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	22
+### Decisions:		22
+### Implications:	791
+### Time:		0.007566
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/poset-nomax-b-12-minus-one.cnf file...
+./test-cases/Group2/sat/poset-nomax-b-12-minus-one.cnf
+vars: 144 clauses: 529
+Read 517 clauses in 0.004616 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		118
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	7
+### Decisions:		118
+### Implications:	77
+### Time:		0.007204
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/poset-nomax-b-12-minus-one.cnf
+vars: 144 clauses: 529
+Read 517 clauses in 0.004353 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		118
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	7
+### Decisions:		118
+### Implications:	77
+### Time:		0.006201
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/poset-nomax-b-12-minus-one.cnf
+vars: 144 clauses: 529
+Read 517 clauses in 0.001384 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.022296
+### num_OnAssign:		10349
+### num_OnUnAssign:		10310
+### num_decisions:		1222
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	621
+### Decisions:		1222
+### Implications:	9127
+### Time:		0.096092
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/poset-nomax-b-12-minus-one.cnf
+vars: 144 clauses: 529
+Read 517 clauses in 0.001517 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.023304
+### num_OnAssign:		10349
+### num_OnUnAssign:		10310
+### num_decisions:		1222
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	621
+### Decisions:		1222
+### Implications:	9127
+### Time:		0.100035
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/synth-20-4-108.cnf file...
+./test-cases/Group2/sat/synth-20-4-108.cnf
+vars: 356 clauses: 4229
+Read 4229 clauses in 0.050542 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4028
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		6
+### Learned-clauses:	1553
+### Decisions:		4028
+### Implications:	118279
+### Time:		1.14122
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/synth-20-4-108.cnf
+vars: 356 clauses: 4229
+Read 4229 clauses in 0.055497 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4028
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		6
+### Learned-clauses:	1553
+### Decisions:		4028
+### Implications:	118279
+### Time:		1.13051
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/synth-20-4-108.cnf
+vars: 356 clauses: 4229
+Read 4229 clauses in 0.016176 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.835719
+### num_OnAssign:		444042
+### num_OnUnAssign:		446294
+### num_decisions:		10710
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	5574
+### Decisions:		10710
+### Implications:	433332
+### Time:		5.31371
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/synth-20-4-108.cnf
+vars: 356 clauses: 4229
+Read 4229 clauses in 0.01525 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.376
+### num_OnAssign:		697731
+### num_OnUnAssign:		700588
+### num_decisions:		16298
+### reducedb_time:		0.063861
+### sort_time:		0.057146
+### nbRemovedClauses:		3795
+### reduceDB:		2
+### Restarts:		18
+### Learned-clauses:	8855
+### Decisions:		16298
+### Implications:	681433
+### Time:		8.97606
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/tatami.cnf file...
+./test-cases/Group2/sat/tatami.cnf
+vars: 2874 clauses: 10527
+Read 10527 clauses in 0.088633 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6268
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	633
+### Decisions:		6268
+### Implications:	126404
+### Time:		0.410975
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/tatami.cnf
+vars: 2874 clauses: 10527
+Read 10527 clauses in 0.086488 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6268
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	633
+### Decisions:		6268
+### Implications:	126404
+### Time:		0.399488
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/tatami.cnf
+vars: 2874 clauses: 10527
+Read 10527 clauses in 0.025577 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.105229
+### num_OnAssign:		40030
+### num_OnUnAssign:		37156
+### num_decisions:		1084
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	325
+### Decisions:		1084
+### Implications:	38946
+### Time:		0.290585
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/tatami.cnf
+vars: 2874 clauses: 10527
+Read 10527 clauses in 0.030959 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.087137
+### num_OnAssign:		40030
+### num_OnUnAssign:		37156
+### num_decisions:		1084
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	325
+### Decisions:		1084
+### Implications:	38946
+### Time:		0.248056
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group2/sat/zebra.cnf file...
+./test-cases/Group2/sat/zebra.cnf
+vars: 155 clauses: 1135
+Read 1129 clauses in 0.011842 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		177
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	96
+### Decisions:		177
+### Implications:	2078
+### Time:		0.027458
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/zebra.cnf
+vars: 155 clauses: 1135
+Read 1129 clauses in 0.011064 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		177
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	96
+### Decisions:		177
+### Implications:	2078
+### Time:		0.023903
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/zebra.cnf
+vars: 155 clauses: 1135
+Read 1129 clauses in 0.002285 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.004146
+### num_OnAssign:		2647
+### num_OnUnAssign:		2492
+### num_decisions:		153
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	86
+### Decisions:		153
+### Implications:	2494
+### Time:		0.017473
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group2/sat/zebra.cnf
+vars: 155 clauses: 1135
+Read 1129 clauses in 0.002681 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.005316
+### num_OnAssign:		2647
+### num_OnUnAssign:		2492
+### num_decisions:		153
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	86
+### Decisions:		153
+### Implications:	2494
+### Time:		0.021889
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/unsat/3.cnf file...
+./test-cases/Group3/unsat/3.cnf
+vars: 7436 clauses: 65120
+Read 65120 clauses in 0.85742 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	96
+### Time:		0.88855
+UNSAT
+./test-cases/Group3/unsat/3.cnf
+vars: 7436 clauses: 65120
+Read 65120 clauses in 0.822901 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	96
+### Time:		0.854384
+UNSAT
+./test-cases/Group3/unsat/3.cnf
+vars: 7436 clauses: 65120
+Read 65120 clauses in 0.148793 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000965
+### num_OnAssign:		99
+### num_OnUnAssign:		77
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	96
+### Time:		0.179509
+UNSAT
+./test-cases/Group3/unsat/3.cnf
+vars: 7436 clauses: 65120
+Read 65120 clauses in 0.158041 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001363
+### num_OnAssign:		99
+### num_OnUnAssign:		77
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	96
+### Time:		0.196468
+UNSAT
+Processing ./test-cases/Group3/unsat/4.cnf file...
+./test-cases/Group3/unsat/4.cnf
+vars: 8632 clauses: 57232
+Read 57232 clauses in 0.767103 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	28
+### Time:		0.81414
+UNSAT
+./test-cases/Group3/unsat/4.cnf
+vars: 8632 clauses: 57232
+Read 57232 clauses in 0.748486 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	28
+### Time:		0.798054
+UNSAT
+./test-cases/Group3/unsat/4.cnf
+vars: 8632 clauses: 57232
+Read 57232 clauses in 0.12167 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000845
+### num_OnAssign:		18
+### num_OnUnAssign:		15
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	15
+### Time:		0.16869
+UNSAT
+./test-cases/Group3/unsat/4.cnf
+vars: 8632 clauses: 57232
+Read 57232 clauses in 0.1232 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00041
+### num_OnAssign:		18
+### num_OnUnAssign:		15
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	15
+### Time:		0.166268
+UNSAT
+Processing ./test-cases/Group3/unsat/5.cnf file...
+./test-cases/Group3/unsat/5.cnf
+vars: 38121 clauses: 189454
+Read 189454 clauses in 2.52125 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	15
+### Time:		2.5887
+UNSAT
+./test-cases/Group3/unsat/5.cnf
+vars: 38121 clauses: 189454
+Read 189454 clauses in 2.45788 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	15
+### Time:		2.52501
+UNSAT
+./test-cases/Group3/unsat/5.cnf
+vars: 38121 clauses: 189454
+Read 189454 clauses in 0.43328 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003651
+### num_OnAssign:		29
+### num_OnUnAssign:		16
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	26
+### Time:		0.491185
+UNSAT
+./test-cases/Group3/unsat/5.cnf
+vars: 38121 clauses: 189454
+Read 189454 clauses in 0.467668 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003681
+### num_OnAssign:		29
+### num_OnUnAssign:		16
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	26
+### Time:		0.531153
+UNSAT
+Processing ./test-cases/Group3/unsat/6.cnf file...
+./test-cases/Group3/unsat/6.cnf
+vars: 23676 clauses: 99314
+Read 99314 clauses in 1.24924 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	73
+### Time:		1.32981
+UNSAT
+./test-cases/Group3/unsat/6.cnf
+vars: 23676 clauses: 99314
+Read 99314 clauses in 1.2034 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	73
+### Time:		1.2665
+UNSAT
+./test-cases/Group3/unsat/6.cnf
+vars: 23676 clauses: 99314
+Read 99314 clauses in 0.228051 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002135
+### num_OnAssign:		76
+### num_OnUnAssign:		58
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	73
+### Time:		0.304828
+UNSAT
+./test-cases/Group3/unsat/6.cnf
+vars: 23676 clauses: 99314
+Read 99314 clauses in 0.210191 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002584
+### num_OnAssign:		76
+### num_OnUnAssign:		58
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	73
+### Time:		0.289951
+UNSAT
+Processing ./test-cases/Group3/unsat/8.cnf file...
+./test-cases/Group3/unsat/8.cnf
+vars: 17000 clauses: 136000
+Read 136000 clauses in 1.77929 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	58
+### Time:		1.87137
+UNSAT
+./test-cases/Group3/unsat/8.cnf
+vars: 17000 clauses: 136000
+Read 136000 clauses in 1.79496 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	58
+### Time:		1.89303
+UNSAT
+./test-cases/Group3/unsat/8.cnf
+vars: 17000 clauses: 136000
+Read 136000 clauses in 0.294734 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001731
+### num_OnAssign:		27
+### num_OnUnAssign:		24
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	24
+### Time:		0.389119
+UNSAT
+./test-cases/Group3/unsat/8.cnf
+vars: 17000 clauses: 136000
+Read 136000 clauses in 0.289658 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001947
+### num_OnAssign:		27
+### num_OnUnAssign:		24
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	24
+### Time:		0.380038
+UNSAT
+Processing ./test-cases/Group3/sat/10.cnf file...
+./test-cases/Group3/sat/10.cnf
+vars: 59056 clauses: 323700
+Read 323252 clauses in 2.99126 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		39248
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	797
+### Decisions:		39248
+### Implications:	2443574
+### Time:		9.3938
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/10.cnf
+vars: 59056 clauses: 323700
+Read 323252 clauses in 3.02885 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		39248
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	797
+### Decisions:		39248
+### Implications:	2443574
+### Time:		9.62548
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/10.cnf
+vars: 59056 clauses: 323700
+Read 323252 clauses in 0.828672 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		9.93937
+### num_OnAssign:		1084613
+### num_OnUnAssign:		1088131
+### num_decisions:		16843
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	930
+### Decisions:		16843
+### Implications:	1067770
+### Time:		14.6818
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/10.cnf
+vars: 59056 clauses: 323700
+Read 323252 clauses in 0.819597 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		10.2597
+### num_OnAssign:		1084613
+### num_OnUnAssign:		1088131
+### num_decisions:		16843
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	930
+### Decisions:		16843
+### Implications:	1067770
+### Time:		15.3162
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/2.cnf file...
+./test-cases/Group3/sat/2.cnf
+vars: 48 clauses: 261
+Read 260 clauses in 0.001923 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	85
+### Time:		0.002492
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/2.cnf
+vars: 48 clauses: 261
+Read 260 clauses in 0.002391 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	85
+### Time:		0.002969
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/2.cnf
+vars: 48 clauses: 261
+Read 260 clauses in 0.000885 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000193
+### num_OnAssign:		101
+### num_OnUnAssign:		53
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		3
+### Implications:	98
+### Time:		0.002263
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/2.cnf
+vars: 48 clauses: 261
+Read 260 clauses in 0.000665 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000134
+### num_OnAssign:		101
+### num_OnUnAssign:		53
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		3
+### Implications:	98
+### Time:		0.001168
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/3.cnf file...
+./test-cases/Group3/sat/3.cnf
+vars: 459 clauses: 4675
+Read 4674 clauses in 0.035636 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		36
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	9
+### Decisions:		36
+### Implications:	1989
+### Time:		0.037256
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/3.cnf
+vars: 459 clauses: 4675
+Read 4674 clauses in 0.037497 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		36
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	9
+### Decisions:		36
+### Implications:	1989
+### Time:		0.0432
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/3.cnf
+vars: 459 clauses: 4675
+Read 4674 clauses in 0.011106 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.004196
+### num_OnAssign:		2390
+### num_OnUnAssign:		1931
+### num_decisions:		31
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	12
+### Decisions:		31
+### Implications:	2359
+### Time:		0.026527
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/3.cnf
+vars: 459 clauses: 4675
+Read 4674 clauses in 0.012196 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.004149
+### num_OnAssign:		2390
+### num_OnUnAssign:		1931
+### num_decisions:		31
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	12
+### Decisions:		31
+### Implications:	2359
+### Time:		0.026929
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/4.cnf file...
+./test-cases/Group3/sat/4.cnf
+vars: 1087 clauses: 13772
+Read 13771 clauses in 0.101114 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		257
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	108
+### Decisions:		257
+### Implications:	38958
+### Time:		0.209814
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/4.cnf
+vars: 1087 clauses: 13772
+Read 13771 clauses in 0.101351 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		257
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	108
+### Decisions:		257
+### Implications:	38958
+### Time:		0.207164
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/4.cnf
+vars: 1087 clauses: 13772
+Read 13771 clauses in 0.027984 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.020187
+### num_OnAssign:		14917
+### num_OnUnAssign:		13830
+### num_decisions:		167
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	61
+### Decisions:		167
+### Implications:	14750
+### Time:		0.098216
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/4.cnf
+vars: 1087 clauses: 13772
+Read 13771 clauses in 0.03408 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.015218
+### num_OnAssign:		14917
+### num_OnUnAssign:		13830
+### num_decisions:		167
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	61
+### Decisions:		167
+### Implications:	14750
+### Time:		0.088162
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/5.cnf file...
+./test-cases/Group3/sat/5.cnf
+vars: 6325 clauses: 131973
+Read 131972 clauses in 0.953536 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		16635
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	5628
+### Decisions:		16635
+### Implications:	4425517
+### Time:		15.3968
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/5.cnf
+vars: 6325 clauses: 131973
+Read 131972 clauses in 0.924676 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		12967
+### reducedb_time:		0.059211
+### sort_time:		0.012016
+### nbRemovedClauses:		982
+### reduceDB:		1
+### Restarts:		11
+### Learned-clauses:	4156
+### Decisions:		12967
+### Implications:	3252306
+### Time:		11.0482
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/5.cnf
+vars: 6325 clauses: 131973
+Read 131972 clauses in 0.262896 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.49247
+### num_OnAssign:		923734
+### num_OnUnAssign:		927270
+### num_decisions:		2325
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1074
+### Decisions:		2325
+### Implications:	921409
+### Time:		5.34788
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/5.cnf
+vars: 6325 clauses: 131973
+Read 131972 clauses in 0.267742 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.46249
+### num_OnAssign:		923734
+### num_OnUnAssign:		927270
+### num_decisions:		2325
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1074
+### Decisions:		2325
+### Implications:	921409
+### Time:		5.18505
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/6.cnf file...
+./test-cases/Group3/sat/6.cnf
+vars: 459 clauses: 7054
+Read 7053 clauses in 0.049144 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		35
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	13
+### Decisions:		35
+### Implications:	3140
+### Time:		0.059889
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/6.cnf
+vars: 459 clauses: 7054
+Read 7053 clauses in 0.051114 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		35
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	13
+### Decisions:		35
+### Implications:	3140
+### Time:		0.067118
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/6.cnf
+vars: 459 clauses: 7054
+Read 7053 clauses in 0.022005 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.006925
+### num_OnAssign:		4185
+### num_OnUnAssign:		3726
+### num_decisions:		45
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	26
+### Decisions:		45
+### Implications:	4140
+### Time:		0.048019
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/6.cnf
+vars: 459 clauses: 7054
+Read 7053 clauses in 0.016356 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.006163
+### num_OnAssign:		4185
+### num_OnUnAssign:		3726
+### num_decisions:		45
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	26
+### Decisions:		45
+### Implications:	4140
+### Time:		0.040535
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/7.cnf file...
+./test-cases/Group3/sat/7.cnf
+vars: 758 clauses: 47820
+Read 47819 clauses in 0.512322 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		55138
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	8084
+### Decisions:		55138
+### Implications:	584683
+### Time:		16.9424
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/7.cnf
+vars: 758 clauses: 47820
+Read 47819 clauses in 0.471054 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		40642
+### reducedb_time:		0.024494
+### sort_time:		0.011112
+### nbRemovedClauses:		958
+### reduceDB:		1
+### Restarts:		12
+### Learned-clauses:	4916
+### Decisions:		40642
+### Implications:	311651
+### Time:		5.64682
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/7.cnf
+vars: 758 clauses: 47820
+Read 47819 clauses in 0.108445 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.290942
+### num_OnAssign:		133107
+### num_OnUnAssign:		133448
+### num_decisions:		7592
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1804
+### Decisions:		7592
+### Implications:	125515
+### Time:		1.43366
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/7.cnf
+vars: 758 clauses: 47820
+Read 47819 clauses in 0.108258 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.274598
+### num_OnAssign:		133107
+### num_OnUnAssign:		133448
+### num_decisions:		7592
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1804
+### Decisions:		7592
+### Implications:	125515
+### Time:		1.37531
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/8.cnf file...
+./test-cases/Group3/sat/8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 2.69286 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3398
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	332
+### Decisions:		3398
+### Implications:	1564062
+### Time:		6.05307
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 2.63389 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3398
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	332
+### Decisions:		3398
+### Implications:	1564062
+### Time:		6.01781
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 0.693138 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		11.45
+### num_OnAssign:		1694768
+### num_OnUnAssign:		1752897
+### num_decisions:		18812
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1008
+### Decisions:		18812
+### Implications:	1675956
+### Time:		17.4929
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 0.696809 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		11.4884
+### num_OnAssign:		1694768
+### num_OnUnAssign:		1752897
+### num_decisions:		18812
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1008
+### Decisions:		18812
+### Implications:	1675956
+### Time:		17.4977
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group3/sat/9.cnf file...
+./test-cases/Group3/sat/9.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 3.49245 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3553
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	94
+### Decisions:		3553
+### Implications:	223957
+### Time:		4.13379
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/9.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 3.37988 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3553
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	94
+### Decisions:		3553
+### Implications:	223957
+### Time:		4.01122
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/9.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 0.8939 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.71038
+### num_OnAssign:		245348
+### num_OnUnAssign:		193709
+### num_decisions:		5874
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	112
+### Decisions:		5874
+### Implications:	239474
+### Time:		4.50955
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group3/sat/9.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 0.886101 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.64479
+### num_OnAssign:		245348
+### num_OnUnAssign:		193709
+### num_decisions:		5874
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	112
+### Decisions:		5874
+### Implications:	239474
+### Time:		4.34899
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/unsat/hole7.cnf file...
+./test-cases/Group4/unsat/hole7.cnf
+vars: 56 clauses: 204
+Read 204 clauses in 0.001464 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1750
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		8
+### Learned-clauses:	1417
+### Decisions:		1750
+### Implications:	23871
+### Time:		0.408131
+UNSAT
+./test-cases/Group4/unsat/hole7.cnf
+vars: 56 clauses: 204
+Read 204 clauses in 0.001413 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1750
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		8
+### Learned-clauses:	1417
+### Decisions:		1750
+### Implications:	23871
+### Time:		0.414643
+UNSAT
+./test-cases/Group4/unsat/hole7.cnf
+vars: 56 clauses: 204
+Read 204 clauses in 0.000573 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.148991
+### num_OnAssign:		68973
+### num_OnUnAssign:		69119
+### num_decisions:		5034
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		14
+### Learned-clauses:	4397
+### Decisions:		5034
+### Implications:	63939
+### Time:		2.42424
+UNSAT
+./test-cases/Group4/unsat/hole7.cnf
+vars: 56 clauses: 204
+Read 204 clauses in 0.000881 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.151608
+### num_OnAssign:		72218
+### num_OnUnAssign:		72383
+### num_decisions:		5382
+### reducedb_time:		0.010412
+### sort_time:		0.009649
+### nbRemovedClauses:		1000
+### reduceDB:		1
+### Restarts:		15
+### Learned-clauses:	4669
+### Decisions:		5382
+### Implications:	66836
+### Time:		1.95056
+UNSAT
+Processing ./test-cases/Group4/unsat/uuf150-023.cnf file...
+./test-cases/Group4/unsat/uuf150-023.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.005807 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		7228
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		16
+### Learned-clauses:	5465
+### Decisions:		7228
+### Implications:	210192
+### Time:		1.57795
+UNSAT
+./test-cases/Group4/unsat/uuf150-023.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.004568 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6648
+### reducedb_time:		0.011661
+### sort_time:		0.010603
+### nbRemovedClauses:		1001
+### reduceDB:		1
+### Restarts:		16
+### Learned-clauses:	5059
+### Decisions:		6648
+### Implications:	197354
+### Time:		1.31099
+UNSAT
+./test-cases/Group4/unsat/uuf150-023.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.001764 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.5209
+### num_OnAssign:		314517
+### num_OnUnAssign:		316226
+### num_decisions:		9976
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		20
+### Learned-clauses:	8161
+### Decisions:		9976
+### Implications:	304541
+### Time:		3.48015
+UNSAT
+./test-cases/Group4/unsat/uuf150-023.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.002511 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.453836
+### num_OnAssign:		278357
+### num_OnUnAssign:		280089
+### num_decisions:		8516
+### reducedb_time:		0.047363
+### sort_time:		0.04318
+### nbRemovedClauses:		3799
+### reduceDB:		2
+### Restarts:		19
+### Learned-clauses:	7100
+### Decisions:		8516
+### Implications:	269841
+### Time:		2.60945
+UNSAT
+Processing ./test-cases/Group4/unsat/uuf150-061.cnf file...
+./test-cases/Group4/unsat/uuf150-061.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.00815 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		7258
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		16
+### Learned-clauses:	5427
+### Decisions:		7258
+### Implications:	213546
+### Time:		1.57044
+UNSAT
+./test-cases/Group4/unsat/uuf150-061.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.009039 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6966
+### reducedb_time:		0.012031
+### sort_time:		0.010794
+### nbRemovedClauses:		997
+### reduceDB:		1
+### Restarts:		16
+### Learned-clauses:	5184
+### Decisions:		6966
+### Implications:	204037
+### Time:		1.31845
+UNSAT
+./test-cases/Group4/unsat/uuf150-061.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.46205
+### num_OnAssign:		275596
+### num_OnUnAssign:		277162
+### num_decisions:		8605
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		18
+### Learned-clauses:	7055
+### Decisions:		8605
+### Implications:	266991
+### Time:		2.74714
+UNSAT
+./test-cases/Group4/unsat/uuf150-061.cnf
+vars: 150 clauses: 645
+Read 645 clauses in 0.002397 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.804357
+### num_OnAssign:		465323
+### num_OnUnAssign:		467651
+### num_decisions:		14493
+### reducedb_time:		0.051817
+### sort_time:		0.048133
+### nbRemovedClauses:		3794
+### reduceDB:		2
+### Restarts:		27
+### Learned-clauses:	11889
+### Decisions:		14493
+### Implications:	450830
+### Time:		5.24739
+UNSAT
+Processing ./test-cases/Group4/sat/ais12.cnf file...
+./test-cases/Group4/sat/ais12.cnf
+vars: 265 clauses: 5666
+Read 5665 clauses in 0.038629 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		2310
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1210
+### Decisions:		2310
+### Implications:	69145
+### Time:		0.741886
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/ais12.cnf
+vars: 265 clauses: 5666
+Read 5665 clauses in 0.040092 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		2310
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1210
+### Decisions:		2310
+### Implications:	69145
+### Time:		0.73941
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/ais12.cnf
+vars: 265 clauses: 5666
+Read 5665 clauses in 0.011249 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.029173
+### num_OnAssign:		16403
+### num_OnUnAssign:		16342
+### num_decisions:		653
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	384
+### Decisions:		653
+### Implications:	15750
+### Time:		0.133118
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/ais12.cnf
+vars: 265 clauses: 5666
+Read 5665 clauses in 0.012032 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.027571
+### num_OnAssign:		16403
+### num_OnUnAssign:		16342
+### num_decisions:		653
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	384
+### Decisions:		653
+### Implications:	15750
+### Time:		0.126105
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bmc-galileo-8.cnf file...
+./test-cases/Group4/sat/bmc-galileo-8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 2.66722 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		49449
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		16
+### Learned-clauses:	8181
+### Decisions:		49449
+### Implications:	14921381
+### Time:		37.0904
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-galileo-8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 2.57926 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		86181
+### reducedb_time:		0.414317
+### sort_time:		0.049128
+### nbRemovedClauses:		3775
+### reduceDB:		2
+### Restarts:		17
+### Learned-clauses:	11001
+### Decisions:		86181
+### Implications:	19610889
+### Time:		48.54
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-galileo-8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 0.68437 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		12.2604
+### num_OnAssign:		2477228
+### num_OnUnAssign:		2516616
+### num_decisions:		15725
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	2197
+### Decisions:		15725
+### Implications:	2461503
+### Time:		20.7779
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-galileo-8.cnf
+vars: 58074 clauses: 294821
+Read 294627 clauses in 0.68614 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		12.4122
+### num_OnAssign:		2404578
+### num_OnUnAssign:		2443966
+### num_decisions:		16028
+### reducedb_time:		0.191961
+### sort_time:		0.012074
+### nbRemovedClauses:		973
+### reduceDB:		1
+### Restarts:		7
+### Learned-clauses:	2230
+### Decisions:		16028
+### Implications:	2388550
+### Time:		21.026
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bmc-galileo-9.cnf file...
+./test-cases/Group4/sat/bmc-galileo-9.cnf
+vars: 63624 clauses: 326999
+Read 326805 clauses in 2.92179 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		52057
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		12
+### Learned-clauses:	6674
+### Decisions:		52057
+### Implications:	10471900
+### Time:		27.0396
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-galileo-9.cnf
+vars: 63624 clauses: 326999
+Read 326805 clauses in 2.85514 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		91723
+### reducedb_time:		0.744776
+### sort_time:		0.127693
+### nbRemovedClauses:		8770
+### reduceDB:		3
+### Restarts:		22
+### Learned-clauses:	16379
+### Decisions:		91723
+### Implications:	24899979
+### Time:		68.5439
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-galileo-9.cnf
+vars: 63624 clauses: 326999
+Read 326805 clauses in 0.782032 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		30.2372
+### num_OnAssign:		6453120
+### num_OnUnAssign:		6558433
+### num_decisions:		30984
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		13
+### Learned-clauses:	6366
+### Decisions:		30984
+### Implications:	6422136
+### Time:		51.5879
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-galileo-9.cnf
+vars: 63624 clauses: 326999
+Read 326805 clauses in 0.747584 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		27.4455
+### num_OnAssign:		5206034
+### num_OnUnAssign:		5291023
+### num_decisions:		28949
+### reducedb_time:		0.216517
+### sort_time:		0.012151
+### nbRemovedClauses:		983
+### reduceDB:		1
+### Restarts:		12
+### Learned-clauses:	5670
+### Decisions:		28949
+### Implications:	5177085
+### Time:		45.6412
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bmc-ibm-10.cnf file...
+./test-cases/Group4/sat/bmc-ibm-10.cnf
+vars: 59056 clauses: 323700
+Read 323253 clauses in 2.91142 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		98936
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		17
+### Learned-clauses:	12992
+### Decisions:		98936
+### Implications:	9883712
+### Time:		44.2446
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-10.cnf
+vars: 59056 clauses: 323700
+Read 323253 clauses in 2.91631 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		92635
+### reducedb_time:		0.448014
+### sort_time:		0.050372
+### nbRemovedClauses:		3746
+### reduceDB:		2
+### Restarts:		16
+### Learned-clauses:	11395
+### Decisions:		92635
+### Implications:	9513611
+### Time:		34.4138
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-10.cnf
+vars: 59056 clauses: 323700
+Read 323253 clauses in 0.791492 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		23.3064
+### num_OnAssign:		3401930
+### num_OnUnAssign:		3525656
+### num_decisions:		30276
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		13
+### Learned-clauses:	5044
+### Decisions:		30276
+### Implications:	3371654
+### Time:		36.596
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-10.cnf
+vars: 59056 clauses: 323700
+Read 323253 clauses in 0.784362 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		21.0306
+### num_OnAssign:		2710916
+### num_OnUnAssign:		2786862
+### num_decisions:		29284
+### reducedb_time:		0.207498
+### sort_time:		0.011187
+### nbRemovedClauses:		965
+### reduceDB:		1
+### Restarts:		12
+### Learned-clauses:	4138
+### Decisions:		29284
+### Implications:	2681632
+### Time:		31.7563
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bmc-ibm-11.cnf file...
+./test-cases/Group4/sat/bmc-ibm-11.cnf
+vars: 32109 clauses: 150027
+Read 149891 clauses in 1.30141 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		67938
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	11955
+### Decisions:		67938
+### Implications:	12072999
+### Time:		42.3372
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-11.cnf
+vars: 32109 clauses: 150027
+Read 149891 clauses in 1.28151 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		50242
+### reducedb_time:		0.256409
+### sort_time:		0.050953
+### nbRemovedClauses:		3781
+### reduceDB:		2
+### Restarts:		15
+### Learned-clauses:	8156
+### Decisions:		50242
+### Implications:	8036053
+### Time:		25.2335
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-11.cnf
+vars: 32109 clauses: 150027
+Read 149891 clauses in 0.381419 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		12.7726
+### num_OnAssign:		3723810
+### num_OnUnAssign:		3754084
+### num_decisions:		21796
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		10
+### Learned-clauses:	4872
+### Decisions:		21796
+### Implications:	3702014
+### Time:		25.5678
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-11.cnf
+vars: 32109 clauses: 150027
+Read 149891 clauses in 0.362047 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		16.226
+### num_OnAssign:		5070109
+### num_OnUnAssign:		5119110
+### num_decisions:		25513
+### reducedb_time:		0.115708
+### sort_time:		0.011582
+### nbRemovedClauses:		987
+### reduceDB:		1
+### Restarts:		10
+### Learned-clauses:	6244
+### Decisions:		25513
+### Implications:	5044596
+### Time:		33.7765
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bmc-ibm-6.cnf file...
+./test-cases/Group4/sat/bmc-ibm-6.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 3.4517 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		21957
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	1771
+### Decisions:		21957
+### Implications:	759868
+### Time:		8.4141
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-6.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 3.32773 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		21957
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	1771
+### Decisions:		21957
+### Implications:	759868
+### Time:		8.25826
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-6.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 0.864593 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		5.68778
+### num_OnAssign:		598370
+### num_OnUnAssign:		582496
+### num_decisions:		7922
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1620
+### Decisions:		7922
+### Implications:	590448
+### Time:		9.32583
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bmc-ibm-6.cnf
+vars: 51639 clauses: 368352
+Read 368002 clauses in 0.838515 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		5.7391
+### num_OnAssign:		598370
+### num_OnUnAssign:		582496
+### num_decisions:		7922
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1620
+### Decisions:		7922
+### Implications:	590448
+### Time:		9.47581
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bw_large.c.cnf file...
+./test-cases/Group4/sat/bw_large.c.cnf
+vars: 3016 clauses: 50457
+Read 50457 clauses in 0.342706 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4220
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		6
+### Learned-clauses:	1240
+### Decisions:		4220
+### Implications:	604221
+### Time:		2.04391
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bw_large.c.cnf
+vars: 3016 clauses: 50457
+Read 50457 clauses in 0.343859 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4220
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		6
+### Learned-clauses:	1240
+### Decisions:		4220
+### Implications:	604221
+### Time:		2.08946
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bw_large.c.cnf
+vars: 3016 clauses: 50457
+Read 50457 clauses in 0.10128 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.20019
+### num_OnAssign:		879828
+### num_OnUnAssign:		882034
+### num_decisions:		3061
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1708
+### Decisions:		3061
+### Implications:	876767
+### Time:		4.10203
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bw_large.c.cnf
+vars: 3016 clauses: 50457
+Read 50457 clauses in 0.095281 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.22914
+### num_OnAssign:		879828
+### num_OnUnAssign:		882034
+### num_decisions:		3061
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1708
+### Decisions:		3061
+### Implications:	876767
+### Time:		4.1669
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/bw_large.d.cnf file...
+./test-cases/Group4/sat/bw_large.d.cnf
+vars: 6325 clauses: 131973
+Read 131973 clauses in 0.903407 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		17709
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	5756
+### Decisions:		17709
+### Implications:	4397040
+### Time:		14.3054
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bw_large.d.cnf
+vars: 6325 clauses: 131973
+Read 131973 clauses in 0.926651 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9884
+### reducedb_time:		0.056988
+### sort_time:		0.012102
+### nbRemovedClauses:		984
+### reduceDB:		1
+### Restarts:		8
+### Learned-clauses:	2643
+### Decisions:		9884
+### Implications:	2000300
+### Time:		7.13799
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bw_large.d.cnf
+vars: 6325 clauses: 131973
+Read 131973 clauses in 0.25043 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.30707
+### num_OnAssign:		924048
+### num_OnUnAssign:		927590
+### num_decisions:		2324
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1074
+### Decisions:		2324
+### Implications:	921724
+### Time:		4.64194
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/bw_large.d.cnf
+vars: 6325 clauses: 131973
+Read 131973 clauses in 0.259449 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.29855
+### num_OnAssign:		924048
+### num_OnUnAssign:		927590
+### num_decisions:		2324
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	1074
+### Decisions:		2324
+### Implications:	921724
+### Time:		4.56708
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/uf150-090.cnf file...
+./test-cases/Group4/sat/uf150-090.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.006583 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3797
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		12
+### Learned-clauses:	2769
+### Decisions:		3797
+### Implications:	110622
+### Time:		0.71318
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/uf150-090.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.004822 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6900
+### reducedb_time:		0.012653
+### sort_time:		0.011548
+### nbRemovedClauses:		999
+### reduceDB:		1
+### Restarts:		16
+### Learned-clauses:	5042
+### Decisions:		6900
+### Implications:	198276
+### Time:		1.40495
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/uf150-090.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.001703 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.268713
+### num_OnAssign:		160595
+### num_OnUnAssign:		161590
+### num_decisions:		4952
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		14
+### Learned-clauses:	3943
+### Decisions:		4952
+### Implications:	155643
+### Time:		1.40402
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/uf150-090.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.002625 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.226792
+### num_OnAssign:		138120
+### num_OnUnAssign:		139125
+### num_decisions:		4367
+### reducedb_time:		0.012056
+### sort_time:		0.010878
+### nbRemovedClauses:		1000
+### reduceDB:		1
+### Restarts:		13
+### Learned-clauses:	3438
+### Decisions:		4367
+### Implications:	133753
+### Time:		1.03574
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group4/sat/uf150-096.cnf file...
+./test-cases/Group4/sat/uf150-096.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.004956 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6551
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	4933
+### Decisions:		6551
+### Implications:	200877
+### Time:		1.38219
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/uf150-096.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.004582 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3145
+### reducedb_time:		0.011234
+### sort_time:		0.009909
+### nbRemovedClauses:		1000
+### reduceDB:		1
+### Restarts:		10
+### Learned-clauses:	2322
+### Decisions:		3145
+### Implications:	95972
+### Time:		0.552492
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/uf150-096.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.003315 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.324472
+### num_OnAssign:		198048
+### num_OnUnAssign:		199372
+### num_decisions:		6179
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		17
+### Learned-clauses:	4963
+### Decisions:		6179
+### Implications:	191869
+### Time:		1.80941
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group4/sat/uf150-096.cnf
+vars: 150 clauses: 645
+Read 644 clauses in 0.00166 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.422994
+### num_OnAssign:		254676
+### num_OnUnAssign:		256147
+### num_decisions:		7830
+### reducedb_time:		0.01118
+### sort_time:		0.009459
+### nbRemovedClauses:		999
+### reduceDB:		1
+### Restarts:		19
+### Learned-clauses:	6387
+### Decisions:		7830
+### Implications:	246846
+### Time:		2.36413
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/unsat/unsat1.cnf file...
+./test-cases/Group5/unsat/unsat1.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.024827 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1351
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	665
+### Decisions:		1351
+### Implications:	102090
+### Time:		0.431684
+UNSAT
+./test-cases/Group5/unsat/unsat1.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.026768 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1351
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	665
+### Decisions:		1351
+### Implications:	102090
+### Time:		0.434982
+UNSAT
+./test-cases/Group5/unsat/unsat1.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.013846 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.145741
+### num_OnAssign:		100218
+### num_OnUnAssign:		100289
+### num_decisions:		1509
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	595
+### Decisions:		1509
+### Implications:	98709
+### Time:		0.48417
+UNSAT
+./test-cases/Group5/unsat/unsat1.cnf
+vars: 1040 clauses: 3668
+Read 3662 clauses in 0.012648 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.140765
+### num_OnAssign:		100218
+### num_OnUnAssign:		100289
+### num_decisions:		1509
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		2
+### Learned-clauses:	595
+### Decisions:		1509
+### Implications:	98709
+### Time:		0.466871
+UNSAT
+Processing ./test-cases/Group5/unsat/unsat2.cnf file...
+./test-cases/Group5/unsat/unsat2.cnf
+vars: 72 clauses: 297
+Read 296 clauses in 0.006103 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		37
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		37
+### Implications:	35
+### Time:		0.00726
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/unsat/unsat2.cnf
+vars: 72 clauses: 297
+Read 296 clauses in 0.001947 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		37
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		37
+### Implications:	35
+### Time:		0.002341
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/unsat/unsat2.cnf
+vars: 72 clauses: 297
+Read 296 clauses in 0.001103 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000136
+### num_OnAssign:		72
+### num_OnUnAssign:		0
+### num_decisions:		28
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		28
+### Implications:	44
+### Time:		0.002055
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/unsat/unsat2.cnf
+vars: 72 clauses: 297
+Read 296 clauses in 0.001363 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000127
+### num_OnAssign:		72
+### num_OnUnAssign:		0
+### num_decisions:		28
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		28
+### Implications:	44
+### Time:		0.002223
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/unsat/unsat3.cnf file...
+./test-cases/Group5/unsat/unsat3.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.013114 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		273
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	176
+### Decisions:		273
+### Implications:	5301
+### Time:		0.047424
+UNSAT
+./test-cases/Group5/unsat/unsat3.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.011595 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		273
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	176
+### Decisions:		273
+### Implications:	5301
+### Time:		0.046076
+UNSAT
+./test-cases/Group5/unsat/unsat3.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.002777 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.004102
+### num_OnAssign:		3102
+### num_OnUnAssign:		3065
+### num_decisions:		143
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	104
+### Decisions:		143
+### Implications:	2959
+### Time:		0.020045
+UNSAT
+./test-cases/Group5/unsat/unsat3.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.004225 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003614
+### num_OnAssign:		3102
+### num_OnUnAssign:		3065
+### num_decisions:		143
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	104
+### Decisions:		143
+### Implications:	2959
+### Time:		0.019946
+UNSAT
+Processing ./test-cases/Group5/unsat/unsat4.cnf file...
+./test-cases/Group5/unsat/unsat4.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.012169 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		133
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	64
+### Decisions:		133
+### Implications:	2066
+### Time:		0.022906
+UNSAT
+./test-cases/Group5/unsat/unsat4.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.011118 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		133
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	64
+### Decisions:		133
+### Implications:	2066
+### Time:		0.021286
+UNSAT
+./test-cases/Group5/unsat/unsat4.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.004152 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00048
+### num_OnAssign:		555
+### num_OnUnAssign:		531
+### num_decisions:		30
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	20
+### Decisions:		30
+### Implications:	525
+### Time:		0.006608
+UNSAT
+./test-cases/Group5/unsat/unsat4.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.003125 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001207
+### num_OnAssign:		555
+### num_OnUnAssign:		531
+### num_decisions:		30
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	20
+### Decisions:		30
+### Implications:	525
+### Time:		0.008616
+UNSAT
+Processing ./test-cases/Group5/unsat/unsat5.cnf file...
+./test-cases/Group5/unsat/unsat5.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.011595 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		51
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	37
+### Decisions:		51
+### Implications:	1267
+### Time:		0.01933
+UNSAT
+./test-cases/Group5/unsat/unsat5.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.013626 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		51
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	37
+### Decisions:		51
+### Implications:	1267
+### Time:		0.021026
+UNSAT
+./test-cases/Group5/unsat/unsat5.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.00433 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001593
+### num_OnAssign:		1399
+### num_OnUnAssign:		1350
+### num_decisions:		72
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	47
+### Decisions:		72
+### Implications:	1327
+### Time:		0.011074
+UNSAT
+./test-cases/Group5/unsat/unsat5.cnf
+vars: 100 clauses: 850
+Read 850 clauses in 0.005013 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003935
+### num_OnAssign:		1399
+### num_OnUnAssign:		1350
+### num_decisions:		72
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	47
+### Decisions:		72
+### Implications:	1327
+### Time:		0.02132
+UNSAT
+Processing ./test-cases/Group5/sat/sat1.cnf file...
+./test-cases/Group5/sat/sat1.cnf
+vars: 718 clauses: 4934
+Read 4806 clauses in 0.035897 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6146
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		11
+### Learned-clauses:	3285
+### Decisions:		6146
+### Implications:	246786
+### Time:		2.53488
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat1.cnf
+vars: 718 clauses: 4934
+Read 4806 clauses in 0.043581 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		7927
+### reducedb_time:		0.015558
+### sort_time:		0.012201
+### nbRemovedClauses:		994
+### reduceDB:		1
+### Restarts:		12
+### Learned-clauses:	4303
+### Decisions:		7927
+### Implications:	310120
+### Time:		4.21834
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat1.cnf
+vars: 718 clauses: 4934
+Read 4806 clauses in 0.013103 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.381222
+### num_OnAssign:		203029
+### num_OnUnAssign:		204679
+### num_decisions:		4923
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		9
+### Learned-clauses:	2834
+### Decisions:		4923
+### Implications:	198106
+### Time:		1.59118
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat1.cnf
+vars: 718 clauses: 4934
+Read 4806 clauses in 0.008097 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.647323
+### num_OnAssign:		334952
+### num_OnUnAssign:		337487
+### num_decisions:		7732
+### reducedb_time:		0.014145
+### sort_time:		0.011162
+### nbRemovedClauses:		995
+### reduceDB:		1
+### Restarts:		12
+### Learned-clauses:	4771
+### Decisions:		7732
+### Implications:	327220
+### Time:		3.11388
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/sat/sat10.cnf file...
+./test-cases/Group5/sat/sat10.cnf
+vars: 220 clauses: 1210
+Read 1210 clauses in 0.01121 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6285
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	4551
+### Decisions:		6285
+### Implications:	227338
+### Time:		1.34738
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat10.cnf
+vars: 220 clauses: 1210
+Read 1210 clauses in 0.014488 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		7673
+### reducedb_time:		0.011933
+### sort_time:		0.010016
+### nbRemovedClauses:		990
+### reduceDB:		1
+### Restarts:		17
+### Learned-clauses:	5547
+### Decisions:		7673
+### Implications:	273987
+### Time:		1.68214
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat10.cnf
+vars: 220 clauses: 1210
+Read 1210 clauses in 0.004818 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.339048
+### num_OnAssign:		216257
+### num_OnUnAssign:		218148
+### num_decisions:		5395
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		15
+### Learned-clauses:	4181
+### Decisions:		5395
+### Implications:	210862
+### Time:		1.57168
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat10.cnf
+vars: 220 clauses: 1210
+Read 1210 clauses in 0.003064 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		1.29044
+### num_OnAssign:		739811
+### num_OnUnAssign:		744621
+### num_decisions:		17942
+### reducedb_time:		0.117437
+### sort_time:		0.108067
+### nbRemovedClauses:		8792
+### reduceDB:		3
+### Restarts:		33
+### Learned-clauses:	14584
+### Decisions:		17942
+### Implications:	721869
+### Time:		7.58287
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/sat/sat2.cnf file...
+./test-cases/Group5/sat/sat2.cnf
+vars: 1076 clauses: 16121
+Read 16121 clauses in 0.15063 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1798
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		4
+### Learned-clauses:	658
+### Decisions:		1798
+### Implications:	164220
+### Time:		0.514192
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat2.cnf
+vars: 1076 clauses: 16121
+Read 16121 clauses in 0.145016 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1798
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		4
+### Learned-clauses:	658
+### Decisions:		1798
+### Implications:	164220
+### Time:		0.513046
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat2.cnf
+vars: 1076 clauses: 16121
+Read 16121 clauses in 0.035609 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.033546
+### num_OnAssign:		36637
+### num_OnUnAssign:		36260
+### num_decisions:		456
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	182
+### Decisions:		456
+### Implications:	36181
+### Time:		0.134677
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat2.cnf
+vars: 1076 clauses: 16121
+Read 16121 clauses in 0.032394 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.055197
+### num_OnAssign:		36637
+### num_OnUnAssign:		36260
+### num_decisions:		456
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	182
+### Decisions:		456
+### Implications:	36181
+### Time:		0.191403
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/sat/sat3.cnf file...
+./test-cases/Group5/sat/sat3.cnf
+vars: 261 clauses: 2558
+Read 2558 clauses in 0.039215 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		2947
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	1057
+### Decisions:		2947
+### Implications:	60532
+### Time:		0.848916
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat3.cnf
+vars: 261 clauses: 2558
+Read 2558 clauses in 0.03478 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		2947
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	1057
+### Decisions:		2947
+### Implications:	60532
+### Time:		0.824683
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat3.cnf
+vars: 261 clauses: 2558
+Read 2558 clauses in 0.008968 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003376
+### num_OnAssign:		1835
+### num_OnUnAssign:		1574
+### num_decisions:		89
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	19
+### Decisions:		89
+### Implications:	1746
+### Time:		0.023616
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat3.cnf
+vars: 261 clauses: 2558
+Read 2558 clauses in 0.009273 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.003276
+### num_OnAssign:		1835
+### num_OnUnAssign:		1574
+### num_decisions:		89
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	19
+### Decisions:		89
+### Implications:	1746
+### Time:		0.02284
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/sat/sat4.cnf file...
+./test-cases/Group5/sat/sat4.cnf
+vars: 759 clauses: 20862
+Read 20862 clauses in 0.3566 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6038
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		9
+### Learned-clauses:	1995
+### Decisions:		6038
+### Implications:	378081
+### Time:		2.87346
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat4.cnf
+vars: 759 clauses: 20862
+Read 20862 clauses in 0.361775 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		6038
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		9
+### Learned-clauses:	1995
+### Decisions:		6038
+### Implications:	378081
+### Time:		2.86022
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat4.cnf
+vars: 759 clauses: 20862
+Read 20862 clauses in 0.07941 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001861
+### num_OnAssign:		1122
+### num_OnUnAssign:		363
+### num_decisions:		76
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		76
+### Implications:	1046
+### Time:		0.098175
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat4.cnf
+vars: 759 clauses: 20862
+Read 20862 clauses in 0.082453 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001824
+### num_OnAssign:		1122
+### num_OnUnAssign:		363
+### num_decisions:		76
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		76
+### Implications:	1046
+### Time:		0.100608
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/sat/sat5.cnf file...
+./test-cases/Group5/sat/sat5.cnf
+vars: 522 clauses: 11636
+Read 11636 clauses in 0.160149 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		447
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	234
+### Decisions:		447
+### Implications:	33910
+### Time:		0.326682
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat5.cnf
+vars: 522 clauses: 11636
+Read 11636 clauses in 0.15775 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		447
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	234
+### Decisions:		447
+### Implications:	33910
+### Time:		0.319342
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat5.cnf
+vars: 522 clauses: 11636
+Read 11636 clauses in 0.031514 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.091435
+### num_OnAssign:		55734
+### num_OnUnAssign:		55461
+### num_decisions:		1094
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	499
+### Decisions:		1094
+### Implications:	54640
+### Time:		0.416481
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat5.cnf
+vars: 522 clauses: 11636
+Read 11636 clauses in 0.037732 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.092148
+### num_OnAssign:		55734
+### num_OnUnAssign:		55461
+### num_decisions:		1094
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	499
+### Decisions:		1094
+### Implications:	54640
+### Time:		0.418629
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group5/sat/sat6.cnf file...
+./test-cases/Group5/sat/sat6.cnf
+vars: 200 clauses: 860
+Read 860 clauses in 0.008163 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		20066
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		35
+### Learned-clauses:	14402
+### Decisions:		20066
+### Implications:	682732
+### Time:		6.48739
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat6.cnf
+vars: 200 clauses: 860
+Read 860 clauses in 0.007443 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		15431
+### reducedb_time:		0.048688
+### sort_time:		0.044694
+### nbRemovedClauses:		3795
+### reduceDB:		2
+### Restarts:		23
+### Learned-clauses:	11189
+### Decisions:		15431
+### Implications:	529840
+### Time:		3.83528
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat6.cnf
+vars: 200 clauses: 860
+Read 860 clauses in 0.002183 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.119233
+### num_OnAssign:		77032
+### num_OnUnAssign:		77802
+### num_decisions:		2177
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	1617
+### Decisions:		2177
+### Implications:	74855
+### Time:		0.473388
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group5/sat/sat6.cnf
+vars: 200 clauses: 860
+Read 860 clauses in 0.00396 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.113155
+### num_OnAssign:		77032
+### num_OnUnAssign:		77802
+### num_decisions:		2177
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		7
+### Learned-clauses:	1617
+### Decisions:		2177
+### Implications:	74855
+### Time:		0.453416
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/unsat/unsat1.cnf file...
+./test-cases/Group6/unsat/unsat1.cnf
+vars: 3 clauses: 8
+Read 8 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	7
+### Time:		0
+UNSAT
+./test-cases/Group6/unsat/unsat1.cnf
+vars: 3 clauses: 8
+Read 8 clauses in 0.000439 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	7
+### Time:		0.000832
+UNSAT
+./test-cases/Group6/unsat/unsat1.cnf
+vars: 3 clauses: 8
+Read 8 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		10
+### num_OnUnAssign:		7
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	7
+### Time:		0
+UNSAT
+./test-cases/Group6/unsat/unsat1.cnf
+vars: 3 clauses: 8
+Read 8 clauses in 0.000141 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.3e-05
+### num_OnAssign:		10
+### num_OnUnAssign:		7
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		3
+### Implications:	7
+### Time:		0.000391
+UNSAT
+Processing ./test-cases/Group6/unsat/unsat2.cnf file...
+./test-cases/Group6/unsat/unsat2.cnf
+vars: 5 clauses: 9
+Read 7 clauses in 0.00034 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		0
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		0
+### Implications:	3
+### Time:		0.000557
+UNSAT
+./test-cases/Group6/unsat/unsat2.cnf
+vars: 5 clauses: 9
+Read 7 clauses in 0.000354 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		0
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		0
+### Implications:	3
+### Time:		0.000522
+UNSAT
+./test-cases/Group6/unsat/unsat2.cnf
+vars: 5 clauses: 9
+Read 7 clauses in 0.000202 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		3e-06
+### num_OnAssign:		3
+### num_OnUnAssign:		0
+### num_decisions:		0
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		0
+### Implications:	3
+### Time:		0.000357
+UNSAT
+./test-cases/Group6/unsat/unsat2.cnf
+vars: 5 clauses: 9
+Read 7 clauses in 0.000219 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		4e-06
+### num_OnAssign:		3
+### num_OnUnAssign:		0
+### num_decisions:		0
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		0
+### Implications:	3
+### Time:		0.000372
+UNSAT
+Processing ./test-cases/Group6/unsat/unsat3.cnf file...
+./test-cases/Group6/unsat/unsat3.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0.001528 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		22
+### Implications:	20
+### Time:		0.001528
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat3.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0.000903 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		22
+### Implications:	20
+### Time:		0.001533
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat3.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		42
+### num_OnUnAssign:		0
+### num_decisions:		15
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		15
+### Implications:	27
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat3.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		42
+### num_OnUnAssign:		0
+### num_decisions:		15
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		15
+### Implications:	27
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/unsat/unsat4.cnf file...
+./test-cases/Group6/unsat/unsat4.cnf
+vars: 63 clauses: 168
+Read 167 clauses in 0.001815 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		304
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	124
+### Decisions:		304
+### Implications:	1106
+### Time:		0.009486
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat4.cnf
+vars: 63 clauses: 168
+Read 167 clauses in 0.001969 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		304
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	124
+### Decisions:		304
+### Implications:	1106
+### Time:		0.010237
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat4.cnf
+vars: 63 clauses: 168
+Read 167 clauses in 0.000513 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.0001
+### num_OnAssign:		65
+### num_OnUnAssign:		2
+### num_decisions:		23
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		23
+### Implications:	42
+### Time:		0.001143
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat4.cnf
+vars: 63 clauses: 168
+Read 167 clauses in 0.001061 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000165
+### num_OnAssign:		65
+### num_OnUnAssign:		2
+### num_decisions:		23
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		23
+### Implications:	42
+### Time:		0.002404
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/unsat/unsat5.cnf file...
+./test-cases/Group6/unsat/unsat5.cnf
+vars: 66 clauses: 176
+Read 175 clauses in 0.002305 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		218
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	119
+### Decisions:		218
+### Implications:	1128
+### Time:		0.012652
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat5.cnf
+vars: 66 clauses: 176
+Read 175 clauses in 0.002324 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		218
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	119
+### Decisions:		218
+### Implications:	1128
+### Time:		0.009435
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat5.cnf
+vars: 66 clauses: 176
+Read 175 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		68
+### num_OnUnAssign:		2
+### num_decisions:		24
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		24
+### Implications:	44
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/unsat/unsat5.cnf
+vars: 66 clauses: 176
+Read 175 clauses in 0.00066 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		8.9e-05
+### num_OnAssign:		68
+### num_OnUnAssign:		2
+### num_decisions:		24
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		24
+### Implications:	44
+### Time:		0.001434
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat1.cnf file...
+./test-cases/Group6/sat/sat1.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.000713 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		9
+### Implications:	59
+### Time:		0.00118
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat1.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.000684 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		9
+### Implications:	59
+### Time:		0.001182
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat1.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.00031 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000418
+### num_OnAssign:		174
+### num_OnUnAssign:		124
+### num_decisions:		41
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	11
+### Decisions:		41
+### Implications:	133
+### Time:		0.002307
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat1.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.000567 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000468
+### num_OnAssign:		174
+### num_OnUnAssign:		124
+### num_decisions:		41
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	11
+### Decisions:		41
+### Implications:	133
+### Time:		0.002914
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat10.cnf file...
+./test-cases/Group6/sat/sat10.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000927 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		11
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	5
+### Decisions:		11
+### Implications:	58
+### Time:		0.001567
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat10.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000829 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		11
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	5
+### Decisions:		11
+### Implications:	58
+### Time:		0.001478
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat10.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000338 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000113
+### num_OnAssign:		69
+### num_OnUnAssign:		49
+### num_decisions:		14
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	6
+### Decisions:		14
+### Implications:	55
+### Time:		0.001202
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat10.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000549 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000159
+### num_OnAssign:		69
+### num_OnUnAssign:		49
+### num_decisions:		14
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	6
+### Decisions:		14
+### Implications:	55
+### Time:		0.001674
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat2.cnf file...
+./test-cases/Group6/sat/sat2.cnf
+vars: 16 clauses: 18
+Read 17 clauses in 0.000228 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		4
+### Implications:	12
+### Time:		0.000228
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat2.cnf
+vars: 16 clauses: 18
+Read 17 clauses in 0.000227 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		4
+### Implications:	12
+### Time:		0.000637
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat2.cnf
+vars: 16 clauses: 18
+Read 17 clauses in 0.000268 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		7e-05
+### num_OnAssign:		29
+### num_OnUnAssign:		13
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		10
+### Implications:	19
+### Time:		0.00133
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat2.cnf
+vars: 16 clauses: 18
+Read 17 clauses in 0.000228 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		4.9e-05
+### num_OnAssign:		29
+### num_OnUnAssign:		13
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		10
+### Implications:	19
+### Time:		0.000766
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat3.cnf file...
+./test-cases/Group6/sat/sat3.cnf
+vars: 4 clauses: 8
+Read 7 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	3
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat3.cnf
+vars: 4 clauses: 8
+Read 7 clauses in 0.000262 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		3
+### Implications:	3
+### Time:		0.000631
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat3.cnf
+vars: 4 clauses: 8
+Read 7 clauses in 0.000127 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		2.9e-05
+### num_OnAssign:		12
+### num_OnUnAssign:		8
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		5
+### Implications:	7
+### Time:		0.00053
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat3.cnf
+vars: 4 clauses: 8
+Read 7 clauses in 0.000171 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		3e-05
+### num_OnAssign:		12
+### num_OnUnAssign:		8
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		5
+### Implications:	7
+### Time:		0.000647
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat4.cnf file...
+./test-cases/Group6/sat/sat4.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		12
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	7
+### Decisions:		12
+### Implications:	72
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat4.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000838 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		12
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	7
+### Decisions:		12
+### Implications:	72
+### Time:		0.000838
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat4.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000495 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000237
+### num_OnAssign:		98
+### num_OnUnAssign:		78
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	8
+### Decisions:		10
+### Implications:	88
+### Time:		0.00158
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat4.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000377 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000205
+### num_OnAssign:		98
+### num_OnUnAssign:		78
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	8
+### Decisions:		10
+### Implications:	88
+### Time:		0.001259
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat5.cnf file...
+./test-cases/Group6/sat/sat5.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000895 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		5
+### Implications:	39
+### Time:		0.000895
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat5.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000888 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		5
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		5
+### Implications:	39
+### Time:		0.001519
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat5.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		20
+### num_OnUnAssign:		0
+### num_decisions:		8
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		8
+### Implications:	12
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat5.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.00037 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		5e-05
+### num_OnAssign:		20
+### num_OnUnAssign:		0
+### num_decisions:		8
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		8
+### Implications:	12
+### Time:		0.000617
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat6.cnf file...
+./test-cases/Group6/sat/sat6.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.001115 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		16
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	10
+### Decisions:		16
+### Implications:	99
+### Time:		0.001899
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat6.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000817 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		16
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	10
+### Decisions:		16
+### Implications:	99
+### Time:		0.000817
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat6.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000304 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		6.7e-05
+### num_OnAssign:		39
+### num_OnUnAssign:		19
+### num_decisions:		12
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		12
+### Implications:	27
+### Time:		0.000844
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat6.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000386 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		7.3e-05
+### num_OnAssign:		39
+### num_OnUnAssign:		19
+### num_decisions:		12
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		12
+### Implications:	27
+### Time:		0.00094
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat7.cnf file...
+./test-cases/Group6/sat/sat7.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000912 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		10
+### Implications:	47
+### Time:		0.001518
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat7.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000894 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		10
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		10
+### Implications:	47
+### Time:		0.001853
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat7.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.00034 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		7.3e-05
+### num_OnAssign:		46
+### num_OnUnAssign:		26
+### num_decisions:		8
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		8
+### Implications:	38
+### Time:		0.000964
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat7.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000511 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		8.3e-05
+### num_OnAssign:		46
+### num_OnUnAssign:		26
+### num_decisions:		8
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		8
+### Implications:	38
+### Time:		0.00128
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat8.cnf file...
+./test-cases/Group6/sat/sat8.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		7
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		7
+### Implications:	37
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat8.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000823 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		7
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	2
+### Decisions:		7
+### Implications:	37
+### Time:		0.001658
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat8.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		28
+### num_OnUnAssign:		8
+### num_decisions:		7
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		7
+### Implications:	21
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat8.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000569 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		6.4e-05
+### num_OnAssign:		28
+### num_OnUnAssign:		8
+### num_decisions:		7
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		7
+### Implications:	21
+### Time:		0.001357
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group6/sat/sat9.cnf file...
+./test-cases/Group6/sat/sat9.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000888 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		11
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		11
+### Implications:	15
+### Time:		0.001283
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat9.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000942 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		11
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		11
+### Implications:	15
+### Time:		0.001434
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat9.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0.000701 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000231
+### num_OnAssign:		83
+### num_OnUnAssign:		63
+### num_decisions:		13
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	7
+### Decisions:		13
+### Implications:	70
+### Time:		0.001793
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group6/sat/sat9.cnf
+vars: 20 clauses: 91
+Read 91 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		83
+### num_OnUnAssign:		63
+### num_decisions:		13
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	7
+### Decisions:		13
+### Implications:	70
+### Time:		0.000494
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/unsat/UNSAT1.cnf file...
+./test-cases/Group7/unsat/UNSAT1.cnf
+vars: 100 clauses: 558
+Read 557 clauses in 0.005214 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		349
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	280
+### Decisions:		349
+### Implications:	8241
+### Time:		0.04452
+UNSAT
+./test-cases/Group7/unsat/UNSAT1.cnf
+vars: 100 clauses: 558
+Read 557 clauses in 0.004111 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		349
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	280
+### Decisions:		349
+### Implications:	8241
+### Time:		0.040951
+UNSAT
+./test-cases/Group7/unsat/UNSAT1.cnf
+vars: 100 clauses: 558
+Read 557 clauses in 0.002206 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.023494
+### num_OnAssign:		16184
+### num_OnUnAssign:		16318
+### num_decisions:		709
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	558
+### Decisions:		709
+### Implications:	15475
+### Time:		0.092814
+UNSAT
+./test-cases/Group7/unsat/UNSAT1.cnf
+vars: 100 clauses: 558
+Read 557 clauses in 0.001419 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.024501
+### num_OnAssign:		16184
+### num_OnUnAssign:		16318
+### num_decisions:		709
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	558
+### Decisions:		709
+### Implications:	15475
+### Time:		0.0962
+UNSAT
+Processing ./test-cases/Group7/unsat/UNSAT2.cnf file...
+./test-cases/Group7/unsat/UNSAT2.cnf
+vars: 500 clauses: 8008
+Read 8008 clauses in 1.28559 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		239
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		239
+### Implications:	7
+### Time:		1.28974
+UNSAT
+./test-cases/Group7/unsat/UNSAT2.cnf
+vars: 500 clauses: 8008
+Read 8008 clauses in 1.29479 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		239
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		239
+### Implications:	7
+### Time:		1.29976
+UNSAT
+./test-cases/Group7/unsat/UNSAT2.cnf
+vars: 500 clauses: 8008
+Read 8008 clauses in 0.289076 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000871
+### num_OnAssign:		109
+### num_OnUnAssign:		106
+### num_decisions:		102
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		102
+### Implications:	7
+### Time:		0.302093
+UNSAT
+./test-cases/Group7/unsat/UNSAT2.cnf
+vars: 500 clauses: 8008
+Read 8008 clauses in 0.268395 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000709
+### num_OnAssign:		109
+### num_OnUnAssign:		106
+### num_decisions:		102
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	3
+### Decisions:		102
+### Implications:	7
+### Time:		0.278399
+UNSAT
+Processing ./test-cases/Group7/unsat/UNSAT3.cnf file...
+./test-cases/Group7/unsat/UNSAT3.cnf
+vars: 100 clauses: 160
+Read 159 clauses in 0.001491 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		137
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	25
+### Decisions:		137
+### Implications:	293
+### Time:		0.002868
+UNSAT
+./test-cases/Group7/unsat/UNSAT3.cnf
+vars: 100 clauses: 160
+Read 159 clauses in 0.001427 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		137
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	25
+### Decisions:		137
+### Implications:	293
+### Time:		0.002702
+UNSAT
+./test-cases/Group7/unsat/UNSAT3.cnf
+vars: 100 clauses: 160
+Read 159 clauses in 0.000521 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.001022
+### num_OnAssign:		344
+### num_OnUnAssign:		333
+### num_decisions:		116
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	26
+### Decisions:		116
+### Implications:	228
+### Time:		0.00357
+UNSAT
+./test-cases/Group7/unsat/UNSAT3.cnf
+vars: 100 clauses: 160
+Read 159 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00068
+### num_OnAssign:		344
+### num_OnUnAssign:		333
+### num_decisions:		116
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	26
+### Decisions:		116
+### Implications:	228
+### Time:		0.002182
+UNSAT
+Processing ./test-cases/Group7/unsat/UNSAT4.cnf file...
+./test-cases/Group7/unsat/UNSAT4.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0.001092 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		22
+### Implications:	20
+### Time:		0.001519
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/unsat/UNSAT4.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		22
+### Implications:	20
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/unsat/UNSAT4.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0.000758 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		5.1e-05
+### num_OnAssign:		42
+### num_OnUnAssign:		0
+### num_decisions:		15
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		15
+### Implications:	27
+### Time:		0.001228
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/unsat/UNSAT4.cnf
+vars: 42 clauses: 133
+Read 132 clauses in 0.000403 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00013
+### num_OnAssign:		42
+### num_OnUnAssign:		0
+### num_decisions:		15
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		15
+### Implications:	27
+### Time:		0.001135
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/unsat/UNSAT5.cnf file...
+./test-cases/Group7/unsat/UNSAT5.cnf
+vars: 60 clauses: 160
+Read 159 clauses in 0.001625 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		267
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	118
+### Decisions:		267
+### Implications:	1072
+### Time:		0.008179
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/unsat/UNSAT5.cnf
+vars: 60 clauses: 160
+Read 159 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		267
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		1
+### Learned-clauses:	118
+### Decisions:		267
+### Implications:	1072
+### Time:		0.007596
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/unsat/UNSAT5.cnf
+vars: 60 clauses: 160
+Read 159 clauses in 0.000499 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		7.9e-05
+### num_OnAssign:		62
+### num_OnUnAssign:		2
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		22
+### Implications:	40
+### Time:		0.001091
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/unsat/UNSAT5.cnf
+vars: 60 clauses: 160
+Read 159 clauses in 0.000833 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		9.4e-05
+### num_OnAssign:		62
+### num_OnUnAssign:		2
+### num_decisions:		22
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	1
+### Decisions:		22
+### Implications:	40
+### Time:		0.001644
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT1.cnf file...
+./test-cases/Group7/sat/SAT1.cnf
+vars: 1000 clauses: 10000
+Read 10000 clauses in 1.59239 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		999
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		999
+### Implications:	0
+### Time:		1.59842
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT1.cnf
+vars: 1000 clauses: 10000
+Read 10000 clauses in 1.57304 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		999
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		999
+### Implications:	0
+### Time:		1.58473
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT1.cnf
+vars: 1000 clauses: 10000
+Read 10000 clauses in 0.352847 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00677
+### num_OnAssign:		1000
+### num_OnUnAssign:		0
+### num_decisions:		1000
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		1000
+### Implications:	0
+### Time:		0.375033
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT1.cnf
+vars: 1000 clauses: 10000
+Read 10000 clauses in 0.341417 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.009101
+### num_OnAssign:		1000
+### num_OnUnAssign:		0
+### num_decisions:		1000
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		1000
+### Implications:	0
+### Time:		0.366554
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT10.cnf file...
+./test-cases/Group7/sat/SAT10.cnf
+vars: 100 clauses: 552
+Read 551 clauses in 0.004117 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		41
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	5
+### Decisions:		41
+### Implications:	170
+### Time:		0.005198
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT10.cnf
+vars: 100 clauses: 552
+Read 551 clauses in 0.003702 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		41
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	5
+### Decisions:		41
+### Implications:	170
+### Time:		0.004389
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT10.cnf
+vars: 100 clauses: 552
+Read 551 clauses in 0.00159 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000926
+### num_OnAssign:		522
+### num_OnUnAssign:		422
+### num_decisions:		46
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	16
+### Decisions:		46
+### Implications:	476
+### Time:		0.00517
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT10.cnf
+vars: 100 clauses: 552
+Read 551 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00098
+### num_OnAssign:		522
+### num_OnUnAssign:		422
+### num_decisions:		46
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	16
+### Decisions:		46
+### Implications:	476
+### Time:		0.003669
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT2.cnf file...
+./test-cases/Group7/sat/SAT2.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.011137 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		3386
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		10
+### Learned-clauses:	2393
+### Decisions:		3386
+### Implications:	99211
+### Time:		0.61708
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT2.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.006225 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		4690
+### reducedb_time:		0.012192
+### sort_time:		0.010987
+### nbRemovedClauses:		999
+### reduceDB:		1
+### Restarts:		13
+### Learned-clauses:	3365
+### Decisions:		4690
+### Implications:	139078
+### Time:		0.836507
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT2.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.112236
+### num_OnAssign:		73366
+### num_OnUnAssign:		73947
+### num_decisions:		2296
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		9
+### Learned-clauses:	1728
+### Decisions:		2296
+### Implications:	71070
+### Time:		0.46145
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT2.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.109388
+### num_OnAssign:		73366
+### num_OnUnAssign:		73947
+### num_decisions:		2296
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		9
+### Learned-clauses:	1728
+### Decisions:		2296
+### Implications:	71070
+### Time:		0.451625
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT3.cnf file...
+./test-cases/Group7/sat/SAT3.cnf
+vars: 500 clauses: 2000
+Read 2000 clauses in 0.29685 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		499
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		499
+### Implications:	0
+### Time:		0.299522
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT3.cnf
+vars: 500 clauses: 2000
+Read 2000 clauses in 0.289125 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		499
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		499
+### Implications:	0
+### Time:		0.291614
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT3.cnf
+vars: 500 clauses: 2000
+Read 2000 clauses in 0.069525 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00307
+### num_OnAssign:		500
+### num_OnUnAssign:		0
+### num_decisions:		500
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		500
+### Implications:	0
+### Time:		0.076601
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT3.cnf
+vars: 500 clauses: 2000
+Read 2000 clauses in 0.075348 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002885
+### num_OnAssign:		500
+### num_OnUnAssign:		0
+### num_decisions:		500
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		500
+### Implications:	0
+### Time:		0.083339
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT4.cnf file...
+./test-cases/Group7/sat/SAT4.cnf
+vars: 200 clauses: 1000
+Read 1000 clauses in 0.152858 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		199
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		199
+### Implications:	0
+### Time:		0.152858
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT4.cnf
+vars: 200 clauses: 1000
+Read 1000 clauses in 0.14674 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		199
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		199
+### Implications:	0
+### Time:		0.148185
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT4.cnf
+vars: 200 clauses: 1000
+Read 1000 clauses in 0.032836 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000586
+### num_OnAssign:		200
+### num_OnUnAssign:		0
+### num_decisions:		200
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		200
+### Implications:	0
+### Time:		0.035511
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT4.cnf
+vars: 200 clauses: 1000
+Read 1000 clauses in 0.034633 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000608
+### num_OnAssign:		200
+### num_OnUnAssign:		0
+### num_decisions:		200
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		200
+### Implications:	0
+### Time:		0.036996
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT5.cnf file...
+./test-cases/Group7/sat/SAT5.cnf
+vars: 100 clauses: 6000
+Read 6000 clauses in 1.11062 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		99
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		99
+### Implications:	0
+### Time:		1.11469
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT5.cnf
+vars: 100 clauses: 6000
+Read 6000 clauses in 1.10922 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		99
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		99
+### Implications:	0
+### Time:		1.11547
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT5.cnf
+vars: 100 clauses: 6000
+Read 6000 clauses in 0.203422 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000346
+### num_OnAssign:		100
+### num_OnUnAssign:		0
+### num_decisions:		100
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		100
+### Implications:	0
+### Time:		0.209691
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT5.cnf
+vars: 100 clauses: 6000
+Read 6000 clauses in 0.202319 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.000247
+### num_OnAssign:		100
+### num_OnUnAssign:		0
+### num_decisions:		100
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	0
+### Decisions:		100
+### Implications:	0
+### Time:		0.208265
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT6.cnf file...
+./test-cases/Group7/sat/SAT6.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.003706 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1285
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	938
+### Decisions:		1285
+### Implications:	36405
+### Time:		0.176859
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT6.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.007824 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		1285
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		5
+### Learned-clauses:	938
+### Decisions:		1285
+### Implications:	36405
+### Time:		0.182013
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT6.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.001989 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.092709
+### num_OnAssign:		64349
+### num_OnUnAssign:		64943
+### num_decisions:		2140
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		8
+### Learned-clauses:	1645
+### Decisions:		2140
+### Implications:	62209
+### Time:		0.386214
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT6.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.098602
+### num_OnAssign:		64349
+### num_OnUnAssign:		64943
+### num_decisions:		2140
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		8
+### Learned-clauses:	1645
+### Decisions:		2140
+### Implications:	62209
+### Time:		0.409221
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT7.cnf file...
+./test-cases/Group7/sat/SAT7.cnf
+vars: 155 clauses: 1135
+Read 1128 clauses in 0.014813 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		177
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	96
+### Decisions:		177
+### Implications:	2078
+### Time:		0.029245
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT7.cnf
+vars: 155 clauses: 1135
+Read 1128 clauses in 0.00882 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		177
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	96
+### Decisions:		177
+### Implications:	2078
+### Time:		0.02158
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT7.cnf
+vars: 155 clauses: 1135
+Read 1128 clauses in 0.0034 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.004177
+### num_OnAssign:		2647
+### num_OnUnAssign:		2492
+### num_decisions:		153
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	86
+### Decisions:		153
+### Implications:	2494
+### Time:		0.018992
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT7.cnf
+vars: 155 clauses: 1135
+Read 1128 clauses in 0.002265 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.002963
+### num_OnAssign:		2647
+### num_OnUnAssign:		2492
+### num_decisions:		153
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	86
+### Decisions:		153
+### Implications:	2494
+### Time:		0.013373
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT8.cnf file...
+./test-cases/Group7/sat/SAT8.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.001129 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		9
+### Implications:	59
+### Time:		0.002081
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT8.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		9
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	4
+### Decisions:		9
+### Implications:	59
+### Time:		0
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT8.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.000336 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00035
+### num_OnAssign:		174
+### num_OnUnAssign:		124
+### num_decisions:		41
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	11
+### Decisions:		41
+### Implications:	133
+### Time:		0.001637
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT8.cnf
+vars: 50 clauses: 80
+Read 79 clauses in 0.000494 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.00048
+### num_OnAssign:		174
+### num_OnUnAssign:		124
+### num_decisions:		41
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	11
+### Decisions:		41
+### Implications:	133
+### Time:		0.002257
+Assignment validated
+solution in assignment.txt
+SAT
+Processing ./test-cases/Group7/sat/SAT9.cnf file...
+./test-cases/Group7/sat/SAT9.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.006784 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		91
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	30
+### Decisions:		91
+### Implications:	1245
+### Time:		0.012346
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT9.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.002454 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0
+### num_OnAssign:		0
+### num_OnUnAssign:		0
+### num_decisions:		91
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		0
+### Learned-clauses:	30
+### Decisions:		91
+### Implications:	1245
+### Time:		0.007321
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT9.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.003455 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.032994
+### num_OnAssign:		18045
+### num_OnUnAssign:		18237
+### num_decisions:		617
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	457
+### Decisions:		617
+### Implications:	17428
+### Time:		0.126558
+Assignment validated
+solution in assignment.txt
+SAT
+./test-cases/Group7/sat/SAT9.cnf
+vars: 150 clauses: 834
+Read 833 clauses in 0.003569 secs.
+Solving...
+
+Statistics: 
+===================
+### queue_time :		0
+### lrate_time:		0.025101
+### num_OnAssign:		18045
+### num_OnUnAssign:		18237
+### num_decisions:		617
+### reducedb_time:		0
+### sort_time:		0
+### nbRemovedClauses:		0
+### reduceDB:		0
+### Restarts:		3
+### Learned-clauses:	457
+### Decisions:		617
+### Implications:	17428
+### Time:		0.097294
+Assignment validated
+solution in assignment.txt
+SAT

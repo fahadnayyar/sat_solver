@@ -39,7 +39,7 @@ double sort_time = 0; // lbd
 double reducedb_time = 0; // lbd
 
 double lrate_time=0; // lrate
-int is_queue=1; // lrate
+int is_queue=0; // lrate
 double queue_time=0; // lrate
 
 enum class VAR_DEC_HEURISTIC {
