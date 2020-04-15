@@ -135,11 +135,12 @@ static int parseInt(ifstream& in, char &c) {
 }
 
 void Solver::read_cnf(ifstream& in) {
-	int i;
+	int i, count=0;
 	unsigned int vars, clauses, unary = 0;
 	set<Lit> s;
 	Clause c;
 	char d;
+	bool flag = false;
 
 	while (in.peek() == 'c') skipLine(in);
 
@@ -156,8 +157,26 @@ void Solver::read_cnf(ifstream& in) {
 
 	while (in.good() && in.peek() != EOF) {
 		skipWhitespace(in, d);
-		if(in.peek() == EOF) break;
-		i = parseInt(in, d);
+		
+		if(in.peek() == EOF) {flag=true;};		
+		
+		if(flag == false)
+		{
+			i = parseInt(in, d);
+		}else
+		{ //cout << d << endl; 
+			// i = (int)d;
+			if(d == '0') {
+				// Abort("Clause Line did not ended with zero. ", 1);
+			 	// break; 
+			 	i = 0;
+			 }else{
+			 	break;
+			 }
+			// i = 0; 
+		}
+
+
 		if (i == 0) {
 			c.cl().resize(s.size());
 			copy(s.begin(), s.end(), c.cl().begin());
@@ -168,6 +187,7 @@ void Solver::read_cnf(ifstream& in) {
 				Abort("Empty clause not allowed in input formula (clause " + num.str() + ")", 1); // concatenating strings
 			}
 			case 1: {
+				count++;
 				Lit l = c.cl()[0];
 				assert_unary(l);
 				BCP_stack.push_back(opposite(l));
@@ -185,10 +205,14 @@ void Solver::read_cnf(ifstream& in) {
 		i = v2l(i);		
 		if (ValDecHeuristic == VAL_DEC_HEURISTIC::LITSCORE) bumpLitScore(i);
 		s.insert(i);
+		
+		if(flag == true){
+			break;
+		}
 	}
 	last_clause_idx = max_original = cnf_size() - 1;
 	if (VarDecHeuristic == VAR_DEC_HEURISTIC::MINISAT) reset_iterators();
-	cout << "Read " << cnf_size() << " clauses in " << cpuTime() - begin_time << " secs." << endl << "Solving..." << endl;
+	cout << "Read " << cnf_size()+count << " clauses in " << cpuTime() - begin_time << " secs." << endl << "Solving..." << endl;
 	prob_size = cnf.size();
 }
 
