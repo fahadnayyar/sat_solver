@@ -5,16 +5,16 @@ FILES2=./test-cases/Group1/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
@@ -26,16 +26,16 @@ FILES2=./test-cases/Group2/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
@@ -47,16 +47,16 @@ FILES2=./test-cases/Group3/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
@@ -69,16 +69,16 @@ FILES2=./test-cases/Group4/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
@@ -91,16 +91,16 @@ FILES2=./test-cases/Group5/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
@@ -112,16 +112,16 @@ FILES2=./test-cases/Group6/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
@@ -133,20 +133,39 @@ FILES2=./test-cases/Group7/sat/*.cnf
 for f in $FILES1
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 for f in $FILES2
 do
   echo "Processing $f file..."
-  REDUCEDB=0 ./edusat -vardh 0 $f
-  REDUCEDB=1 ./edusat -vardh 0 $f
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
   REDUCEDB=0 ./edusat -vardh 2 $f
   REDUCEDB=1 ./edusat -vardh 2 $f
 done
 
+
+FILES1=./test-cases/good/unsat/*.cnf
+FILES2=./test-cases/good/sat/*.cnf
+for f in $FILES1
+do
+  echo "Processing $f file..."
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
+  REDUCEDB=0 ./edusat -vardh 2 $f
+  REDUCEDB=1 ./edusat -vardh 2 $f
+done
+for f in $FILES2
+do
+  echo "Processing $f file..."
+  # REDUCEDB=0 ./edusat -vardh 0 $f
+  # REDUCEDB=1 ./edusat -vardh 0 $f
+  REDUCEDB=0 ./edusat -vardh 2 $f
+  REDUCEDB=1 ./edusat -vardh 2 $f
+done
 
 
 # FILES1=./test-cases/Group8/unsat/*.cnf
