@@ -627,6 +627,13 @@ void Solver::reset_iterators(double activity_key/* = 0.0*/) {
 
 void Solver::initialize() {	
 	
+	if (is_lbd_restart)
+	{
+		lbdQueue.initSize(50); // lbd restart
+		trailQueue.initSize(5000); // lbd restart
+	}
+	
+
 	state.resize(nvars + 1);
 	prev_state.resize(nvars + 1, 0);
 	antecedent.resize(nvars + 1, -1);	
@@ -1259,6 +1266,14 @@ int Solver::analyze(const Clause conflicting) {
 		BCP_stack.push_back(u); // this way after backtracking we will handle the new clause.
 		add_clause(new_clause, watch_lit, new_clause.size() - 1);
 		computeLBD(cnf.size()-1); 	
+		
+		if (is_lbd_restart)
+		{
+			lbdQueue.push(cnf[cnf.size()-1].get_lbd()); // lbd restart. 
+			sumLBD += (cnf[cnf.size()-1].get_lbd()); // lbd restart.
+		}
+		
+		
 		//cout << "added conflict" << endl;
 		if (VarDecHeuristic == VAR_DEC_HEURISTIC::CMTF) cmtf_bring_forward(cnf_size()-1); // this takes care of the prev/next in cnf for new_clause.
 		if (verbose > 1) cout << "BCP_stack <- " << new_clause.cl()[watch_lit] << endl;
@@ -1352,10 +1367,16 @@ void Solver::AfterConflictAnalysis(set<Var> ConflictSide, set<Var> ConflictClaus
 
 void Solver::backtrack(int k) {
 	if (verbose_now()) cout << "backtrack" << endl;
-	if (k > 0 && (num_learned - conflicts_at_dl[k] > restart_threshold)) {	// "local restart"	
-		restart(); 		
-		return;
+	
+	//* old restart deleted.
+	if (!is_lbd_restart)
+	{
+		if (k > 0 && (num_learned - conflicts_at_dl[k] > restart_threshold)) {	// "local restart"	
+			restart(); 		
+			return;
+		}
 	}
+
 
 	double jump_to_activity = m_curr_activity;
 	for (trail_t::iterator it = trail.begin() + separators[k+1]; it != trail.end(); ++it) { // erasing from k+1
@@ -1403,11 +1424,15 @@ void Solver::validate_assignment() {
 
 void Solver::restart() {	
 	if (verbose >= 1) cout << "restart" << endl;
-	restart_threshold = static_cast<int>(restart_threshold * restart_multiplier);
-	if (restart_threshold > restart_upper) {
-		restart_threshold = restart_lower;
-		restart_upper = static_cast<int>(restart_upper  * restart_multiplier);
+	if (!is_lbd_restart)
+	{
+		restart_threshold = static_cast<int>(restart_threshold * restart_multiplier);
+		if (restart_threshold > restart_upper) {
+			restart_threshold = restart_lower;
+			restart_upper = static_cast<int>(restart_upper  * restart_multiplier);
+		}
 	}
+
 	if (verbose >=1) cout << "restart: new threshold = " << restart_threshold <<", upper = " << restart_upper << endl;
 	++num_restarts;
 	for (unsigned int i = 0; i <= nvars; ++i) 
@@ -1480,10 +1505,45 @@ SolverState Solver::_solve() {
 			if (res == SolverState::UNSAT) return res;
 			if (res == SolverState::CONFLICT){
 				conflicts++;
+				conflictsRestarts ++ ; // lbd restart.
 				// computeLBD(cnf.size()-1);
+
+				if (is_lbd_restart)
+				{
+					trailQueue.push(trail.size()); // lbd restart.
+					if (conflictsRestarts > 10000 && lbdQueue.isvalid() && trail.size() > 1.4 * trailQueue.getavg())
+					{
+						lbdQueue.fastclear(); // lbd restart.
+					}
+				}
+
+
+
 				backtrack(analyze(cnf[conflicting_clause_idx]));
 			}
-			else break;
+			else {
+				if (is_lbd_restart)
+				{
+					if ((lbdQueue.isvalid() && ((lbdQueue.getavg() * 0.8) > (sumLBD / conflictsRestarts))))
+					{
+						lbdQueue.fastclear();
+						// printf("restart\n");
+						restart();
+						
+						// num_restarts++;
+						// backtrack(0);
+						
+						// int bt = 0;
+						// if (incremental)
+						// { // DO NOT BACKTRACK UNTIL 0.. USELESS
+						// bt = (decisionLevel() < assumptions.size()) ? decisionLevel() : assumptions.size();
+						// }
+						// cancelUntil(bt);
+					}
+				}
+
+				break;
+			}
 		}
 	    if (conflicts >= curRestart*nbclausesbeforereduce && is_reduce_db ) {
       		assert(cnf.size()>=prob_size);
@@ -1581,7 +1641,11 @@ int main(int argc, char** argv){
 		is_queue = atoi(ISQUEUE);
 	}
 
-	
+	char* ISLBDRES = (char*) getenv("ISLBDRES");
+	if (ISLBDRES != NULL){
+		is_lbd_restart = atoi(ISLBDRES);
+	}
+
 	begin_time = cpuTime();
 	parse_options(argc, argv);
 	
